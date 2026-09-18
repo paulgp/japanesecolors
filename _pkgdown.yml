@@ -1,0 +1,76 @@
+url: https://paulgp.github.io/japanese-colors/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#1B65A1"
+    base_font: {google: "Inter"}
+    heading_font: {google: "Inter"}
+    code_font: {google: "JetBrains Mono"}
+
+home:
+  title: Curated colour palettes for R
+  description: >
+    Four curated colour-palette collections - Retro, Minimalism, Kawaii and
+    Avant Garde - where every palette is an exported vector of hex colours.
+  links:
+  - text: Browse the palette gallery
+    href: articles/gallery.html
+
+navbar:
+  structure:
+    left: [gallery, intro, articles, reference]
+    right: [search, github]
+  components:
+    gallery:
+      text: Gallery
+      href: articles/gallery.html
+    intro:
+      text: Get started
+      href: articles/japanesecolors.html
+
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - japanesecolors
+  - gallery
+
+reference:
+- title: Palette objects
+  desc: >
+    Every palette is an exported character vector of hex colours. These are the
+    primary interface; the IDs are stable API.
+  contents:
+  - retro_palettes
+  - minimalism_palettes
+  - kawaii_palettes
+  - avantgarde_palettes
+
+- title: Discovery
+  desc: Browse the catalogue and look palettes up.
+  contents:
+  - palettes
+  - palette_names
+  - collections
+  - get_palette
+  - palette_info
+
+- title: Display
+  contents:
+  - show_palette
+
+- title: ggplot2 scales
+  contents:
+  - scale_japanesecolors
+  - japanesecolors_pal
+
+- title: Provenance
+  desc: Transcription status and readings that still need verification.
+  contents:
+  - palettes_needing_review
+  - monochrome
+
+- title: Package
+  contents:
+  - japanesecolors-package

@@ -1,0 +1,26 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rcheck/
+*.tar.gz
+*.zip
+inst/doc
+docs/
+/doc/
+/Meta/
+.DS_Store
+README.html
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+
+# transcription working files: kept locally, not published
+data-raw/

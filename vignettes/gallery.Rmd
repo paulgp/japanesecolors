@@ -1,0 +1,183 @@
+---
+title: "Palette gallery"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Palette gallery}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", echo = FALSE)
+library(japanesecolors)
+```
+
+```{css, echo = FALSE}
+.rs-controls {
+  display: flex; flex-wrap: wrap; gap: .4rem; align-items: center;
+  margin: 1rem 0 1.5rem; padding: .75rem; border: 1px solid #e3e3e3;
+  border-radius: 8px; background: #fafafa; position: sticky; top: 0; z-index: 10;
+}
+.rs-controls button {
+  font: inherit; font-size: .85rem; padding: .3rem .7rem; cursor: pointer;
+  border: 1px solid #ccc; border-radius: 999px; background: #fff; color: #333;
+}
+.rs-controls button[aria-pressed="true"] { background: #333; color: #fff; border-color: #333; }
+.rs-controls label { font-size: .85rem; color: #555; margin-right: .2rem; }
+.rs-count { font-size: .85rem; color: #666; margin-left: auto; }
+
+.rs-pal { margin: 0 0 1.1rem; }
+.rs-pal-head {
+  display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap;
+  font-size: .85rem; margin-bottom: .3rem;
+}
+.rs-id { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 600; }
+.rs-name { color: #555; }
+.rs-meta { color: #888; margin-left: auto; font-variant-numeric: tabular-nums; }
+.rs-flag {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
+  background: #fde68a; color: #713f12; padding: .1rem .4rem; border-radius: 4px;
+}
+.rs-bar { display: flex; height: 54px; border-radius: 6px; overflow: hidden; border: 1px solid #0000001a; }
+.rs-sw { flex: 1 1 0; position: relative; }
+.rs-sw span {
+  position: absolute; inset: auto 0 4px 0; text-align: center; font-size: .6rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  opacity: 0; transition: opacity .12s;
+}
+.rs-bar:hover .rs-sw span { opacity: .85; }
+.rs-empty { color: #888; font-style: italic; }
+@media (prefers-color-scheme: dark) {
+  .rs-controls { background: #1c1c1c; border-color: #333; }
+  .rs-controls button { background: #262626; color: #ddd; border-color: #444; }
+  .rs-controls button[aria-pressed="true"] { background: #eee; color: #111; border-color: #eee; }
+  .rs-name { color: #bbb; } .rs-meta { color: #999; }
+}
+```
+
+All `r nrow(palettes())` palettes, grouped by collection. Hover a palette to
+read its hex values. Every palette shown here is an exported object: type its
+ID into R and you get the vector.
+
+```{r gallery, results = "asis"}
+esc <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  gsub(">", "&gt;", x, fixed = TRUE)
+}
+
+# black or white label text, whichever reads better on the swatch
+ink <- function(hex) {
+  v <- grDevices::col2rgb(hex) / 255
+  lin <- ifelse(v <= 0.03928, v / 12.92, ((v + 0.055) / 1.055)^2.4)
+  lum <- 0.2126 * lin[1, ] + 0.7152 * lin[2, ] + 0.0722 * lin[3, ]
+  ifelse(lum > 0.45, "#000", "#fff")
+}
+
+palette_html <- function(row) {
+  cols <- get_palette(row$id)
+  sw <- paste0(sprintf(
+    '<div class="rs-sw" style="background:%s"><span style="color:%s">%s</span></div>',
+    cols, ink(cols), esc(cols)), collapse = "")
+
+  name <- if (!identical(row$name, row$id)) sprintf('<span class="rs-name">%s</span>', esc(row$name)) else ""
+  flag <- if (identical(row$status, "review")) '<span class="rs-flag">provisional</span>' else ""
+
+  # emit as a single line: indented continuation lines would be parsed as a
+  # markdown code block rather than as HTML
+  sprintf(paste0(
+    '<div class="rs-pal" data-collection="%s" data-family="%s" data-status="%s">',
+    '<div class="rs-pal-head"><span class="rs-id">%s</span>%s%s',
+    '<span class="rs-meta">%s &middot; %d colours</span></div>',
+    '<div class="rs-bar">%s</div>',
+    '</div>'),
+    row$collection, row$family, row$status,
+    esc(row$id), name, flag, esc(row$type), row$n_colors, sw)
+}
+
+cat('<div class="rs-controls" id="rs-controls">\n')
+cat('<label>Collection</label>')
+cat('<button data-filter="collection" data-value="all" aria-pressed="true">All</button>')
+for (i in seq_len(nrow(collections()))) {
+  cl <- collections()[i, ]
+  cat(sprintf('<button data-filter="collection" data-value="%s" aria-pressed="false">%s</button>',
+              cl$collection, esc(cl$label)))
+}
+types <- c(bi = "bicolor", tri = "tricolor", four = "four-color", multi = "multicolor")
+cat('<label style="margin-left:1rem">Type</label>')
+cat('<button data-filter="family" data-value="all" aria-pressed="true">All</button>')
+for (code in names(types)) {
+  cat(sprintf('<button data-filter="family" data-value="%s" aria-pressed="false">%s</button>',
+              code, types[[code]]))
+}
+cat('<span class="rs-count" id="rs-count"></span>\n')
+cat('</div>\n')
+
+cat('<div id="rs-gallery">\n')
+for (coll in collections()$collection) {
+  rows <- palettes(coll)
+  label <- collections()$label[collections()$collection == coll]
+  cat(sprintf('<h2 data-collection-heading="%s">%s <span style="font-weight:400;color:#888;font-size:.8em">(%d)</span></h2>\n',
+              coll, esc(label), nrow(rows)))
+  for (i in seq_len(nrow(rows))) cat(palette_html(rows[i, ]), "\n")
+}
+cat('</div>\n')
+cat('<p class="rs-empty" id="rs-empty" style="display:none">No palettes match that combination.</p>\n')
+```
+
+```{js, echo = FALSE}
+(function () {
+  var state = { collection: "all", family: "all" };
+  var controls = document.getElementById("rs-controls");
+  if (!controls) return;
+
+  function apply() {
+    var pals = document.querySelectorAll("#rs-gallery .rs-pal");
+    var shown = 0;
+    pals.forEach(function (p) {
+      var ok = (state.collection === "all" || p.dataset.collection === state.collection) &&
+               (state.family === "all" || p.dataset.family === state.family);
+      p.style.display = ok ? "" : "none";
+      if (ok) shown++;
+    });
+    // hide a collection heading when nothing under it survives the filter
+    document.querySelectorAll("[data-collection-heading]").forEach(function (h) {
+      var any = document.querySelectorAll(
+        '#rs-gallery .rs-pal[data-collection="' + h.dataset.collectionHeading + '"]');
+      var visible = Array.prototype.filter.call(any, function (p) {
+        return p.style.display !== "none";
+      }).length;
+      h.style.display = visible ? "" : "none";
+    });
+    document.getElementById("rs-count").textContent =
+      shown + (shown === 1 ? " palette" : " palettes");
+    document.getElementById("rs-empty").style.display = shown ? "none" : "";
+  }
+
+  controls.addEventListener("click", function (e) {
+    var btn = e.target.closest("button[data-filter]");
+    if (!btn) return;
+    state[btn.dataset.filter] = btn.dataset.value;
+    controls.querySelectorAll('button[data-filter="' + btn.dataset.filter + '"]')
+      .forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    apply();
+  });
+
+  apply();
+})();
+```
+
+## Finding a palette from R
+
+```{r find, echo = TRUE}
+# all four-colour Avant Garde palettes
+palette_names("avantgarde", type = "four-color")
+
+# anything with at least seven colours
+palettes(n = 7)[, c("id", "collection", "n_colors")]
+
+# only fully transcribed palettes
+nrow(palettes(include_review = FALSE))
+```

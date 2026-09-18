@@ -1,0 +1,160 @@
+---
+title: "Getting started with japanesecolors"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Getting started with japanesecolors}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.width = 7)
+library(japanesecolors)
+```
+
+## Palettes are objects
+
+A palette is a character vector of hex colours, exported under its own name:
+
+```{r}
+library(japanesecolors)
+
+kawaii_tri_07
+```
+
+So it works anywhere R takes colours:
+
+```{r fig.height = 3}
+barplot(c(5, 8, 3), col = kawaii_tri_07, border = NA, axes = FALSE)
+```
+
+To look at one:
+
+```{r fig.height = 1.3}
+show_palette(avantgarde_multi_09)
+```
+
+## Palette IDs
+
+IDs have the form `<collection>_<type>_<nn>`:
+
+| Part | Values |
+|---|---|
+| collection | `retro`, `minimalism`, `kawaii`, `avantgarde` |
+| type | `bi` (bicolor), `tri` (tricolor), `four` (four-color), `multi` (multicolor) |
+| number | zero-padded, contiguous within each collection and type |
+
+These IDs are stable API. Descriptive names may be added later as aliases; the
+numbered IDs will keep working.
+
+## Browsing
+
+`palettes()` returns the catalogue as a data frame:
+
+```{r}
+head(palettes()[, c("id", "collection", "type", "n_colors", "status")])
+```
+
+It filters by collection, matching type and number of colours:
+
+```{r}
+palettes("minimalism", type = "bicolor")[, c("id", "n_colors")]
+
+# anything wide enough for six groups
+palette_names(n = 6)
+```
+
+`collections()` summarises the four collections:
+
+```{r}
+collections()[, c("collection", "label", "n_palettes", "n_review")]
+```
+
+## Choosing a palette programmatically
+
+When the palette is decided at runtime, look it up by ID:
+
+```{r}
+get_palette("retro_four_03")
+
+# the first n colours, or reversed
+get_palette("retro_four_03", n = 2)
+get_palette("retro_four_03", reverse = TRUE)
+```
+
+Palettes are curated categorical sets and are never stretched. Asking for more
+colours than a palette holds is an error, not a recycled or interpolated colour:
+
+```{r error = TRUE}
+get_palette("kawaii_tri_07", n = 5)
+```
+
+`palettes(n = 5)` will tell you which palettes are big enough.
+
+## ggplot2
+
+```{r fig.height = 3.5, message = FALSE}
+library(ggplot2)
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point(size = 2.5) +
+  scale_colour_japanesecolors("kawaii_tri_07") +
+  theme_minimal()
+```
+
+```{r fig.height = 3.5}
+ggplot(mpg, aes(class, fill = drv)) +
+  geom_bar() +
+  scale_fill_japanesecolors("avantgarde_tri_06") +
+  theme_minimal()
+```
+
+All three take `reverse`, `na.value`, and anything else `scale_*_manual()`
+accepts:
+
+```{r fig.height = 3.5}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point(size = 2.5) +
+  scale_colour_japanesecolors("retro_tri_02", reverse = TRUE, name = "Iris species") +
+  theme_minimal()
+```
+
+Being plain vectors, they also work with `scale_colour_manual()`, which lets you
+pin colours to specific categories:
+
+```{r fig.height = 3.5}
+cols <- setNames(kawaii_tri_07, levels(iris$Species))
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point(size = 2.5) +
+  scale_colour_manual(values = cols) +
+  theme_minimal()
+```
+
+For packages that expect a palette *function* of `n`, use `japanesecolors_pal()`:
+
+```{r}
+pal <- japanesecolors_pal("minimalism_multi_05")
+pal(3)
+```
+
+## Transcription status
+
+Colour values were read by hand from printed RGB labels. Readings that were not
+reliably legible are recorded as provisional:
+
+```{r}
+palettes_needing_review()[1:3, c("palette_id", "order", "hex")]
+```
+
+They are exported like any other, and `palettes()` includes them by default with
+`status == "review"`. For fully transcribed values only:
+
+```{r}
+nrow(palettes(include_review = FALSE))
+```
+
+See the [package README](https://paulgp.github.io/japanese-colors/) for where
+the data came from.

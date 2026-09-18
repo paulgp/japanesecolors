@@ -1,0 +1,7882 @@
+{
+  "schema_version": "1.1",
+  "package": "japanesecolors",
+  "generated_by": "data-raw/build.R",
+  "source": {
+    "title": "Japanese Color Matching",
+    "publisher": "SendPoints (Sendpoints Publishing Company Limited)",
+    "year": 2022,
+    "isbn": "978-988-760-879-0",
+    "transcription": "RGB values manually transcribed from printed colour labels by the japanesecolors project.",
+    "relationship": "japanesecolors is an independent, unaffiliated project. It is not associated with, licensed by, endorsed by or approved by SendPoints. This file contains transcribed colour values and project metadata only - no text, page layouts, photographs, advertisements or other artwork from the book."
+  },
+  "collections": [
+    {
+      "collection": "Retro Sense",
+      "collection_id": "retro",
+      "schema_version": "1.1",
+      "version": "0.1.0",
+      "method": "Manual transcription of printed RGB labels; hexadecimal values calculated from RGB. No photographic color sampling or CMYK conversion.",
+      "color_space_assumption": "Printed RGB triplets are treated as sRGB for web/R use; no color profile is specified in the supplied photographs.",
+      "names_note": "Stable IDs and descriptive names are editorial additions, not official palette names. Retro display names are editorial additions by this project, not official design names.",
+      "review_note": "Transcribed means visually readable in the supplied photo, not independently verified against a publisher source. Review entries contain provisional candidate values, not certified transcriptions.",
+      "source_note": "User-provided photographs of the Retro Sense section. Full book title, author, publisher, edition, and reuse permissions have not been established."
+    },
+    {
+      "collection": "Minimalism",
+      "collection_id": "minimalism",
+      "schema_version": "1.1",
+      "version": "0.2.0",
+      "method": "Manual transcription of printed RGB labels; hexadecimal values calculated from RGB. No photographic color sampling or CMYK conversion.",
+      "color_space_assumption": "Printed RGB triplets are treated as sRGB for web/R use; no color profile is specified in the supplied photographs.",
+      "names_note": "Palette names are pending. Stable numbered IDs are placeholders, not official design names. Repeated printed page references remain distinct palettes.",
+      "review_note": "Transcribed means visually readable in the supplied photo, not independently verified against a publisher source.",
+      "source_note": "User identified this collection as Minimalism. Full book title, author, publisher, edition, and reuse permissions have not been established.",
+      "monochrome_note": "The 14 single-color references are stored separately and are not counted as matching palettes."
+    },
+    {
+      "collection": "Kawaii",
+      "collection_id": "kawaii",
+      "schema_version": "1.1",
+      "version": "0.3.0",
+      "method": "Manual transcription of printed RGB labels; hexadecimal values calculated from RGB. No photographic color sampling or CMYK conversion.",
+      "color_space_assumption": "Printed RGB triplets are treated as sRGB for web/R use; no color profile is specified in the supplied photographs.",
+      "names_note": "Palette names are pending. Stable numbered IDs are placeholders, not official design names. Repeated printed page references remain distinct palettes.",
+      "review_note": "Transcribed means visually readable in the supplied photo, not independently verified against a publisher source.",
+      "source_note": "User identified this collection as Kawaii. Full book title, author, publisher, edition, and reuse permissions have not been established.",
+      "monochrome_note": "The five single-color references are stored separately and are not counted as matching palettes."
+    },
+    {
+      "collection": "Avant Garde",
+      "collection_id": "avantgarde",
+      "schema_version": "1.1",
+      "version": "0.4.0",
+      "method": "Manual transcription of printed RGB labels; hexadecimal values calculated from RGB. No photographic color sampling or CMYK conversion.",
+      "color_space_assumption": "Printed RGB triplets are treated as sRGB for web/R use; no color profile is specified in the supplied photographs.",
+      "names_note": "Palette names are pending. Stable numbered IDs are placeholders, not official design names. Repeated printed page references remain distinct palettes.",
+      "review_note": "Transcribed means visually readable in the supplied photo, not independently verified against a publisher source.",
+      "source_note": "User identified this collection as Avant Garde."
+    }
+  ],
+  "palettes": [
+    {
+      "id": "retro_bi_01",
+      "name": "Ochre & brick",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            235,
+            184,
+            69
+          ],
+          "hex": "#EBB845",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            197,
+            53,
+            30
+          ],
+          "hex": "#C5351E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_02",
+      "name": "Plum & apricot",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            147,
+            75,
+            133
+          ],
+          "hex": "#934B85",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            225,
+            138,
+            49
+          ],
+          "hex": "#E18A31",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_03",
+      "name": "Violet & olive",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            90,
+            79,
+            125
+          ],
+          "hex": "#5A4F7D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            113,
+            126,
+            66
+          ],
+          "hex": "#717E42",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_04",
+      "name": "Gold & ink",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            217,
+            188,
+            119
+          ],
+          "hex": "#D9BC77",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_05",
+      "name": "Blue & charcoal",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            27,
+            101,
+            161
+          ],
+          "hex": "#1B65A1",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            83,
+            87,
+            96
+          ],
+          "hex": "#535760",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_06",
+      "name": "Moss & clay",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            92,
+            137,
+            52
+          ],
+          "hex": "#5C8934",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            152,
+            97,
+            78
+          ],
+          "hex": "#98614E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_07",
+      "name": "Brick & citron",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            197,
+            53,
+            30
+          ],
+          "hex": "#C5351E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            194,
+            199,
+            25
+          ],
+          "hex": "#C2C719",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_08",
+      "name": "Mint & cream",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            181,
+            222,
+            217
+          ],
+          "hex": "#B5DED9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            252,
+            209
+          ],
+          "hex": "#FFFCD1",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_09",
+      "name": "Walnut & pine",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            136,
+            108,
+            75
+          ],
+          "hex": "#886C4B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            19,
+            59,
+            46
+          ],
+          "hex": "#133B2E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_10",
+      "name": "Slate & stone",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            89,
+            96,
+            106
+          ],
+          "hex": "#59606A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            151,
+            148,
+            147
+          ],
+          "hex": "#979493",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_11",
+      "name": "Plum & citron",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "Repeated colors are also printed more clearly in columns 1 and 2 of the same section.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            147,
+            75,
+            133
+          ],
+          "hex": "#934B85",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            194,
+            199,
+            25
+          ],
+          "hex": "#C2C719",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_12",
+      "name": "Brick & moss",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "Repeated colors are also printed more clearly in columns 1 and 2 of the same section.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            197,
+            53,
+            30
+          ],
+          "hex": "#C5351E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            92,
+            137,
+            52
+          ],
+          "hex": "#5C8934",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_13",
+      "name": "Saffron & ink",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            244,
+            192,
+            58
+          ],
+          "hex": "#F4C03A",
+          "status": "review",
+          "note": "Provisional RGB reading: the small gold label is blurred. Confirm all three channels and the design reference."
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_bi_14",
+      "name": "Blue & poppy",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            48,
+            113,
+            185
+          ],
+          "hex": "#3071B9",
+          "status": "review",
+          "note": "Provisional RGB reading at curved outer edge; confirm channels and design reference."
+        },
+        {
+          "order": 2,
+          "rgb": [
+            227,
+            73,
+            80
+          ],
+          "hex": "#E34950",
+          "status": "review",
+          "note": "Provisional RGB reading at curved outer edge; confirm all three channels."
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_01",
+      "name": "Meadow & sky",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            233,
+            217,
+            155
+          ],
+          "hex": "#E9D99B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            172,
+            102
+          ],
+          "hex": "#00AC66",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            128,
+            205,
+            231
+          ],
+          "hex": "#80CDE7",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_02",
+      "name": "Harbor",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            87,
+            176,
+            191
+          ],
+          "hex": "#57B0BF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            35,
+            58,
+            110
+          ],
+          "hex": "#233A6E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            230,
+            191,
+            125
+          ],
+          "hex": "#E6BF7D",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_03",
+      "name": "Poolside",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            223,
+            79
+          ],
+          "hex": "#FFDF4F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            153,
+            212,
+            215
+          ],
+          "hex": "#99D4D7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            242,
+            152,
+            120
+          ],
+          "hex": "#F29878",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_04",
+      "name": "Orange soda",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            238,
+            118,
+            59
+          ],
+          "hex": "#EE763B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            169,
+            196
+          ],
+          "hex": "#00A9C4",
+          "status": "review",
+          "note": "Provisional blue channel; the printed number may end in 5 or 6."
+        },
+        {
+          "order": 3,
+          "rgb": [
+            238,
+            198,
+            111
+          ],
+          "hex": "#EEC66F",
+          "status": "review",
+          "note": "Provisional RGB reading; confirm the blurred golden swatch label."
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_05",
+      "name": "Plum, blue & crimson",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            132,
+            105,
+            152
+          ],
+          "hex": "#846998",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            127,
+            174
+          ],
+          "hex": "#007FAE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            229,
+            13,
+            43
+          ],
+          "hex": "#E50D2B",
+          "status": "review",
+          "note": "Provisional RGB reading; confirm the small red label at the curved page edge."
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_06",
+      "name": "Peach orchard",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            245,
+            174,
+            148
+          ],
+          "hex": "#F5AE94",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            158,
+            78,
+            82
+          ],
+          "hex": "#9E4E52",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            101,
+            153,
+            48
+          ],
+          "hex": "#659930",
+          "status": "review",
+          "note": "Provisional RGB reading; confirm the blurred green label at the page edge."
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_07",
+      "name": "Crimson garden",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            231,
+            47,
+            43
+          ],
+          "hex": "#E72F2B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            54,
+            62,
+            150
+          ],
+          "hex": "#363E96",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            182,
+            218,
+            145
+          ],
+          "hex": "#B6DA91",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_08",
+      "name": "Harvest",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            175,
+            174,
+            65
+          ],
+          "hex": "#AFAE41",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            150,
+            80,
+            66
+          ],
+          "hex": "#965042",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            237,
+            208,
+            63
+          ],
+          "hex": "#EDD03F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_09",
+      "name": "Steel & rust",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            230,
+            230
+          ],
+          "hex": "#E6E6E6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            118,
+            154,
+            188
+          ],
+          "hex": "#769ABC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            203,
+            78,
+            64
+          ],
+          "hex": "#CB4E40",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_10",
+      "name": "Evergreen studio",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            83,
+            75
+          ],
+          "hex": "#00534B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            163,
+            164,
+            147
+          ],
+          "hex": "#A3A493",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            246,
+            202,
+            165
+          ],
+          "hex": "#F6CAA5",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_11",
+      "name": "Blue, walnut & lime",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            131,
+            194
+          ],
+          "hex": "#0083C2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            135,
+            98,
+            77
+          ],
+          "hex": "#87624D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            227,
+            229,
+            48
+          ],
+          "hex": "#E3E530",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_12",
+      "name": "Garden party",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            67,
+            168,
+            100
+          ],
+          "hex": "#43A864",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            175,
+            204,
+            95
+          ],
+          "hex": "#AFCC5F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            234,
+            84,
+            92
+          ],
+          "hex": "#EA545C",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_13",
+      "name": "Velvet",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            174,
+            32,
+            57
+          ],
+          "hex": "#AE2039",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            2,
+            100,
+            103
+          ],
+          "hex": "#026467",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            207,
+            133,
+            174
+          ],
+          "hex": "#CF85AE",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_14",
+      "name": "Coffeehouse",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            132,
+            79,
+            69
+          ],
+          "hex": "#844F45",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            195,
+            181,
+            158
+          ],
+          "hex": "#C3B59E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            76,
+            68,
+            63
+          ],
+          "hex": "#4C443F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_15",
+      "name": "Sunny field",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            223,
+            79
+          ],
+          "hex": "#FFDF4F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            111,
+            186
+          ],
+          "hex": "#006FBA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            182,
+            218,
+            145
+          ],
+          "hex": "#B6DA91",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_16",
+      "name": "Sky, leaf & red",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            188,
+            224,
+            231
+          ],
+          "hex": "#BCE0E7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            141,
+            193,
+            99
+          ],
+          "hex": "#8DC163",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            217,
+            40,
+            23
+          ],
+          "hex": "#D92817",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_17",
+      "name": "Quiet olive",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            146,
+            151,
+            90
+          ],
+          "hex": "#92975A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            201,
+            202,
+            202
+          ],
+          "hex": "#C9CACA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            244,
+            235,
+            227
+          ],
+          "hex": "#F4EBE3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_18",
+      "name": "Forest & brass",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            88,
+            70
+          ],
+          "hex": "#005846",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            177,
+            134,
+            38
+          ],
+          "hex": "#B18626",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            191,
+            192,
+            192
+          ],
+          "hex": "#BFC0C0",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_19",
+      "name": "Primary print",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            25,
+            25
+          ],
+          "hex": "#E61919",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            251,
+            196,
+            0
+          ],
+          "hex": "#FBC400",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            73,
+            144
+          ],
+          "hex": "#004990",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_20",
+      "name": "Blue hour",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            48,
+            166,
+            223
+          ],
+          "hex": "#30A6DF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            26,
+            81,
+            163
+          ],
+          "hex": "#1A51A3",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            95,
+            92,
+            167
+          ],
+          "hex": "#5F5CA7",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_tri_21",
+      "name": "Woodland",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            126,
+            139,
+            93
+          ],
+          "hex": "#7E8B5D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            83,
+            59
+          ],
+          "hex": "#00533B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            190,
+            176,
+            154
+          ],
+          "hex": "#BEB09A",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_01",
+      "name": "Rose, paper & gold",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            0,
+            42
+          ],
+          "hex": "#E6002A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            247,
+            195,
+            194
+          ],
+          "hex": "#F7C3C2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            241,
+            236,
+            223
+          ],
+          "hex": "#F1ECDF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            253,
+            206,
+            39
+          ],
+          "hex": "#FDCE27",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_02",
+      "name": "Hot type",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            241,
+            141,
+            2
+          ],
+          "hex": "#F18D02",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            253,
+            209,
+            0
+          ],
+          "hex": "#FDD100",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_03",
+      "name": "Classic print",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            231,
+            41,
+            34
+          ],
+          "hex": "#E72922",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            30,
+            83,
+            164
+          ],
+          "hex": "#1E53A4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            102,
+            55
+          ],
+          "hex": "#006637",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            202,
+            176,
+            107
+          ],
+          "hex": "#CAB06B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_04",
+      "name": "Petal & leaf",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            242,
+            158,
+            157
+          ],
+          "hex": "#F29E9D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            135,
+            126,
+            156
+          ],
+          "hex": "#877E9C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            175,
+            195,
+            84
+          ],
+          "hex": "#AFC354",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            42,
+            130,
+            84
+          ],
+          "hex": "#2A8254",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_05",
+      "name": "Coastal clay",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            187,
+            220,
+            206
+          ],
+          "hex": "#BBDCCE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            224,
+            166,
+            62
+          ],
+          "hex": "#E0A63E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            109,
+            166,
+            177
+          ],
+          "hex": "#6DA6B1",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            223,
+            117,
+            47
+          ],
+          "hex": "#DF752F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_06",
+      "name": "Botanical",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            140,
+            173
+          ],
+          "hex": "#008CAD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            131,
+            175,
+            110
+          ],
+          "hex": "#83AF6E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            90,
+            70
+          ],
+          "hex": "#005A46",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            240,
+            208,
+            118
+          ],
+          "hex": "#F0D076",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_07",
+      "name": "Crimson & sea glass",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            201,
+            37,
+            57
+          ],
+          "hex": "#C92539",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            210,
+            175,
+            157
+          ],
+          "hex": "#D2AF9D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            152,
+            200,
+            205
+          ],
+          "hex": "#98C8CD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            11,
+            134,
+            126
+          ],
+          "hex": "#0B867E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_08",
+      "name": "Summer postcard",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            97,
+            195,
+            213
+          ],
+          "hex": "#61C3D5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            158,
+            95
+          ],
+          "hex": "#009E5F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            247,
+            184,
+            142
+          ],
+          "hex": "#F7B88E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            240,
+            137,
+            114
+          ],
+          "hex": "#F08972",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_09",
+      "name": "Primary play",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            109,
+            187
+          ],
+          "hex": "#006DBB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            235,
+            97,
+            27
+          ],
+          "hex": "#EB611B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_10",
+      "name": "Faded fresco",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            200,
+            225,
+            198
+          ],
+          "hex": "#C8E1C6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            164,
+            157,
+            175
+          ],
+          "hex": "#A49DAF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            208,
+            152,
+            144
+          ],
+          "hex": "#D09890",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            217,
+            198,
+            153
+          ],
+          "hex": "#D9C699",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_four_11",
+      "name": "Lilac & leather",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            166,
+            134,
+            188
+          ],
+          "hex": "#A686BC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            234,
+            222,
+            189
+          ],
+          "hex": "#EADEBD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            141,
+            92,
+            97
+          ],
+          "hex": "#8D5C61",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            163,
+            140,
+            74
+          ],
+          "hex": "#A38C4A",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_01",
+      "name": "Rose & marigold",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            248,
+            204,
+            209
+          ],
+          "hex": "#F8CCD1",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            216,
+            183,
+            124
+          ],
+          "hex": "#D8B77C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            230,
+            14,
+            57
+          ],
+          "hex": "#E60E39",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            76,
+            175,
+            119
+          ],
+          "hex": "#4CAF77",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            235,
+            213,
+            108
+          ],
+          "hex": "#EBD56C",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_02",
+      "name": "Market day",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            222,
+            198,
+            123
+          ],
+          "hex": "#DEC67B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            235,
+            97,
+            42
+          ],
+          "hex": "#EB612A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            225,
+            0
+          ],
+          "hex": "#FFE100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            27,
+            184,
+            206
+          ],
+          "hex": "#1BB8CE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            75,
+            169,
+            53
+          ],
+          "hex": "#4BA935",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_03",
+      "name": "Ceramics",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            237,
+            196,
+            172
+          ],
+          "hex": "#EDC4AC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            215,
+            198,
+            94
+          ],
+          "hex": "#D7C65E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            100,
+            171,
+            171
+          ],
+          "hex": "#64ABAB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            223,
+            96,
+            87
+          ],
+          "hex": "#DF6057",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            108,
+            76,
+            62
+          ],
+          "hex": "#6C4C3E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_04",
+      "name": "Record shop",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            192,
+            159,
+            50
+          ],
+          "hex": "#C09F32",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "review",
+          "note": "Provisional yellow RGB reading; the low-contrast printed digits need confirmation."
+        },
+        {
+          "order": 3,
+          "rgb": [
+            66,
+            67,
+            147
+          ],
+          "hex": "#424393",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            232,
+            53,
+            15
+          ],
+          "hex": "#E8350F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            0,
+            108,
+            60
+          ],
+          "hex": "#006C3C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            16,
+            49,
+            139
+          ],
+          "hex": "#10318B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_05",
+      "name": "Autumn archive",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 8,
+      "status": "transcribed",
+      "note": "One eight-color palette: the final two swatches wrap onto a second line.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            146,
+            158,
+            81
+          ],
+          "hex": "#929E51",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            245,
+            171,
+            124
+          ],
+          "hex": "#F5AB7C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            217,
+            188,
+            119
+          ],
+          "hex": "#D9BC77",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            224,
+            182,
+            143
+          ],
+          "hex": "#E0B68F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            203,
+            217,
+            222
+          ],
+          "hex": "#CBD9DE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            29,
+            80,
+            162
+          ],
+          "hex": "#1D50A2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 7,
+          "rgb": [
+            242,
+            204,
+            22
+          ],
+          "hex": "#F2CC16",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 8,
+          "rgb": [
+            195,
+            62,
+            71
+          ],
+          "hex": "#C33E47",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_06",
+      "name": "Twilight bouquet",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            153,
+            182,
+            214
+          ],
+          "hex": "#99B6D6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            192,
+            194,
+            226
+          ],
+          "hex": "#C0C2E2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            140,
+            138,
+            178
+          ],
+          "hex": "#8C8AB2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            229,
+            207,
+            98
+          ],
+          "hex": "#E5CF62",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            236,
+            133,
+            156
+          ],
+          "hex": "#EC859C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            246,
+            192,
+            211
+          ],
+          "hex": "#F6C0D3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_07",
+      "name": "Pastel garden",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            233,
+            211,
+            219
+          ],
+          "hex": "#E9D3DB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            237,
+            230,
+            199
+          ],
+          "hex": "#EDE6C7",
+          "status": "review",
+          "note": "Provisional reading of the pale cream RGB label; confirm all channels."
+        },
+        {
+          "order": 3,
+          "rgb": [
+            158,
+            187,
+            216
+          ],
+          "hex": "#9EBBD8",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            239,
+            211,
+            89
+          ],
+          "hex": "#EFD359",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            113,
+            167,
+            46
+          ],
+          "hex": "#71A72E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_08",
+      "name": "Seaside poster",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            100,
+            171
+          ],
+          "hex": "#0064AB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            105,
+            196,
+            217
+          ],
+          "hex": "#69C4D9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            70,
+            176,
+            116
+          ],
+          "hex": "#46B074",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            228,
+            77,
+            53
+          ],
+          "hex": "#E44D35",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            244,
+            201,
+            43
+          ],
+          "hex": "#F4C92B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            182,
+            218,
+            207
+          ],
+          "hex": "#B6DACF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "retro_multi_09",
+      "name": "Dusk to amber",
+      "name_status": "editorial",
+      "collection": "retro",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            39,
+            52,
+            140
+          ],
+          "hex": "#27348C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            94,
+            77,
+            141
+          ],
+          "hex": "#5E4D8D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            170,
+            140,
+            197
+          ],
+          "hex": "#AA8CC5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            109,
+            170,
+            195
+          ],
+          "hex": "#6DAAC3",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            144,
+            197,
+            157
+          ],
+          "hex": "#90C59D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            247,
+            179,
+            73
+          ],
+          "hex": "#F7B349",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_01",
+      "name": "minimalism_bi_01",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            92,
+            179,
+            206
+          ],
+          "hex": "#5CB3CE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            221,
+            109,
+            131
+          ],
+          "hex": "#DD6D83",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_02",
+      "name": "minimalism_bi_02",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            143,
+            195,
+            34
+          ],
+          "hex": "#8FC322",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            224,
+            127,
+            1
+          ],
+          "hex": "#E07F01",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_03",
+      "name": "minimalism_bi_03",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            239,
+            135,
+            135
+          ],
+          "hex": "#EF8787",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            247,
+            228,
+            224
+          ],
+          "hex": "#F7E4E0",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_04",
+      "name": "minimalism_bi_04",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#FFFFFF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            210,
+            163,
+            100
+          ],
+          "hex": "#D2A364",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_05",
+      "name": "minimalism_bi_05",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            83,
+            165
+          ],
+          "hex": "#0053A5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            146,
+            210,
+            225
+          ],
+          "hex": "#92D2E1",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_06",
+      "name": "minimalism_bi_06",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            191,
+            85,
+            108
+          ],
+          "hex": "#BF556C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            227,
+            210,
+            180
+          ],
+          "hex": "#E3D2B4",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_07",
+      "name": "minimalism_bi_07",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            2,
+            88,
+            159
+          ],
+          "hex": "#02589F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            142,
+            173,
+            191
+          ],
+          "hex": "#8EADBF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_08",
+      "name": "minimalism_bi_08",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            193,
+            167,
+            108
+          ],
+          "hex": "#C1A76C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            24,
+            43,
+            130
+          ],
+          "hex": "#182B82",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_09",
+      "name": "minimalism_bi_09",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            53,
+            132,
+            75
+          ],
+          "hex": "#35844B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            220,
+            232,
+            159
+          ],
+          "hex": "#DCE89F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_10",
+      "name": "minimalism_bi_10",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            47,
+            139,
+            182
+          ],
+          "hex": "#2F8BB6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            207,
+            229,
+            236
+          ],
+          "hex": "#CFE5EC",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_11",
+      "name": "minimalism_bi_11",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            215,
+            183,
+            146
+          ],
+          "hex": "#D7B792",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_bi_12",
+      "name": "minimalism_bi_12",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#FFFFFF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_tri_01",
+      "name": "minimalism_tri_01",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            66,
+            146
+          ],
+          "hex": "#004292",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            141,
+            177,
+            222
+          ],
+          "hex": "#8DB1DE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            160,
+            207
+          ],
+          "hex": "#00A0CF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_tri_02",
+      "name": "minimalism_tri_02",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            87,
+            0,
+            24
+          ],
+          "hex": "#570018",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            232,
+            211,
+            199
+          ],
+          "hex": "#E8D3C7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            146,
+            69,
+            21
+          ],
+          "hex": "#924515",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_01",
+      "name": "minimalism_four_01",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            220,
+            84,
+            138
+          ],
+          "hex": "#DC548A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            78,
+            187,
+            164
+          ],
+          "hex": "#4EBBA4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            137,
+            92,
+            160
+          ],
+          "hex": "#895CA0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            222,
+            217,
+            112
+          ],
+          "hex": "#DED970",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_02",
+      "name": "minimalism_four_02",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            236,
+            203,
+            175
+          ],
+          "hex": "#ECCBAF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            222,
+            214,
+            175
+          ],
+          "hex": "#DED6AF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            242,
+            233,
+            231
+          ],
+          "hex": "#F2E9E7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            232,
+            181,
+            169
+          ],
+          "hex": "#E8B5A9",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_03",
+      "name": "minimalism_four_03",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "hex": "#FFFFFF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            50,
+            156,
+            155
+          ],
+          "hex": "#329C9B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            141,
+            194,
+            202
+          ],
+          "hex": "#8DC2CA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            236,
+            107,
+            85
+          ],
+          "hex": "#EC6B55",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_04",
+      "name": "minimalism_four_04",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            189,
+            154,
+            88
+          ],
+          "hex": "#BD9A58",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            162,
+            209,
+            217
+          ],
+          "hex": "#A2D1D9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            229,
+            186,
+            189
+          ],
+          "hex": "#E5BABD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            139,
+            78,
+            155
+          ],
+          "hex": "#8B4E9B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_05",
+      "name": "minimalism_four_05",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            194,
+            169,
+            82
+          ],
+          "hex": "#C2A952",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            153,
+            181,
+            136
+          ],
+          "hex": "#99B588",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            219,
+            139,
+            150
+          ],
+          "hex": "#DB8B96",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            74,
+            81,
+            127
+          ],
+          "hex": "#4A517F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_06",
+      "name": "minimalism_four_06",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            241,
+            177,
+            206
+          ],
+          "hex": "#F1B1CE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            231,
+            211,
+            189
+          ],
+          "hex": "#E7D3BD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            3,
+            103,
+            175
+          ],
+          "hex": "#0367AF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            0,
+            75,
+            41
+          ],
+          "hex": "#004B29",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_07",
+      "name": "minimalism_four_07",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            241,
+            177,
+            206
+          ],
+          "hex": "#F1B1CE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            230,
+            25,
+            23
+          ],
+          "hex": "#E61917",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            231,
+            211,
+            189
+          ],
+          "hex": "#E7D3BD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            149,
+            65,
+            34
+          ],
+          "hex": "#954122",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_four_08",
+      "name": "minimalism_four_08",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "Four-color continuation, not part of the multicolor section. Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            212,
+            140,
+            186
+          ],
+          "hex": "#D48CBA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            158,
+            180
+          ],
+          "hex": "#009EB4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            81,
+            81,
+            113
+          ],
+          "hex": "#515171",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            186,
+            149,
+            94
+          ],
+          "hex": "#BA955E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_01",
+      "name": "minimalism_multi_01",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            234,
+            218,
+            185
+          ],
+          "hex": "#EADAB9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            190,
+            41,
+            32
+          ],
+          "hex": "#BE2920",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            252,
+            226,
+            220
+          ],
+          "hex": "#FCE2DC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            184,
+            228,
+            237
+          ],
+          "hex": "#B8E4ED",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            182,
+            185,
+            70
+          ],
+          "hex": "#B6B946",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            185,
+            188,
+            193
+          ],
+          "hex": "#B9BCC1",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_02",
+      "name": "minimalism_multi_02",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 7,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible. One seven-color palette: six swatches on the first line, then the seventh at the left of the next line.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            106,
+            95
+          ],
+          "hex": "#E66A5F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            237,
+            194,
+            182
+          ],
+          "hex": "#EDC2B6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            203,
+            180,
+            147
+          ],
+          "hex": "#CBB493",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            158,
+            128,
+            155
+          ],
+          "hex": "#9E809B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            57,
+            86,
+            66
+          ],
+          "hex": "#395642",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            191,
+            227,
+            231
+          ],
+          "hex": "#BFE3E7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 7,
+          "rgb": [
+            206,
+            189,
+            53
+          ],
+          "hex": "#CEBD35",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_03",
+      "name": "minimalism_multi_03",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            64,
+            92,
+            79
+          ],
+          "hex": "#405C4F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            61,
+            186,
+            190
+          ],
+          "hex": "#3DBABE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            127,
+            184,
+            222
+          ],
+          "hex": "#7FB8DE",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            219,
+            183,
+            158
+          ],
+          "hex": "#DBB79E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            230,
+            71,
+            76
+          ],
+          "hex": "#E6474C",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_04",
+      "name": "minimalism_multi_04",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            236,
+            232,
+            226
+          ],
+          "hex": "#ECE8E2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            198,
+            134,
+            93
+          ],
+          "hex": "#C6865D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            17,
+            159,
+            87
+          ],
+          "hex": "#119F57",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            229,
+            143,
+            68
+          ],
+          "hex": "#E58F44",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            0,
+            163,
+            211
+          ],
+          "hex": "#00A3D3",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            200,
+            26,
+            67
+          ],
+          "hex": "#C81A43",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_05",
+      "name": "minimalism_multi_05",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 7,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible. One seven-color palette: six swatches on the first line, then the seventh at the left of the next line.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            91,
+            174,
+            127
+          ],
+          "hex": "#5BAE7F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            177,
+            192,
+            107
+          ],
+          "hex": "#B1C06B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            237,
+            222,
+            123
+          ],
+          "hex": "#EDDE7B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            222,
+            120,
+            94
+          ],
+          "hex": "#DE785E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            90,
+            169,
+            210
+          ],
+          "hex": "#5AA9D2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            130,
+            115,
+            172
+          ],
+          "hex": "#8273AC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 7,
+          "rgb": [
+            238,
+            134,
+            174
+          ],
+          "hex": "#EE86AE",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "minimalism_multi_06",
+      "name": "minimalism_multi_06",
+      "name_status": "pending",
+      "collection": "minimalism",
+      "family": "multi",
+      "n_colors": 7,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible. One seven-color palette: six swatches on the first line, then the seventh at the left of the next line.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            226,
+            145,
+            84
+          ],
+          "hex": "#E29154",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            99,
+            194,
+            199
+          ],
+          "hex": "#63C2C7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            232,
+            143,
+            147
+          ],
+          "hex": "#E88F93",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            237,
+            215,
+            61
+          ],
+          "hex": "#EDD73D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            100,
+            105,
+            175
+          ],
+          "hex": "#6469AF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            119,
+            182,
+            228
+          ],
+          "hex": "#77B6E4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 7,
+          "rgb": [
+            147,
+            112,
+            91
+          ],
+          "hex": "#93705B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_bi_01",
+      "name": "kawaii_bi_01",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            92,
+            77,
+            140
+          ],
+          "hex": "#5C4D8C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            208,
+            217,
+            89
+          ],
+          "hex": "#D0D959",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_01",
+      "name": "kawaii_tri_01",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            244,
+            200,
+            221
+          ],
+          "hex": "#F4C8DD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            151,
+            220
+          ],
+          "hex": "#0097DC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            59,
+            182,
+            153
+          ],
+          "hex": "#3BB699",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_02",
+      "name": "kawaii_tri_02",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            74,
+            176,
+            223
+          ],
+          "hex": "#4AB0DF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            216,
+            77,
+            150
+          ],
+          "hex": "#D84D96",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            130,
+            85,
+            160
+          ],
+          "hex": "#8255A0",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_03",
+      "name": "kawaii_tri_03",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            231,
+            187,
+            127
+          ],
+          "hex": "#E7BB7F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            229,
+            194,
+            219
+          ],
+          "hex": "#E5C2DB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            234,
+            223,
+            202
+          ],
+          "hex": "#EADFCA",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_04",
+      "name": "kawaii_tri_04",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            244,
+            98
+          ],
+          "hex": "#FFF462",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            175,
+            217,
+            185
+          ],
+          "hex": "#AFD9B9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            175,
+            192,
+            227
+          ],
+          "hex": "#AFC0E3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_05",
+      "name": "kawaii_tri_05",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            222,
+            22,
+            40
+          ],
+          "hex": "#DE1628",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            39,
+            178,
+            141
+          ],
+          "hex": "#27B28D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            242,
+            203,
+            79
+          ],
+          "hex": "#F2CB4F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_06",
+      "name": "kawaii_tri_06",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            32,
+            126,
+            184
+          ],
+          "hex": "#207EB8",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            45,
+            124,
+            58
+          ],
+          "hex": "#2D7C3A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            238,
+            221,
+            40
+          ],
+          "hex": "#EEDD28",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_07",
+      "name": "kawaii_tri_07",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            61,
+            126,
+            180
+          ],
+          "hex": "#3D7EB4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            223,
+            68,
+            114
+          ],
+          "hex": "#DF4472",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            230,
+            140,
+            95
+          ],
+          "hex": "#E68C5F",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_08",
+      "name": "kawaii_tri_08",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            250,
+            219,
+            218
+          ],
+          "hex": "#FADBDA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            175,
+            217,
+            185
+          ],
+          "hex": "#AFD9B9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            252,
+            209
+          ],
+          "hex": "#FFFCD1",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_09",
+      "name": "kawaii_tri_09",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            244,
+            98
+          ],
+          "hex": "#FFF462",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            250,
+            219,
+            218
+          ],
+          "hex": "#FADBDA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            126,
+            206,
+            244
+          ],
+          "hex": "#7ECEF4",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_10",
+      "name": "kawaii_tri_10",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            250,
+            219,
+            218
+          ],
+          "hex": "#FADBDA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            200,
+            231,
+            233
+          ],
+          "hex": "#C8E7E9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            175,
+            192,
+            227
+          ],
+          "hex": "#AFC0E3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_11",
+      "name": "kawaii_tri_11",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            252,
+            234,
+            212
+          ],
+          "hex": "#FCEAD4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            71,
+            11,
+            0
+          ],
+          "hex": "#470B00",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            253,
+            215,
+            0
+          ],
+          "hex": "#FDD700",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_12",
+      "name": "kawaii_tri_12",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            247,
+            226,
+            231
+          ],
+          "hex": "#F7E2E7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            80,
+            0,
+            71
+          ],
+          "hex": "#500047",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            253,
+            215,
+            0
+          ],
+          "hex": "#FDD700",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_13",
+      "name": "kawaii_tri_13",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            249,
+            242,
+            30
+          ],
+          "hex": "#F9F21E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            182,
+            151,
+            123
+          ],
+          "hex": "#B6977B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            164,
+            136,
+            211
+          ],
+          "hex": "#A488D3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_14",
+      "name": "kawaii_tri_14",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            29,
+            150,
+            122
+          ],
+          "hex": "#1D967A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            253,
+            211,
+            92
+          ],
+          "hex": "#FDD35C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            233,
+            77,
+            59
+          ],
+          "hex": "#E94D3B",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_15",
+      "name": "kawaii_tri_15",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            244,
+            98
+          ],
+          "hex": "#FFF462",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            58,
+            180,
+            131
+          ],
+          "hex": "#3AB483",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            175,
+            192,
+            227
+          ],
+          "hex": "#AFC0E3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_16",
+      "name": "kawaii_tri_16",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            238,
+            244,
+            231
+          ],
+          "hex": "#EEF4E7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            60,
+            11
+          ],
+          "hex": "#003C0B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            253,
+            215,
+            0
+          ],
+          "hex": "#FDD700",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_17",
+      "name": "kawaii_tri_17",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            225,
+            241,
+            247
+          ],
+          "hex": "#E1F1F7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            23,
+            23,
+            118
+          ],
+          "hex": "#171776",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            253,
+            215,
+            0
+          ],
+          "hex": "#FDD700",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_18",
+      "name": "kawaii_tri_18",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            166,
+            241,
+            247
+          ],
+          "hex": "#A6F1F7",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            234,
+            138,
+            113
+          ],
+          "hex": "#EA8A71",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            81,
+            231,
+            196
+          ],
+          "hex": "#51E7C4",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_tri_19",
+      "name": "kawaii_tri_19",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            231,
+            36,
+            46
+          ],
+          "hex": "#E7242E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            99,
+            86
+          ],
+          "hex": "#006356",
+          "status": "review",
+          "note": "The blue-channel final digit is blurred in the photograph. RGB (0, 99, 86) is the provisional reading; 86 versus 85 needs a closer source image. R and G are legible."
+        },
+        {
+          "order": 3,
+          "rgb": [
+            239,
+            199,
+            87
+          ],
+          "hex": "#EFC757",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_four_01",
+      "name": "kawaii_four_01",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            207,
+            200,
+            59
+          ],
+          "hex": "#CFC83B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            231,
+            153,
+            112
+          ],
+          "hex": "#E79970",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            155,
+            204,
+            208
+          ],
+          "hex": "#9BCCD0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            46,
+            141,
+            58
+          ],
+          "hex": "#2E8D3A",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_four_02",
+      "name": "kawaii_four_02",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            121,
+            121,
+            45
+          ],
+          "hex": "#79792D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            117,
+            184,
+            188
+          ],
+          "hex": "#75B8BC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            212,
+            105,
+            50
+          ],
+          "hex": "#D46932",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            62,
+            44,
+            39
+          ],
+          "hex": "#3E2C27",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_01",
+      "name": "kawaii_multi_01",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            244,
+            200,
+            221
+          ],
+          "hex": "#F4C8DD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            151,
+            220
+          ],
+          "hex": "#0097DC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            59,
+            182,
+            153
+          ],
+          "hex": "#3BB699",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            252,
+            206,
+            96
+          ],
+          "hex": "#FCCE60",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            233,
+            71,
+            64
+          ],
+          "hex": "#E94740",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_02",
+      "name": "kawaii_multi_02",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "review",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            246,
+            170,
+            150
+          ],
+          "hex": "#F6AA96",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            233,
+            71,
+            12
+          ],
+          "hex": "#E9470C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            142,
+            172,
+            122
+          ],
+          "hex": "#8EAC7A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            119,
+            189,
+            91
+          ],
+          "hex": "#77BD5B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            0,
+            145,
+            212
+          ],
+          "hex": "#0091D4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            240,
+            200,
+            43
+          ],
+          "hex": "#F0C82B",
+          "status": "review",
+          "note": "The faint yellow label appears to read RGB (240, 200, 43), but the last blue-channel digit is not reliably legible. This triplet is a provisional candidate, not a confirmed transcription."
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_03",
+      "name": "kawaii_multi_03",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 7,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible. One seven-color palette: six swatches on the first line, then the seventh at the left of the next line.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            194,
+            72,
+            49
+          ],
+          "hex": "#C24831",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            37,
+            166,
+            76
+          ],
+          "hex": "#25A64C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            247,
+            162,
+            17
+          ],
+          "hex": "#F7A211",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            255,
+            158,
+            178
+          ],
+          "hex": "#FF9EB2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            61,
+            48,
+            138
+          ],
+          "hex": "#3D308A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            178,
+            96,
+            84
+          ],
+          "hex": "#B26054",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 7,
+          "rgb": [
+            132,
+            210,
+            194
+          ],
+          "hex": "#84D2C2",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_04",
+      "name": "kawaii_multi_04",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            238,
+            207,
+            36
+          ],
+          "hex": "#EECF24",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            220,
+            66,
+            31
+          ],
+          "hex": "#DC421F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            48,
+            87,
+            97
+          ],
+          "hex": "#305761",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            221,
+            186,
+            143
+          ],
+          "hex": "#DDBA8F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            227,
+            165,
+            42
+          ],
+          "hex": "#E3A52A",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_05",
+      "name": "kawaii_multi_05",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            233,
+            191,
+            53
+          ],
+          "hex": "#E9BF35",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            170,
+            149,
+            224
+          ],
+          "hex": "#AA95E0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            164,
+            172,
+            73
+          ],
+          "hex": "#A4AC49",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            220,
+            123,
+            143
+          ],
+          "hex": "#DC7B8F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            118,
+            149,
+            170
+          ],
+          "hex": "#7695AA",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_06",
+      "name": "kawaii_multi_06",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            36,
+            100,
+            136
+          ],
+          "hex": "#246488",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            81,
+            102,
+            46
+          ],
+          "hex": "#51662E",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            27,
+            45,
+            69
+          ],
+          "hex": "#1B2D45",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            232,
+            211,
+            202
+          ],
+          "hex": "#E8D3CA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            196,
+            191,
+            198
+          ],
+          "hex": "#C4BFC6",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_07",
+      "name": "kawaii_multi_07",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            115,
+            89,
+            68
+          ],
+          "hex": "#735944",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            145,
+            141,
+            141
+          ],
+          "hex": "#918D8D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            214,
+            175,
+            73
+          ],
+          "hex": "#D6AF49",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            189,
+            26,
+            34
+          ],
+          "hex": "#BD1A22",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            84,
+            111,
+            50
+          ],
+          "hex": "#546F32",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "kawaii_multi_08",
+      "name": "kawaii_multi_08",
+      "name_status": "pending",
+      "collection": "kawaii",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "Reference-sheet page number is not visible.",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            214,
+            163,
+            27
+          ],
+          "hex": "#D6A31B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            234,
+            80,
+            52
+          ],
+          "hex": "#EA5034",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            59,
+            101,
+            176
+          ],
+          "hex": "#3B65B0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            86,
+            181,
+            82
+          ],
+          "hex": "#56B552",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            244,
+            223,
+            42
+          ],
+          "hex": "#F4DF2A",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_01",
+      "name": "avantgarde_bi_01",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            228,
+            88,
+            134
+          ],
+          "hex": "#E45886",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            104,
+            172
+          ],
+          "hex": "#0068AC",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_02",
+      "name": "avantgarde_bi_02",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            247,
+            219,
+            0
+          ],
+          "hex": "#F7DB00",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            52,
+            166,
+            67
+          ],
+          "hex": "#34A643",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_03",
+      "name": "avantgarde_bi_03",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            200,
+            24,
+            57
+          ],
+          "hex": "#C81839",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            166,
+            117,
+            170
+          ],
+          "hex": "#A675AA",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_04",
+      "name": "avantgarde_bi_04",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            3,
+            110,
+            184
+          ],
+          "hex": "#036EB8",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            252,
+            235,
+            239
+          ],
+          "hex": "#FCEBEF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_05",
+      "name": "avantgarde_bi_05",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            61,
+            177,
+            221
+          ],
+          "hex": "#3DB1DD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            215,
+            66,
+            136
+          ],
+          "hex": "#D74288",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_06",
+      "name": "avantgarde_bi_06",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            164,
+            66,
+            149
+          ],
+          "hex": "#A44295",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            245,
+            200,
+            38
+          ],
+          "hex": "#F5C826",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_07",
+      "name": "avantgarde_bi_07",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            213,
+            57,
+            33
+          ],
+          "hex": "#D53921",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            104,
+            192,
+            165
+          ],
+          "hex": "#68C0A5",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_bi_08",
+      "name": "avantgarde_bi_08",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "bi",
+      "n_colors": 2,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            143,
+            60,
+            137
+          ],
+          "hex": "#8F3C89",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            239,
+            229,
+            49
+          ],
+          "hex": "#EFE531",
+          "status": "review",
+          "note": "Blue channel is faint in the photograph; candidate B=49."
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_01",
+      "name": "avantgarde_tri_01",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            254,
+            234,
+            205
+          ],
+          "hex": "#FEEACD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            79,
+            163
+          ],
+          "hex": "#004FA3",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_02",
+      "name": "avantgarde_tri_02",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            167,
+            218,
+            229
+          ],
+          "hex": "#A7DAE5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            107,
+            185
+          ],
+          "hex": "#006BB9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            231,
+            36,
+            16
+          ],
+          "hex": "#E72410",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_03",
+      "name": "avantgarde_tri_03",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            246,
+            195,
+            217
+          ],
+          "hex": "#F6C3D9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            167,
+            168,
+            168
+          ],
+          "hex": "#A7A8A8",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_04",
+      "name": "avantgarde_tri_04",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            37,
+            177,
+            124
+          ],
+          "hex": "#25B17C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            232,
+            65,
+            54
+          ],
+          "hex": "#E84136",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            240,
+            0
+          ],
+          "hex": "#FFF000",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_05",
+      "name": "avantgarde_tri_05",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            61,
+            174,
+            228
+          ],
+          "hex": "#3DAEE4",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            245,
+            239,
+            106
+          ],
+          "hex": "#F5EF6A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            235,
+            221,
+            213
+          ],
+          "hex": "#EBDDD5",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_06",
+      "name": "avantgarde_tri_06",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            230,
+            46,
+            139
+          ],
+          "hex": "#E62E8B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            160,
+            233
+          ],
+          "hex": "#00A0E9",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_07",
+      "name": "avantgarde_tri_07",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            153,
+            68
+          ],
+          "hex": "#009944",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            215,
+            215,
+            216
+          ],
+          "hex": "#D7D7D8",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_08",
+      "name": "avantgarde_tri_08",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            8,
+            51,
+            141
+          ],
+          "hex": "#08338D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            154,
+            91
+          ],
+          "hex": "#009A5B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            177,
+            175
+          ],
+          "hex": "#00B1AF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_09",
+      "name": "avantgarde_tri_09",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            204,
+            56,
+            109
+          ],
+          "hex": "#CC386D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            164,
+            140
+          ],
+          "hex": "#00A48C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            168,
+            217
+          ],
+          "hex": "#00A8D9",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_10",
+      "name": "avantgarde_tri_10",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            171,
+            235
+          ],
+          "hex": "#00ABEB",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_tri_11",
+      "name": "avantgarde_tri_11",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "tri",
+      "n_colors": 3,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            140,
+            71,
+            145
+          ],
+          "hex": "#8C4791",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            210,
+            15,
+            42
+          ],
+          "hex": "#D20F2A",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            253,
+            225
+          ],
+          "hex": "#FFFDE1",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_01",
+      "name": "avantgarde_four_01",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            242,
+            171,
+            22
+          ],
+          "hex": "#F2AB16",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            64,
+            165,
+            143
+          ],
+          "hex": "#40A58F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            0,
+            116,
+            186
+          ],
+          "hex": "#0074BA",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_02",
+      "name": "avantgarde_four_02",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            228,
+            0,
+            127
+          ],
+          "hex": "#E4007F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            160,
+            233
+          ],
+          "hex": "#00A0E9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            0,
+            0,
+            0
+          ],
+          "hex": "#000000",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_03",
+      "name": "avantgarde_four_03",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            200,
+            201,
+            208
+          ],
+          "hex": "#C8C9D0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            240,
+            237,
+            236
+          ],
+          "hex": "#F0EDEC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            34,
+            168,
+            225
+          ],
+          "hex": "#22A8E1",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            234,
+            90,
+            70
+          ],
+          "hex": "#EA5A46",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_04",
+      "name": "avantgarde_four_04",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            238,
+            128,
+            108
+          ],
+          "hex": "#EE806C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            254,
+            234,
+            182
+          ],
+          "hex": "#FEEAB6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            41,
+            181,
+            160
+          ],
+          "hex": "#29B5A0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            247,
+            203,
+            223
+          ],
+          "hex": "#F7CBDF",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_05",
+      "name": "avantgarde_four_05",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            81,
+            146,
+            207
+          ],
+          "hex": "#5192CF",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            250,
+            220,
+            233
+          ],
+          "hex": "#FADCE9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            187,
+            228,
+            249
+          ],
+          "hex": "#BBE4F9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            230,
+            153,
+            0
+          ],
+          "hex": "#E69900",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_06",
+      "name": "avantgarde_four_06",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            255,
+            241,
+            0
+          ],
+          "hex": "#FFF100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            34,
+            172,
+            56
+          ],
+          "hex": "#22AC38",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            235,
+            104,
+            140
+          ],
+          "hex": "#EB688C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            159,
+            160,
+            160
+          ],
+          "hex": "#9FA0A0",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_four_07",
+      "name": "avantgarde_four_07",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "four",
+      "n_colors": 4,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            236,
+            232,
+            34
+          ],
+          "hex": "#ECE822",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            234,
+            89,
+            115
+          ],
+          "hex": "#EA5973",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            0,
+            150,
+            214
+          ],
+          "hex": "#0096D6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            156,
+            202,
+            67
+          ],
+          "hex": "#9CCA43",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_01",
+      "name": "avantgarde_multi_01",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            20,
+            106,
+            181
+          ],
+          "hex": "#146AB5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            235,
+            95,
+            86
+          ],
+          "hex": "#EB5F56",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            220,
+            221,
+            221
+          ],
+          "hex": "#DCDDDD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            209,
+            221,
+            33
+          ],
+          "hex": "#D1DD21",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            230,
+            45,
+            123
+          ],
+          "hex": "#E62D7B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            47,
+            175,
+            88
+          ],
+          "hex": "#2FAF58",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_02",
+      "name": "avantgarde_multi_02",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            114,
+            113,
+            113
+          ],
+          "hex": "#727171",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            20,
+            106,
+            181
+          ],
+          "hex": "#146AB5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            230,
+            45,
+            123
+          ],
+          "hex": "#E62D7B",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            220,
+            221,
+            221
+          ],
+          "hex": "#DCDDDD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            207,
+            221,
+            33
+          ],
+          "hex": "#CFDD21",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            47,
+            175,
+            88
+          ],
+          "hex": "#2FAF58",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_03",
+      "name": "avantgarde_multi_03",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            128,
+            192
+          ],
+          "hex": "#0080C0",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            244,
+            160,
+            0
+          ],
+          "hex": "#F4A000",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            230,
+            8,
+            35
+          ],
+          "hex": "#E60823",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            53,
+            122,
+            77
+          ],
+          "hex": "#357A4D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            234,
+            99,
+            157
+          ],
+          "hex": "#EA639D",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_04",
+      "name": "avantgarde_multi_04",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            37,
+            179,
+            220
+          ],
+          "hex": "#25B3DC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            230,
+            6,
+            20
+          ],
+          "hex": "#E60614",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            239,
+            139,
+            178
+          ],
+          "hex": "#EF8BB2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            247,
+            176,
+            9
+          ],
+          "hex": "#F7B009",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            28,
+            137,
+            96
+          ],
+          "hex": "#1C8960",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_05",
+      "name": "avantgarde_multi_05",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            160,
+            233
+          ],
+          "hex": "#00A0E9",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            143,
+            195,
+            31
+          ],
+          "hex": "#8FC31F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            248,
+            182,
+            45
+          ],
+          "hex": "#F8B62D",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            240,
+            193,
+            143
+          ],
+          "hex": "#F0C18F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            250,
+            216,
+            188
+          ],
+          "hex": "#FAD8BC",
+          "status": "review",
+          "note": "Faint RGB label; candidate (250,216,188)."
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_06",
+      "name": "avantgarde_multi_06",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            242,
+            145,
+            0
+          ],
+          "hex": "#F29100",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            255,
+            242,
+            8
+          ],
+          "hex": "#FFF208",
+          "status": "review",
+          "note": "Faint blue channel; candidate B=8."
+        },
+        {
+          "order": 3,
+          "rgb": [
+            98,
+            198,
+            242
+          ],
+          "hex": "#62C6F2",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            251,
+            224,
+            234
+          ],
+          "hex": "#FBE0EA",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            229,
+            0,
+            78
+          ],
+          "hex": "#E5004E",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_07",
+      "name": "avantgarde_multi_07",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            93,
+            173
+          ],
+          "hex": "#005DAD",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            237,
+            106,
+            80
+          ],
+          "hex": "#ED6A50",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            173,
+            206,
+            0
+          ],
+          "hex": "#ADCE00",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            0,
+            156,
+            66
+          ],
+          "hex": "#009C42",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            146,
+            146,
+            146
+          ],
+          "hex": "#929292",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            230,
+            0,
+            18
+          ],
+          "hex": "#E60012",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_08",
+      "name": "avantgarde_multi_08",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            236,
+            112,
+            153
+          ],
+          "hex": "#EC7099",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            17,
+            74,
+            156
+          ],
+          "hex": "#114A9C",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            255,
+            241,
+            8
+          ],
+          "hex": "#FFF108",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            83,
+            192,
+            214
+          ],
+          "hex": "#53C0D6",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            192,
+            103,
+            165
+          ],
+          "hex": "#C067A5",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_09",
+      "name": "avantgarde_multi_09",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 6,
+      "status": "transcribed",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            0,
+            74,
+            159
+          ],
+          "hex": "#004A9F",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            0,
+            174,
+            225
+          ],
+          "hex": "#00AEE1",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            225,
+            112,
+            148
+          ],
+          "hex": "#E17094",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            231,
+            211,
+            120
+          ],
+          "hex": "#E7D378",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 5,
+          "rgb": [
+            196,
+            200,
+            229
+          ],
+          "hex": "#C4C8E5",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 6,
+          "rgb": [
+            81,
+            181,
+            174
+          ],
+          "hex": "#51B5AE",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "avantgarde_multi_10",
+      "name": "avantgarde_multi_10",
+      "name_status": "pending",
+      "collection": "avantgarde",
+      "family": "multi",
+      "n_colors": 5,
+      "status": "review",
+      "note": "",
+      "colors": [
+        {
+          "order": 1,
+          "rgb": [
+            233,
+            194,
+            101
+          ],
+          "hex": "#E9C265",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 2,
+          "rgb": [
+            25,
+            64,
+            152
+          ],
+          "hex": "#194098",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 3,
+          "rgb": [
+            81,
+            192,
+            220
+          ],
+          "hex": "#51C0DC",
+          "status": "transcribed",
+          "note": ""
+        },
+        {
+          "order": 4,
+          "rgb": [
+            247,
+            220,
+            234
+          ],
+          "hex": "#F7DCEA",
+          "status": "review",
+          "note": "Faint RGB label; candidate (247,220,234)."
+        },
+        {
+          "order": 5,
+          "rgb": [
+            149,
+            201,
+            112
+          ],
+          "hex": "#95C970",
+          "status": "transcribed",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "monochrome_swatches": [
+    {
+      "id": "minimalism_mono_01",
+      "rgb": [
+        164,
+        31,
+        37
+      ],
+      "hex": "#A41F25",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_02",
+      "rgb": [
+        0,
+        143,
+        208
+      ],
+      "hex": "#008FD0",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_03",
+      "rgb": [
+        219,
+        50,
+        54
+      ],
+      "hex": "#DB3236",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_04",
+      "rgb": [
+        235,
+        111,
+        35
+      ],
+      "hex": "#EB6F23",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_05",
+      "rgb": [
+        1,
+        154,
+        123
+      ],
+      "hex": "#019A7B",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_06",
+      "rgb": [
+        31,
+        49,
+        143
+      ],
+      "hex": "#1F318F",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_07",
+      "rgb": [
+        233,
+        220,
+        1
+      ],
+      "hex": "#E9DC01",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_08",
+      "rgb": [
+        239,
+        147,
+        187
+      ],
+      "hex": "#EF93BB",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_09",
+      "rgb": [
+        120,
+        196,
+        151
+      ],
+      "hex": "#78C497",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_10",
+      "rgb": [
+        62,
+        98,
+        93
+      ],
+      "hex": "#3E625D",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_11",
+      "rgb": [
+        82,
+        54,
+        48
+      ],
+      "hex": "#523630",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_12",
+      "rgb": [
+        255,
+        64,
+        0
+      ],
+      "hex": "#FF4000",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_13",
+      "rgb": [
+        79,
+        178,
+        51
+      ],
+      "hex": "#4FB233",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "minimalism_mono_14",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "hex": "#FFFFFF",
+      "status": "transcribed",
+      "collection": "minimalism"
+    },
+    {
+      "id": "kawaii_mono_01",
+      "rgb": [
+        128,
+        201,
+        236
+      ],
+      "hex": "#80C9EC",
+      "status": "transcribed",
+      "collection": "kawaii"
+    },
+    {
+      "id": "kawaii_mono_02",
+      "rgb": [
+        117,
+        38,
+        52
+      ],
+      "hex": "#752634",
+      "status": "transcribed",
+      "collection": "kawaii"
+    },
+    {
+      "id": "kawaii_mono_03",
+      "rgb": [
+        38,
+        90,
+        65
+      ],
+      "hex": "#265A41",
+      "status": "transcribed",
+      "collection": "kawaii"
+    },
+    {
+      "id": "kawaii_mono_04",
+      "rgb": [
+        45,
+        68,
+        134
+      ],
+      "hex": "#2D4486",
+      "status": "transcribed",
+      "collection": "kawaii"
+    },
+    {
+      "id": "kawaii_mono_05",
+      "rgb": [
+        227,
+        206,
+        96
+      ],
+      "hex": "#E3CE60",
+      "status": "transcribed",
+      "collection": "kawaii"
+    }
+  ]
+}
+

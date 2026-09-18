@@ -1,0 +1,16 @@
+linters: linters_with_defaults(
+    line_length_linter(100),
+    object_name_linter = NULL,
+    commented_code_linter = NULL,
+    # the argument validators are flat chains of `||` conditions; splitting
+    # them to satisfy the threshold would only obscure them
+    cyclocomp_linter = NULL,
+    # this codebase aligns continuation lines under the opening parenthesis,
+    # which the indentation linter does not recognise
+    indentation_linter = NULL
+  )
+exclusions: list(
+    "R/catalogue-data.R",
+    "R/palette-objects.R",
+    "vignettes"
+  )

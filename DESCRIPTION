@@ -1,0 +1,38 @@
+Package: japanesecolors
+Title: Curated Colour Palettes in Four Collections
+Version: 0.5.0
+Authors@R: c(
+    person("Paul", "Goldsmith-Pinkham", , "paulgp@gmail.com",
+           role = c("aut", "cre", "cph"))
+  )
+Description: Four curated colour-palette collections - Retro, Minimalism,
+    Kawaii and Avant Garde - transcribed from printed RGB reference labels.
+    Every palette is an exported character vector of hex colours that can be
+    used directly wherever R accepts colours, alongside functions to browse
+    the catalogue, display palettes and build discrete 'ggplot2' scales.
+    Transcription provenance and the status of uncertain readings are
+    recorded as package metadata. Colour values were manually transcribed
+    from 'Japanese Color Matching' (SendPoints, 2022, ISBN
+    978-988-760-879-0); this is an independent, unaffiliated project and
+    is not licensed or endorsed by the publisher.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 3.6.0)
+Imports:
+    grDevices,
+    graphics,
+    utils
+Suggests:
+    ggplot2 (>= 3.3.0),
+    jsonlite,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: false
+URL: https://github.com/paulgp/japanese-colors, https://paulgp.github.io/japanese-colors/
+BugReports: https://github.com/paulgp/japanese-colors/issues
