@@ -34,5 +34,5 @@ Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 LazyData: false
-URL: https://github.com/paulgp/japanese-colors, https://paulgp.github.io/japanese-colors/
-BugReports: https://github.com/paulgp/japanese-colors/issues
+URL: https://github.com/paulgp/japanesecolors, https://paulgp.com/japanesecolors/
+BugReports: https://github.com/paulgp/japanesecolors/issues

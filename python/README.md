@@ -3,7 +3,7 @@
 149 curated colour palettes in four collections — **Retro**, **Minimalism**,
 **Kawaii** and **Avant Garde** — for matplotlib and general plotting.
 
-This is the Python build of the [`japanesecolors`](https://github.com/paulgp/japanese-colors)
+This is the Python build of the [`japanesecolors`](https://github.com/paulgp/japanesecolors)
 project. Both it and the R package are generated from the same canonical
 palette data, so the two always agree.
 

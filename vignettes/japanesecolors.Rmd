@@ -156,5 +156,5 @@ They are exported like any other, and `palettes()` includes them by default with
 nrow(palettes(include_review = FALSE))
 ```
 
-See the [package README](https://paulgp.github.io/japanese-colors/) for where
+See the [package README](https://paulgp.com/japanesecolors/) for where
 the data came from.

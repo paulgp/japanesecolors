@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/paulgp/japanese-colors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/paulgp/japanese-colors/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/paulgp/japanesecolors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/paulgp/japanesecolors/actions/workflows/R-CMD-check.yaml)
 [![License:
 MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
@@ -22,7 +22,7 @@ Available for **R** and **Python**.
 
 ``` r
 # install.packages("pak")
-pak::pak("paulgp/japanese-colors")
+pak::pak("paulgp/japanesecolors")
 ```
 
 ``` bash
@@ -120,7 +120,7 @@ get_palette("minimalism_multi_02")
 ```
 
 The visual gallery of all 149 palettes is on the [package
-website](https://paulgp.github.io/japanese-colors/articles/gallery.html).
+website](https://paulgp.com/japanesecolors/articles/gallery.html).
 
 ## Python
 

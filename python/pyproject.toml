@@ -31,9 +31,9 @@ plot = ["matplotlib>=3.5"]
 test = ["pytest>=7", "matplotlib>=3.5"]
 
 [project.urls]
-Homepage = "https://paulgp.github.io/japanese-colors/"
-Source = "https://github.com/paulgp/japanese-colors"
-Issues = "https://github.com/paulgp/japanese-colors/issues"
+Homepage = "https://paulgp.com/japanesecolors/"
+Source = "https://github.com/paulgp/japanesecolors"
+Issues = "https://github.com/paulgp/japanesecolors/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/japanesecolors"]

@@ -44,9 +44,9 @@ other artwork -- and is no substitute for the book.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/paulgp/japanese-colors}
-  \item \url{https://paulgp.github.io/japanese-colors/}
-  \item Report bugs at \url{https://github.com/paulgp/japanese-colors/issues}
+  \item \url{https://github.com/paulgp/japanesecolors}
+  \item \url{https://paulgp.com/japanesecolors/}
+  \item Report bugs at \url{https://github.com/paulgp/japanesecolors/issues}
 }
 
 }
