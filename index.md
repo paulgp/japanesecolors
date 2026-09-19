@@ -13,7 +13,7 @@ Available for **R** and **Python**.
 ``` r
 
 # install.packages("pak")
-pak::pak("paulgp/japanese-colors")
+pak::pak("paulgp/japanesecolors")
 ```
 
 ``` bash
@@ -64,9 +64,9 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 ![Scatter plot of iris sepal measurements, the three species coloured
 with kawaii_tri_07.](reference/figures/README-ggplot-1.png)
 
-[`scale_fill_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`scale_fill_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 and
-[`scale_color_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`scale_color_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 work the same way, or pass the vector straight to
 `scale_colour_manual(values = kawaii_tri_07)`.
 
@@ -122,7 +122,7 @@ get_palette("minimalism_multi_02")
 ```
 
 The visual gallery of all 149 palettes is on the [package
-website](https://paulgp.github.io/japanese-colors/articles/gallery.html).
+website](https://paulgp.com/japanesecolors/articles/gallery.html).
 
 ## Python
 
@@ -140,7 +140,7 @@ jc.register_cmaps()                    # then cmap="jc:retro_multi_01"
 ```
 
 See
-[`python/README.md`](https://paulgp.github.io/japanese-colors/python/README.md).
+[`python/README.md`](https://paulgp.com/japanesecolors/python/README.md).
 A test asserts the R and Python packages carry identical colour values.
 
 ## Provenance

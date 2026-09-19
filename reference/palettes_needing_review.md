@@ -24,8 +24,8 @@ the best available reading, not a guess at a nicer colour.
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`palette_info()`](https://paulgp.github.io/japanese-colors/reference/palette_info.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`palette_info()`](https://paulgp.com/japanesecolors/reference/palette_info.md)
 
 ## Examples
 

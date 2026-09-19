@@ -148,11 +148,11 @@ A character vector of hex colour strings.
 
 `retro_bi_13`: “Saffron & ink”, bicolor, 2 colours (#F4C03A, \#000000).
 Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_bi_14`: “Blue & poppy”, bicolor, 2 colours (#3071B9, \#E34950).
 Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_tri_01`: “Meadow & sky”, tricolor, 3 colours (#E9D99B, \#00AC66,
 \#80CDE7).
@@ -165,15 +165,15 @@ Contains a provisional reading; see
 
 `retro_tri_04`: “Orange soda”, tricolor, 3 colours (#EE763B, \#00A9C4,
 \#EEC66F). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_tri_05`: “Plum, blue & crimson”, tricolor, 3 colours (#846998,
 \#007FAE, \#E50D2B). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_tri_06`: “Peach orchard”, tricolor, 3 colours (#F5AE94, \#9E4E52,
 \#659930). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_tri_07`: “Crimson garden”, tricolor, 3 colours (#E72F2B,
 \#363E96, \#B6DA91).
@@ -265,7 +265,7 @@ Contains a provisional reading; see
 `retro_multi_04`: “Record shop”, multicolor, 6 colours (#C09F32,
 \#FFF100, \#424393, \#E8350F, \#006C3C, \#10318B). Contains a
 provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_multi_05`: “Autumn archive”, multicolor, 8 colours (#929E51,
 \#F5AB7C, \#D9BC77, \#E0B68F, \#CBD9DE, \#1D50A2, \#F2CC16, \#C33E47).
@@ -276,7 +276,7 @@ provisional reading; see
 `retro_multi_07`: “Pastel garden”, multicolor, 5 colours (#E9D3DB,
 \#EDE6C7, \#9EBBD8, \#EFD359, \#71A72E). Contains a provisional reading;
 see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `retro_multi_08`: “Seaside poster”, multicolor, 6 colours (#0064AB,
 \#69C4D9, \#46B074, \#E44D35, \#F4C92B, \#B6DACF).
@@ -288,13 +288,13 @@ see
 
 7 of them contain a provisional reading and are marked `"review"` in the
 catalogue; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md),
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md),
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 
 ## Examples
 

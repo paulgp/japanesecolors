@@ -24,24 +24,24 @@ IDs have the form `<collection>_<type>_<nn>`, where `<type>` is `bi`
 (multicolor). They are stable API.
 
 Browse with
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`palette_names()`](https://paulgp.github.io/japanese-colors/reference/palette_names.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`palette_names()`](https://paulgp.com/japanesecolors/reference/palette_names.md)
 and
-[`collections()`](https://paulgp.github.io/japanese-colors/reference/collections.md);
+[`collections()`](https://paulgp.com/japanesecolors/reference/collections.md);
 look up with
-[`get_palette()`](https://paulgp.github.io/japanese-colors/reference/get_palette.md)
+[`get_palette()`](https://paulgp.com/japanesecolors/reference/get_palette.md)
 and
-[`palette_info()`](https://paulgp.github.io/japanese-colors/reference/palette_info.md);
+[`palette_info()`](https://paulgp.com/japanesecolors/reference/palette_info.md);
 draw with
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md).
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md).
 For ggplot2, see
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md).
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md).
 ggplot2 is suggested, not required.
 
 Values were transcribed by hand from printed RGB labels. Readings that
 were not reliably legible are marked `"review"` rather than treated as
 confirmed;
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md)
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md)
 lists them.
 
 ## Source and attribution
@@ -60,11 +60,11 @@ advertisements or other artwork – and is no substitute for the book.
 
 Useful links:
 
-- <https://github.com/paulgp/japanese-colors>
+- <https://github.com/paulgp/japanesecolors>
 
-- <https://paulgp.github.io/japanese-colors/>
+- <https://paulgp.com/japanesecolors/>
 
-- Report bugs at <https://github.com/paulgp/japanese-colors/issues>
+- Report bugs at <https://github.com/paulgp/japanesecolors/issues>
 
 ## Author
 

@@ -19,7 +19,7 @@ scale_fill_japanesecolors(palette, ..., reverse = FALSE, na.value = "grey50")
 - palette:
 
   A palette ID, such as `"kawaii_tri_07"`. See
-  [`palette_names()`](https://paulgp.github.io/japanese-colors/reference/palette_names.md).
+  [`palette_names()`](https://paulgp.com/japanesecolors/reference/palette_names.md).
 
 - ...:
 
@@ -46,13 +46,13 @@ A ggplot2 scale, to add to a plot.
 Palettes are curated categorical sets and are used in their printed
 order. If the data have more levels than the palette has colours,
 ggplot2 raises an error rather than recycling or interpolating; use
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
 with the `n` argument to find a palette large enough.
 
 ## See also
 
-[`japanesecolors_pal()`](https://paulgp.github.io/japanese-colors/reference/japanesecolors_pal.md),
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md)
+[`japanesecolors_pal()`](https://paulgp.com/japanesecolors/reference/japanesecolors_pal.md),
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
 
 ## Examples
 

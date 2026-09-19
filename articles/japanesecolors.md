@@ -46,7 +46,7 @@ aliases; the numbered IDs will keep working.
 
 ## Browsing
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
 returns the catalogue as a data frame:
 
 ``` r
@@ -88,7 +88,7 @@ palette_names(n = 6)
 #> [10] "avantgarde_multi_05" "avantgarde_multi_07" "avantgarde_multi_09"
 ```
 
-[`collections()`](https://paulgp.github.io/japanese-colors/reference/collections.md)
+[`collections()`](https://paulgp.com/japanesecolors/reference/collections.md)
 summarises the four collections:
 
 ``` r
@@ -184,7 +184,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 ![](japanesecolors_files/figure-html/unnamed-chunk-12-1.png)
 
 For packages that expect a palette *function* of `n`, use
-[`japanesecolors_pal()`](https://paulgp.github.io/japanese-colors/reference/japanesecolors_pal.md):
+[`japanesecolors_pal()`](https://paulgp.com/japanesecolors/reference/japanesecolors_pal.md):
 
 ``` r
 
@@ -208,7 +208,7 @@ palettes_needing_review()[1:3, c("palette_id", "order", "hex")]
 ```
 
 They are exported like any other, and
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
 includes them by default with `status == "review"`. For fully
 transcribed values only:
 
@@ -218,5 +218,5 @@ nrow(palettes(include_review = FALSE))
 #> [1] 136
 ```
 
-See the [package README](https://paulgp.github.io/japanese-colors/) for
-where the data came from.
+See the [package README](https://paulgp.com/japanesecolors/) for where
+the data came from.

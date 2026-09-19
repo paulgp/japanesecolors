@@ -32,7 +32,7 @@ palettes(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
   Whether to include palettes that contain a provisional swatch reading.
   `TRUE` by default, so nothing is hidden; the `status` column marks
   them and
-  [`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md)
+  [`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md)
   lists them.
 
 ## Value
@@ -74,11 +74,11 @@ A data frame with one row per palette and the columns:
 
 ## See also
 
-[`palette_names()`](https://paulgp.github.io/japanese-colors/reference/palette_names.md)
+[`palette_names()`](https://paulgp.com/japanesecolors/reference/palette_names.md)
 for just the IDs,
-[`get_palette()`](https://paulgp.github.io/japanese-colors/reference/get_palette.md)
+[`get_palette()`](https://paulgp.com/japanesecolors/reference/get_palette.md)
 to fetch colours,
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md)
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md)
 to draw them.
 
 ## Examples

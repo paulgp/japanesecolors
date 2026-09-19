@@ -16,7 +16,7 @@ and a short provenance note.
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
 
 ## Examples
 

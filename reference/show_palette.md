@@ -36,8 +36,8 @@ show_palette(x, labels = TRUE, title = NULL, border = "#FFFFFF")
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`get_palette()`](https://paulgp.github.io/japanese-colors/reference/get_palette.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`get_palette()`](https://paulgp.com/japanesecolors/reference/get_palette.md)
 
 ## Examples
 

@@ -111,7 +111,7 @@ A character vector of hex colour strings.
 
 `kawaii_tri_19`: tricolor, 3 colours (#E7242E, \#006356, \#EFC757).
 Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `kawaii_four_01`: four-color, 4 colours (#CFC83B, \#E79970, \#9BCCD0,
 \#2E8D3A).
@@ -124,7 +124,7 @@ Contains a provisional reading; see
 
 `kawaii_multi_02`: multicolor, 6 colours (#F6AA96, \#E9470C, \#8EAC7A,
 \#77BD5B, \#0091D4, \#F0C82B). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `kawaii_multi_03`: multicolor, 7 colours (#C24831, \#25A64C, \#F7A211,
 \#FF9EB2, \#3D308A, \#B26054, \#84D2C2).
@@ -148,13 +148,13 @@ Contains a provisional reading; see
 
 2 of them contain a provisional reading and are marked `"review"` in the
 catalogue; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md),
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md),
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 
 ## Examples
 

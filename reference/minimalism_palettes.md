@@ -139,9 +139,9 @@ A character vector of hex colour strings.
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md),
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md),
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 
 ## Examples
 

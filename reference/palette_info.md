@@ -17,13 +17,13 @@ palette_info(palette)
 ## Value
 
 A one-row data frame with the same columns as
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
 plus a `colors` list-column holding the palette's hex vector.
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md)
 
 ## Examples
 

@@ -34,8 +34,8 @@ holds is an error rather than a silently repeated or blended colour.
 
 ## See also
 
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md),
-[`get_palette()`](https://paulgp.github.io/japanese-colors/reference/get_palette.md)
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md),
+[`get_palette()`](https://paulgp.com/japanesecolors/reference/get_palette.md)
 
 ## Examples
 

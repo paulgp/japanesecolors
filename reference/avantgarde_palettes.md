@@ -99,7 +99,7 @@ A character vector of hex colour strings.
 
 `avantgarde_bi_08`: bicolor, 2 colours (#8F3C89, \#EFE531). Contains a
 provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `avantgarde_tri_01`: tricolor, 3 colours (#E60012, \#FEEACD, \#004FA3).
 
@@ -159,11 +159,11 @@ provisional reading; see
 `avantgarde_multi_05`: multicolor, 6 colours (#E60012, \#00A0E9,
 \#8FC31F, \#F8B62D, \#F0C18F, \#FAD8BC). Contains a provisional reading;
 see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `avantgarde_multi_06`: multicolor, 5 colours (#F29100, \#FFF208,
 \#62C6F2, \#FBE0EA, \#E5004E). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 `avantgarde_multi_07`: multicolor, 6 colours (#005DAD, \#ED6A50,
 \#ADCE00, \#009C42, \#929292, \#E60012).
@@ -176,19 +176,19 @@ see
 
 `avantgarde_multi_10`: multicolor, 5 colours (#E9C265, \#194098,
 \#51C0DC, \#F7DCEA, \#95C970). Contains a provisional reading; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 ## Details
 
 4 of them contain a provisional reading and are marked `"review"` in the
 catalogue; see
-[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md).
+[`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md).
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md),
-[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md),
+[`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md)
 
 ## Examples
 

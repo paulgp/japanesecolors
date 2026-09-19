@@ -32,9 +32,9 @@ An unnamed character vector of hex colours.
 
 ## See also
 
-[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
-[`palette_info()`](https://paulgp.github.io/japanese-colors/reference/palette_info.md),
-[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md)
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md),
+[`palette_info()`](https://paulgp.com/japanesecolors/reference/palette_info.md),
+[`show_palette()`](https://paulgp.com/japanesecolors/reference/show_palette.md)
 
 ## Examples
 

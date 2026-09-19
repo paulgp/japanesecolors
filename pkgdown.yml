@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   gallery: gallery.html
   japanesecolors: japanesecolors.html
-last_built: 2026-09-19T03:00Z
+last_built: 2026-09-19T03:04Z
 urls:
-  reference: https://paulgp.github.io/japanese-colors/reference
-  article: https://paulgp.github.io/japanese-colors/articles
+  reference: https://paulgp.com/japanesecolors/reference
+  article: https://paulgp.com/japanesecolors/articles
