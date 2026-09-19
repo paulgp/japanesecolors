@@ -1,0 +1,72 @@
+# japanesecolors: Curated Colour Palettes in Four Collections
+
+Four curated colour-palette collections - Retro, Minimalism, Kawaii and
+Avant Garde - transcribed from printed RGB reference labels. Every
+palette is an exported character vector of hex colours that can be used
+directly wherever R accepts colours, alongside functions to browse the
+catalogue, display palettes and build discrete 'ggplot2' scales.
+Transcription provenance and the status of uncertain readings are
+recorded as package metadata. Colour values were manually transcribed
+from 'Japanese Color Matching' (SendPoints, 2022, ISBN
+978-988-760-879-0); this is an independent, unaffiliated project and is
+not licensed or endorsed by the publisher.
+
+## Details
+
+Every palette is an exported character vector of hex colours, so the
+primary interface is the palette's name:
+
+    kawaii_tri_07
+    #> [1] "#3D7EB4" "#DF4472" "#E68C5F"
+
+IDs have the form `<collection>_<type>_<nn>`, where `<type>` is `bi`
+(bicolor), `tri` (tricolor), `four` (four-color) or `multi`
+(multicolor). They are stable API.
+
+Browse with
+[`palettes()`](https://paulgp.github.io/japanese-colors/reference/palettes.md),
+[`palette_names()`](https://paulgp.github.io/japanese-colors/reference/palette_names.md)
+and
+[`collections()`](https://paulgp.github.io/japanese-colors/reference/collections.md);
+look up with
+[`get_palette()`](https://paulgp.github.io/japanese-colors/reference/get_palette.md)
+and
+[`palette_info()`](https://paulgp.github.io/japanese-colors/reference/palette_info.md);
+draw with
+[`show_palette()`](https://paulgp.github.io/japanese-colors/reference/show_palette.md).
+For ggplot2, see
+[`scale_colour_japanesecolors()`](https://paulgp.github.io/japanese-colors/reference/scale_japanesecolors.md).
+ggplot2 is suggested, not required.
+
+Values were transcribed by hand from printed RGB labels. Readings that
+were not reliably legible are marked `"review"` rather than treated as
+confirmed;
+[`palettes_needing_review()`](https://paulgp.github.io/japanese-colors/reference/palettes_needing_review.md)
+lists them.
+
+## Source and attribution
+
+Colour values were manually transcribed from *Japanese Color Matching*,
+edited and published by SendPoints (Sendpoints Publishing Company
+Limited), 2022, ISBN 978-988-760-879-0.
+
+`japanesecolors` is an independent, unaffiliated project. It is not
+associated with, licensed by, endorsed by or approved by SendPoints. It
+distributes this project's transcription of RGB/hex colour values and
+its own metadata – not the book's text, layouts, photographs,
+advertisements or other artwork – and is no substitute for the book.
+
+## See also
+
+Useful links:
+
+- <https://github.com/paulgp/japanese-colors>
+
+- <https://paulgp.github.io/japanese-colors/>
+
+- Report bugs at <https://github.com/paulgp/japanese-colors/issues>
+
+## Author
+
+**Maintainer**: Paul Goldsmith-Pinkham <paulgp@gmail.com> \[copyright
+holder\]
