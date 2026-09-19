@@ -192,26 +192,6 @@
 </h2>
 <p>Colour values were manually transcribed from the <strong>printed RGB labels</strong> in <em>Japanese Color Matching</em>, edited and published by SendPoints (Sendpoints Publishing Company Limited), 2022, ISBN 978-988-760-879-0. Hex is computed from those triplets; nothing was sampled from photographs or converted from CMYK, and no value was adjusted because another colour looked more plausible.</p>
 <p><code>japanesecolors</code> is an independent, unaffiliated project. It is not associated with, licensed by, endorsed by or approved by SendPoints. It distributes this project’s transcription of RGB/hex colour values and its own metadata — not the book’s text, layouts, photographs, advertisements or other artwork — and is no substitute for the book itself.</p>
-<p>15 readings were not reliably legible and are marked provisional rather than treated as confirmed:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/palettes_needing_review.html">palettes_needing_review</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"palette_id"</span>, <span class="st">"order"</span>, <span class="st">"hex"</span><span class="op">)</span><span class="op">]</span></span>
-<span><span class="co">#&gt;             palette_id order     hex</span></span>
-<span><span class="co">#&gt; 1          retro_bi_13     1 #F4C03A</span></span>
-<span><span class="co">#&gt; 2          retro_bi_14     1 #3071B9</span></span>
-<span><span class="co">#&gt; 3          retro_bi_14     2 #E34950</span></span>
-<span><span class="co">#&gt; 4         retro_tri_04     2 #00A9C4</span></span>
-<span><span class="co">#&gt; 5         retro_tri_04     3 #EEC66F</span></span>
-<span><span class="co">#&gt; 6         retro_tri_05     3 #E50D2B</span></span>
-<span><span class="co">#&gt; 7         retro_tri_06     3 #659930</span></span>
-<span><span class="co">#&gt; 8       retro_multi_04     2 #FFF100</span></span>
-<span><span class="co">#&gt; 9       retro_multi_07     2 #EDE6C7</span></span>
-<span><span class="co">#&gt; 10       kawaii_tri_19     2 #006356</span></span>
-<span><span class="co">#&gt; 11     kawaii_multi_02     6 #F0C82B</span></span>
-<span><span class="co">#&gt; 12    avantgarde_bi_08     2 #EFE531</span></span>
-<span><span class="co">#&gt; 13 avantgarde_multi_05     6 #FAD8BC</span></span>
-<span><span class="co">#&gt; 14 avantgarde_multi_06     2 #FFF208</span></span>
-<span><span class="co">#&gt; 15 avantgarde_multi_10     4 #F7DCEA</span></span></code></pre></div>
-<p>They are still exported and usable; the value is the best available reading of the printed label, not a guess at a nicer colour, and the flag records that it could not be confirmed. The citation is available at runtime as <code>japanesecolors:::SOURCE</code> in R and <code>japanesecolors.SOURCE</code> in Python.</p>
 <p>The MIT licence covers this package’s code, metadata and documentation. It confers no rights in the source work.</p>
 </div>
 </div>

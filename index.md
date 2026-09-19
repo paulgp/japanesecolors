@@ -159,35 +159,5 @@ its own metadata — not the book’s text, layouts, photographs,
 advertisements or other artwork — and is no substitute for the book
 itself.
 
-15 readings were not reliably legible and are marked provisional rather
-than treated as confirmed:
-
-``` r
-
-palettes_needing_review()[, c("palette_id", "order", "hex")]
-#>             palette_id order     hex
-#> 1          retro_bi_13     1 #F4C03A
-#> 2          retro_bi_14     1 #3071B9
-#> 3          retro_bi_14     2 #E34950
-#> 4         retro_tri_04     2 #00A9C4
-#> 5         retro_tri_04     3 #EEC66F
-#> 6         retro_tri_05     3 #E50D2B
-#> 7         retro_tri_06     3 #659930
-#> 8       retro_multi_04     2 #FFF100
-#> 9       retro_multi_07     2 #EDE6C7
-#> 10       kawaii_tri_19     2 #006356
-#> 11     kawaii_multi_02     6 #F0C82B
-#> 12    avantgarde_bi_08     2 #EFE531
-#> 13 avantgarde_multi_05     6 #FAD8BC
-#> 14 avantgarde_multi_06     2 #FFF208
-#> 15 avantgarde_multi_10     4 #F7DCEA
-```
-
-They are still exported and usable; the value is the best available
-reading of the printed label, not a guess at a nicer colour, and the
-flag records that it could not be confirmed. The citation is available
-at runtime as `japanesecolors:::SOURCE` in R and `japanesecolors.SOURCE`
-in Python.
-
 The MIT licence covers this package’s code, metadata and documentation.
 It confers no rights in the source work.
