@@ -1,6 +1,6 @@
 Package: japanesecolors
 Title: Curated Colour Palettes in Four Collections
-Version: 0.5.0
+Version: 0.6.0
 Authors@R: c(
     person("Paul", "Goldsmith-Pinkham", , "paulgp@gmail.com",
            role = c("aut", "cre", "cph"))

@@ -65,11 +65,12 @@ TYPE_IDS <- names(.family_from_type)
   x
 }
 
-.filter_catalogue <- function(collection, type, n, include_review) {
+.filter_catalogue <- function(collection, type, n, include_review, dataviz_friendly) {
   collection <- .check_collection(collection)
   type <- .check_type(type)
   n <- .check_n(n)
   .check_flag(include_review, "include_review")
+  if (!is.null(dataviz_friendly)) .check_flag(dataviz_friendly, "dataviz_friendly")
 
   cat_df <- .japanesecolors_catalogue
   keep <- rep(TRUE, nrow(cat_df))
@@ -77,6 +78,9 @@ TYPE_IDS <- names(.family_from_type)
   if (!is.null(type))       keep <- keep & cat_df$family %in% type
   if (!is.null(n))          keep <- keep & cat_df$n_colors %in% n
   if (!include_review)      keep <- keep & cat_df$status == "transcribed"
+  if (!is.null(dataviz_friendly)) {
+    keep <- keep & cat_df$dataviz_friendly == dataviz_friendly
+  }
 
   out <- cat_df[keep, , drop = FALSE]
   rownames(out) <- NULL
@@ -98,6 +102,9 @@ TYPE_IDS <- names(.family_from_type)
 #' @param include_review Whether to include palettes that contain a provisional
 #'   swatch reading. `TRUE` by default, so nothing is hidden; the `status`
 #'   column marks them and [palettes_needing_review()] lists them.
+#' @param dataviz_friendly Optionally keep only palettes that screen well for
+#'   data visualisation (`TRUE`), or only those that do not (`FALSE`). `NULL`,
+#'   the default, keeps both. See the Data visualisation section.
 #'
 #' @return A data frame with one row per palette and the columns:
 #'   \describe{
@@ -109,8 +116,34 @@ TYPE_IDS <- names(.family_from_type)
 #'     \item{family, type}{Matching type, as a short code and printed name.}
 #'     \item{n_colors}{Number of colours.}
 #'     \item{status}{`"transcribed"` or `"review"`.}
+#'     \item{dataviz_friendly}{Whether the palette screens well for categorical
+#'       data visualisation. See the Data visualisation section.}
+#'     \item{min_delta_e, min_delta_e_cvd, min_delta_e_white}{The measurements
+#'       behind that flag.}
 #'     \item{note}{Free text, including why any swatch is provisional.}
 #'   }
+#'
+#' @section Data visualisation:
+#' These are design palettes, chosen to look good together rather than to
+#' encode categories, so many are unsuitable for charts. `dataviz_friendly`
+#' screens for the two things that decide it:
+#'
+#' - **Colour-vision deficiency.** Colours that separate for a trichromat can
+#'   collapse for a dichromat, so each palette is re-measured under simulated
+#'   deuteranopia, protanopia and tritanopia.
+#' - **Perceptual separation.** Categories have to read as different at a
+#'   glance, in small marks.
+#'
+#' Both use CIEDE2000 on a palette's closest pair, since a palette is only as
+#' readable as the two colours most easily confused. A third check stops a
+#' near-white colour from vanishing against the page. `min_delta_e`,
+#' `min_delta_e_cvd` and `min_delta_e_white` report the measurements, so you
+#' can apply a stricter or looser bar than the shipped thresholds.
+#'
+#' Thresholds are calibrated so that the Okabe-Ito palette, designed for
+#' colour-vision deficiency, passes. Treat the flag as a screening aid: it
+#' judges separability only, and cannot know whether a palette suits your
+#' chart, audience or medium.
 #'
 #' @seealso [palette_names()] for just the IDs, [get_palette()] to fetch
 #'   colours, [show_palette()] to draw them.
@@ -125,10 +158,13 @@ TYPE_IDS <- names(.family_from_type)
 #'
 #' # only fully transcribed palettes
 #' nrow(palettes(include_review = FALSE))
+#'
+#' # palettes that screen well for charts
+#' head(palettes(dataviz_friendly = TRUE)[, c("id", "n_colors", "min_delta_e_cvd")])
 #' @export
 palettes <- function(collection = NULL, type = NULL, n = NULL,
-                     include_review = TRUE) {
-  .filter_catalogue(collection, type, n, include_review)
+                     include_review = TRUE, dataviz_friendly = NULL) {
+  .filter_catalogue(collection, type, n, include_review, dataviz_friendly)
 }
 
 #' Palette names
@@ -143,11 +179,12 @@ palettes <- function(collection = NULL, type = NULL, n = NULL,
 #' @examples
 #' palette_names("avantgarde")
 #' palette_names("minimalism", type = "bicolor")
+#' palette_names(n = 4, dataviz_friendly = TRUE)
 #' length(palette_names())
 #' @export
 palette_names <- function(collection = NULL, type = NULL, n = NULL,
-                          include_review = TRUE) {
-  .filter_catalogue(collection, type, n, include_review)$id
+                          include_review = TRUE, dataviz_friendly = NULL) {
+  .filter_catalogue(collection, type, n, include_review, dataviz_friendly)$id
 }
 
 #' The palette collections

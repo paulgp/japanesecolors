@@ -140,6 +140,28 @@ pal <- japanesecolors_pal("minimalism_multi_05")
 pal(3)
 ```
 
+## Which palettes suit a chart
+
+These are design palettes, so most were never meant to encode categories.
+`dataviz_friendly` screens for the two things that decide it: whether the
+colours survive colour-vision deficiency, and whether they are far enough apart
+to read as different at a glance.
+
+```{r}
+nrow(palettes(dataviz_friendly = TRUE))
+
+palettes(dataviz_friendly = TRUE, n = 4)[, c("id", "min_delta_e", "min_delta_e_cvd")]
+```
+
+```{r fig.height = 1.3}
+show_palette("avantgarde_four_02")
+```
+
+`min_delta_e` is the closest pair in normal vision and `min_delta_e_cvd` the
+closest under the worst of simulated deuteranopia, protanopia and tritanopia,
+both as CIEDE2000 distances. They ship with every palette, so you can set a
+different bar than the default.
+
 ## Transcription status
 
 Colour values were read by hand from printed RGB labels. Readings that were not

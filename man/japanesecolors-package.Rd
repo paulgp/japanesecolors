@@ -24,6 +24,11 @@ Browse with \code{\link[=palettes]{palettes()}}, \code{\link[=palette_names]{pal
 \code{\link[=get_palette]{get_palette()}} and \code{\link[=palette_info]{palette_info()}}; draw with \code{\link[=show_palette]{show_palette()}}. For ggplot2,
 see \code{\link[=scale_colour_japanesecolors]{scale_colour_japanesecolors()}}. ggplot2 is suggested, not required.
 
+These are design palettes, so many are unsuitable for charts.
+\code{palettes(dataviz_friendly = TRUE)} keeps those that stay separable under
+simulated colour-vision deficiency and far enough apart to read at a glance;
+see \code{\link[=palettes]{palettes()}} for how that is measured.
+
 Values were transcribed by hand from printed RGB labels. Readings that were
 not reliably legible are marked \code{"review"} rather than treated as confirmed;
 \code{\link[=palettes_needing_review]{palettes_needing_review()}} lists them.

@@ -4,7 +4,13 @@
 \alias{palettes}
 \title{The palette catalogue}
 \usage{
-palettes(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
+palettes(
+  collection = NULL,
+  type = NULL,
+  n = NULL,
+  include_review = TRUE,
+  dataviz_friendly = NULL
+)
 }
 \arguments{
 \item{collection}{Optional collection name(s) to keep: \code{"retro"},
@@ -20,6 +26,10 @@ short codes used in palette IDs (\code{"bi"}, \code{"tri"}, \code{"four"}, \code
 \item{include_review}{Whether to include palettes that contain a provisional
 swatch reading. \code{TRUE} by default, so nothing is hidden; the \code{status}
 column marks them and \code{\link[=palettes_needing_review]{palettes_needing_review()}} lists them.}
+
+\item{dataviz_friendly}{Optionally keep only palettes that screen well for
+data visualisation (\code{TRUE}), or only those that do not (\code{FALSE}). \code{NULL},
+the default, keeps both. See the Data visualisation section.}
 }
 \value{
 A data frame with one row per palette and the columns:
@@ -32,6 +42,10 @@ A data frame with one row per palette and the columns:
 \item{family, type}{Matching type, as a short code and printed name.}
 \item{n_colors}{Number of colours.}
 \item{status}{\code{"transcribed"} or \code{"review"}.}
+\item{dataviz_friendly}{Whether the palette screens well for categorical
+data visualisation. See the Data visualisation section.}
+\item{min_delta_e, min_delta_e_cvd, min_delta_e_white}{The measurements
+behind that flag.}
 \item{note}{Free text, including why any swatch is provisional.}
 }
 }
@@ -39,6 +53,31 @@ A data frame with one row per palette and the columns:
 Returns the palette catalogue as a data frame, optionally filtered. This is
 the main way to browse what is in the package.
 }
+\section{Data visualisation}{
+
+These are design palettes, chosen to look good together rather than to
+encode categories, so many are unsuitable for charts. \code{dataviz_friendly}
+screens for the two things that decide it:
+\itemize{
+\item \strong{Colour-vision deficiency.} Colours that separate for a trichromat can
+collapse for a dichromat, so each palette is re-measured under simulated
+deuteranopia, protanopia and tritanopia.
+\item \strong{Perceptual separation.} Categories have to read as different at a
+glance, in small marks.
+}
+
+Both use CIEDE2000 on a palette's closest pair, since a palette is only as
+readable as the two colours most easily confused. A third check stops a
+near-white colour from vanishing against the page. \code{min_delta_e},
+\code{min_delta_e_cvd} and \code{min_delta_e_white} report the measurements, so you
+can apply a stricter or looser bar than the shipped thresholds.
+
+Thresholds are calibrated so that the Okabe-Ito palette, designed for
+colour-vision deficiency, passes. Treat the flag as a screening aid: it
+judges separability only, and cannot know whether a palette suits your
+chart, audience or medium.
+}
+
 \examples{
 head(palettes())
 
@@ -50,6 +89,9 @@ palettes(type = "tricolor")
 
 # only fully transcribed palettes
 nrow(palettes(include_review = FALSE))
+
+# palettes that screen well for charts
+head(palettes(dataviz_friendly = TRUE)[, c("id", "n_colors", "min_delta_e_cvd")])
 }
 \seealso{
 \code{\link[=palette_names]{palette_names()}} for just the IDs, \code{\link[=get_palette]{get_palette()}} to fetch

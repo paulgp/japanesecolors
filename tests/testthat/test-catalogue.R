@@ -5,7 +5,8 @@ test_that("palettes() returns the whole catalogue with the documented columns", 
   expect_s3_class(p, "data.frame")
   expect_identical(names(p),
                    c("id", "name", "name_status", "collection", "collection_label",
-                     "family", "type", "n_colors", "status", "note"))
+                     "family", "type", "n_colors", "status", "dataviz_friendly",
+                     "min_delta_e", "min_delta_e_cvd", "min_delta_e_white", "note"))
   expect_identical(nrow(p), length(palette_names()))
   expect_false(anyNA(p$id))
   expect_type(p$n_colors, "integer")

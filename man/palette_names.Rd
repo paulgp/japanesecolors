@@ -4,7 +4,13 @@
 \alias{palette_names}
 \title{Palette names}
 \usage{
-palette_names(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
+palette_names(
+  collection = NULL,
+  type = NULL,
+  n = NULL,
+  include_review = TRUE,
+  dataviz_friendly = NULL
+)
 }
 \arguments{
 \item{collection}{Optional collection name(s) to keep: \code{"retro"},
@@ -20,6 +26,10 @@ short codes used in palette IDs (\code{"bi"}, \code{"tri"}, \code{"four"}, \code
 \item{include_review}{Whether to include palettes that contain a provisional
 swatch reading. \code{TRUE} by default, so nothing is hidden; the \code{status}
 column marks them and \code{\link[=palettes_needing_review]{palettes_needing_review()}} lists them.}
+
+\item{dataviz_friendly}{Optionally keep only palettes that screen well for
+data visualisation (\code{TRUE}), or only those that do not (\code{FALSE}). \code{NULL},
+the default, keeps both. See the Data visualisation section.}
 }
 \value{
 A character vector of palette IDs.
@@ -32,6 +42,7 @@ of an exported object, so \code{get_palette(palette_names("kawaii")[1])} and
 \examples{
 palette_names("avantgarde")
 palette_names("minimalism", type = "bicolor")
+palette_names(n = 4, dataviz_friendly = TRUE)
 length(palette_names())
 }
 \seealso{

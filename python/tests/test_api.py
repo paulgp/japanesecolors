@@ -18,6 +18,7 @@ def test_palettes_returns_documented_keys():
     assert set(rows[0]) == {
         "id", "name", "name_status", "collection", "collection_label",
         "family", "type", "n_colors", "status", "note",
+        "dataviz_friendly", "min_delta_e", "min_delta_e_cvd", "min_delta_e_white",
     }
 
 

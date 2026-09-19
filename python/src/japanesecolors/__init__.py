@@ -26,6 +26,7 @@ from ._palettes import *  # noqa: F401,F403
 from ._palettes import (  # noqa: F401
     CATALOGUE,
     COLLECTIONS,
+    DATAVIZ,
     MONOCHROME,
     PALETTES,
     SOURCE,
@@ -33,7 +34,7 @@ from ._palettes import (  # noqa: F401
 )
 from ._palettes import __all__ as _DATA_ALL
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 
 COLLECTION_IDS = tuple(c["collection"] for c in COLLECTIONS)
 
@@ -113,7 +114,9 @@ def _suggest(name: str) -> str:
     return f" Did you mean {', '.join(map(repr, near))}?" if near else ""
 
 
-def palettes(collection=None, type=None, n=None, include_review=True):  # noqa: A002
+def palettes(  # noqa: A002
+    collection=None, type=None, n=None, include_review=True, dataviz_friendly=None
+):
     """Return the palette catalogue, optionally filtered.
 
     Parameters
@@ -131,19 +134,42 @@ def palettes(collection=None, type=None, n=None, include_review=True):  # noqa: 
         Whether to include palettes containing a provisional reading. ``True``
         by default so nothing is hidden; the ``status`` key marks them and
         :func:`palettes_needing_review` lists them.
+    dataviz_friendly:
+        Keep only palettes that screen well for data visualisation (``True``),
+        or only those that do not (``False``). ``None``, the default, keeps
+        both.
 
     Returns
     -------
     list of dict
         One dict per palette, with keys ``id``, ``name``, ``name_status``,
         ``collection``, ``collection_label``, ``family``, ``type``,
-        ``n_colors``, ``status`` and ``note``.
+        ``n_colors``, ``status``, ``note``, ``dataviz_friendly``,
+        ``min_delta_e``, ``min_delta_e_cvd`` and ``min_delta_e_white``.
+
+    Notes
+    -----
+    These are design palettes, chosen to look good together rather than to
+    encode categories, so many are unsuitable for charts. ``dataviz_friendly``
+    screens for the two things that decide it: whether the colours stay
+    separable under simulated deuteranopia, protanopia and tritanopia, and
+    whether they are far enough apart to read as different at a glance. Both
+    use CIEDE2000 on a palette's closest pair, since a palette is only as
+    readable as the two colours most easily confused; a third check stops a
+    near-white colour from vanishing against the page.
+
+    Thresholds are calibrated so the Okabe-Ito palette, designed for
+    colour-vision deficiency, passes; see :data:`DATAVIZ`. The underlying
+    measurements ship with each palette, so a stricter or looser bar can be
+    applied. Treat the flag as a screening aid, not a guarantee.
     """
     colls = _check_collections(collection)
     fams = _check_types(type)
     sizes = _check_sizes(n)
     if not isinstance(include_review, bool):
         raise TypeError("include_review must be True or False")
+    if dataviz_friendly is not None and not isinstance(dataviz_friendly, bool):
+        raise TypeError("dataviz_friendly must be True, False or None")
 
     out = []
     for row in CATALOGUE:
@@ -155,13 +181,20 @@ def palettes(collection=None, type=None, n=None, include_review=True):  # noqa: 
             continue
         if not include_review and row["status"] != "transcribed":
             continue
+        if dataviz_friendly is not None and row["dataviz_friendly"] is not dataviz_friendly:
+            continue
         out.append(dict(row))
     return out
 
 
-def palette_names(collection=None, type=None, n=None, include_review=True):  # noqa: A002
+def palette_names(  # noqa: A002
+    collection=None, type=None, n=None, include_review=True, dataviz_friendly=None
+):
     """Return the stable IDs of the palettes matching a filter."""
-    return [row["id"] for row in palettes(collection, type, n, include_review)]
+    return [
+        row["id"]
+        for row in palettes(collection, type, n, include_review, dataviz_friendly)
+    ]
 
 
 def collections():
@@ -297,6 +330,7 @@ __all__ = [
     "set_palette",
     "color_cycler",
     "COLLECTION_IDS",
+    "DATAVIZ",
     "FAMILY_IDS",
     "TYPE_IDS",
     "__version__",

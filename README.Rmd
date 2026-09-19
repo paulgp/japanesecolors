@@ -110,6 +110,37 @@ get_palette("minimalism_multi_02")
 The visual gallery of all `r nrow(palettes())` palettes is on the
 [package website](https://paulgp.com/japanesecolors/articles/gallery.html).
 
+## Which ones work in a chart
+
+These are design palettes, chosen to look good together rather than to encode
+categories, so most were never meant for data visualisation.
+`r sum(palettes()$dataviz_friendly)` of the `r nrow(palettes())` screen well
+for it, on two criteria:
+
+- **Colour-vision deficiency** — colours that separate for a trichromat can
+  collapse for a dichromat, so each palette is re-measured under simulated
+  deuteranopia, protanopia and tritanopia.
+- **Perceptual separation** — categories have to read as different at a glance,
+  in small marks.
+
+Both use CIEDE2000 on a palette's closest pair, since a palette is only as
+readable as the two colours most easily confused. A third check stops a
+near-white colour vanishing against the page.
+
+```{r dataviz}
+palettes(dataviz_friendly = TRUE, n = 4)[, c("id", "min_delta_e", "min_delta_e_cvd")]
+```
+
+The measurements ship with every palette, so you can set your own bar. The
+thresholds are calibrated so that the [Okabe-Ito
+palette](https://jfly.uni-koeln.de/color/), designed for colour-vision
+deficiency, passes — and palettes that separate well in normal vision but
+collapse for a dichromat, like ggplot2's default hue scale, do not.
+
+Worth knowing: no palette of five or more colours clears the bar. Keeping
+5--8 colours mutually distinguishable under dichromacy is hard, and these
+palettes were not built for it.
+
 ## Python
 
 The same palettes, generated from the same canonical data, are available for

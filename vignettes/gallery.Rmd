@@ -40,6 +40,13 @@ library(japanesecolors)
   font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
   background: #fde68a; color: #713f12; padding: .1rem .4rem; border-radius: 4px;
 }
+.rs-dv {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
+  background: #cfe8d5; color: #14532d; padding: .1rem .4rem; border-radius: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  .rs-dv { background: #14532d; color: #cfe8d5; }
+}
 .rs-bar { display: flex; height: 54px; border-radius: 6px; overflow: hidden; border: 1px solid #0000001a; }
 .rs-sw { flex: 1 1 0; position: relative; }
 .rs-sw span {
@@ -60,6 +67,12 @@ library(japanesecolors)
 All `r nrow(palettes())` palettes, grouped by collection. Hover a palette to
 read its hex values. Every palette shown here is an exported object: type its
 ID into R and you get the vector.
+
+These are design palettes, so most were never meant to encode categories in a
+chart. The `r sum(palettes()$dataviz_friendly)` marked **dataviz** stay
+separable both in normal vision and under simulated colour-vision deficiency
+— filter to them with the *Charts* buttons, or in code with
+`palettes(dataviz_friendly = TRUE)`.
 
 ```{r gallery, results = "asis"}
 esc <- function(x) {
@@ -84,17 +97,22 @@ palette_html <- function(row) {
 
   name <- if (!identical(row$name, row$id)) sprintf('<span class="rs-name">%s</span>', esc(row$name)) else ""
   flag <- if (identical(row$status, "review")) '<span class="rs-flag">provisional</span>' else ""
+  dv <- if (isTRUE(row$dataviz_friendly)) {
+    sprintf('<span class="rs-dv" title="Separable in normal vision (dE %.0f) and under simulated colour-vision deficiency (dE %.0f)">dataviz</span>',
+            row$min_delta_e, row$min_delta_e_cvd)
+  } else ""
 
   # emit as a single line: indented continuation lines would be parsed as a
   # markdown code block rather than as HTML
   sprintf(paste0(
-    '<div class="rs-pal" data-collection="%s" data-family="%s" data-status="%s">',
-    '<div class="rs-pal-head"><span class="rs-id">%s</span>%s%s',
+    '<div class="rs-pal" data-collection="%s" data-family="%s" data-status="%s" data-dataviz="%s">',
+    '<div class="rs-pal-head"><span class="rs-id">%s</span>%s%s%s',
     '<span class="rs-meta">%s &middot; %d colours</span></div>',
     '<div class="rs-bar">%s</div>',
     '</div>'),
     row$collection, row$family, row$status,
-    esc(row$id), name, flag, esc(row$type), row$n_colors, sw)
+    if (isTRUE(row$dataviz_friendly)) "yes" else "no",
+    esc(row$id), name, flag, dv, esc(row$type), row$n_colors, sw)
 }
 
 cat('<div class="rs-controls" id="rs-controls">\n')
@@ -112,6 +130,9 @@ for (code in names(types)) {
   cat(sprintf('<button data-filter="family" data-value="%s" aria-pressed="false">%s</button>',
               code, types[[code]]))
 }
+cat('<label style="margin-left:1rem">Charts</label>')
+cat('<button data-filter="dataviz" data-value="all" aria-pressed="true">All</button>')
+cat('<button data-filter="dataviz" data-value="yes" aria-pressed="false">Dataviz-friendly</button>')
 cat('<span class="rs-count" id="rs-count"></span>\n')
 cat('</div>\n')
 
@@ -129,7 +150,7 @@ cat('<p class="rs-empty" id="rs-empty" style="display:none">No palettes match th
 
 ```{js, echo = FALSE}
 (function () {
-  var state = { collection: "all", family: "all" };
+  var state = { collection: "all", family: "all", dataviz: "all" };
   var controls = document.getElementById("rs-controls");
   if (!controls) return;
 
@@ -138,7 +159,8 @@ cat('<p class="rs-empty" id="rs-empty" style="display:none">No palettes match th
     var shown = 0;
     pals.forEach(function (p) {
       var ok = (state.collection === "all" || p.dataset.collection === state.collection) &&
-               (state.family === "all" || p.dataset.family === state.family);
+               (state.family === "all" || p.dataset.family === state.family) &&
+               (state.dataviz === "all" || p.dataset.dataviz === state.dataviz);
       p.style.display = ok ? "" : "none";
       if (ok) shown++;
     });
@@ -180,4 +202,7 @@ palettes(n = 7)[, c("id", "collection", "n_colors")]
 
 # only fully transcribed palettes
 nrow(palettes(include_review = FALSE))
+
+# palettes that screen well for charts, widest first
+head(palettes(dataviz_friendly = TRUE)[, c("id", "n_colors", "min_delta_e_cvd")])
 ```

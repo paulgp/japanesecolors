@@ -50,6 +50,23 @@ jc.register_cmaps()
 plt.scatter(x, y, c=z, cmap="jc:retro_multi_01")
 ```
 
+### Palettes that work in charts
+
+These are design palettes, so most were never meant to encode categories. 65 of
+the 149 stay separable both in normal vision and under simulated colour-vision
+deficiency, measured with CIEDE2000 on each palette's closest pair:
+
+```python
+jc.palettes(dataviz_friendly=True, n=4)
+jc.palette_names(dataviz_friendly=True)
+
+jc.DATAVIZ["thresholds"]   # the bar used, calibrated against Okabe-Ito
+```
+
+Every palette carries `min_delta_e`, `min_delta_e_cvd` and `min_delta_e_white`,
+so you can apply a stricter or looser bar. No palette of five or more colours
+clears it.
+
 ### Browsing
 
 IDs are `<collection>_<type>_<nn>`, where type is `bi`, `tri`, `four` or
