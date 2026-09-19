@@ -4,36 +4,42 @@ All 149 palettes, grouped by collection. Hover a palette to read its hex
 values. Every palette shown here is an exported object: type its ID into
 R and you get the vector.
 
+These are design palettes, so most were never meant to encode categories
+in a chart. The 65 marked **dataviz** stay separable both in normal
+vision and under simulated colour-vision deficiency — filter to them
+with the *Charts* buttons, or in code with
+`palettes(dataviz_friendly = TRUE)`.
+
 CollectionAllRetroMinimalismKawaiiAvant
-GardeTypeAllbicolortricolorfour-colormulticolor
+GardeTypeAllbicolortricolorfour-colormulticolorChartsAllDataviz-friendly
 
 ## Retro (55)
 
-retro_bi_01Ochre & brickbicolor · 2 colours
+retro_bi_01Ochre & brickdatavizbicolor · 2 colours
 
 \#EBB845
 
 \#C5351E
 
-retro_bi_02Plum & apricotbicolor · 2 colours
+retro_bi_02Plum & apricotdatavizbicolor · 2 colours
 
 \#934B85
 
 \#E18A31
 
-retro_bi_03Violet & olivebicolor · 2 colours
+retro_bi_03Violet & olivedatavizbicolor · 2 colours
 
 \#5A4F7D
 
 \#717E42
 
-retro_bi_04Gold & inkbicolor · 2 colours
+retro_bi_04Gold & inkdatavizbicolor · 2 colours
 
 \#D9BC77
 
 \#000000
 
-retro_bi_05Blue & charcoalbicolor · 2 colours
+retro_bi_05Blue & charcoaldatavizbicolor · 2 colours
 
 \#1B65A1
 
@@ -45,31 +51,31 @@ retro_bi_06Moss & claybicolor · 2 colours
 
 \#98614E
 
-retro_bi_07Brick & citronbicolor · 2 colours
+retro_bi_07Brick & citrondatavizbicolor · 2 colours
 
 \#C5351E
 
 \#C2C719
 
-retro_bi_08Mint & creambicolor · 2 colours
+retro_bi_08Mint & creamdatavizbicolor · 2 colours
 
 \#B5DED9
 
 \#FFFCD1
 
-retro_bi_09Walnut & pinebicolor · 2 colours
+retro_bi_09Walnut & pinedatavizbicolor · 2 colours
 
 \#886C4B
 
 \#133B2E
 
-retro_bi_10Slate & stonebicolor · 2 colours
+retro_bi_10Slate & stonedatavizbicolor · 2 colours
 
 \#59606A
 
 \#979493
 
-retro_bi_11Plum & citronbicolor · 2 colours
+retro_bi_11Plum & citrondatavizbicolor · 2 colours
 
 \#934B85
 
@@ -81,19 +87,19 @@ retro_bi_12Brick & mossbicolor · 2 colours
 
 \#5C8934
 
-retro_bi_13Saffron & inkprovisionalbicolor · 2 colours
+retro_bi_13Saffron & inkprovisionaldatavizbicolor · 2 colours
 
 \#F4C03A
 
 \#000000
 
-retro_bi_14Blue & poppyprovisionalbicolor · 2 colours
+retro_bi_14Blue & poppyprovisionaldatavizbicolor · 2 colours
 
 \#3071B9
 
 \#E34950
 
-retro_tri_01Meadow & skytricolor · 3 colours
+retro_tri_01Meadow & skydataviztricolor · 3 colours
 
 \#E9D99B
 
@@ -101,7 +107,7 @@ retro_tri_01Meadow & skytricolor · 3 colours
 
 \#80CDE7
 
-retro_tri_02Harbortricolor · 3 colours
+retro_tri_02Harbordataviztricolor · 3 colours
 
 \#57B0BF
 
@@ -109,7 +115,7 @@ retro_tri_02Harbortricolor · 3 colours
 
 \#E6BF7D
 
-retro_tri_03Poolsidetricolor · 3 colours
+retro_tri_03Poolsidedataviztricolor · 3 colours
 
 \#FFDF4F
 
@@ -117,7 +123,7 @@ retro_tri_03Poolsidetricolor · 3 colours
 
 \#F29878
 
-retro_tri_04Orange sodaprovisionaltricolor · 3 colours
+retro_tri_04Orange sodaprovisionaldataviztricolor · 3 colours
 
 \#EE763B
 
@@ -133,7 +139,7 @@ retro_tri_05Plum, blue & crimsonprovisionaltricolor · 3 colours
 
 \#E50D2B
 
-retro_tri_06Peach orchardprovisionaltricolor · 3 colours
+retro_tri_06Peach orchardprovisionaldataviztricolor · 3 colours
 
 \#F5AE94
 
@@ -141,7 +147,7 @@ retro_tri_06Peach orchardprovisionaltricolor · 3 colours
 
 \#659930
 
-retro_tri_07Crimson gardentricolor · 3 colours
+retro_tri_07Crimson gardendataviztricolor · 3 colours
 
 \#E72F2B
 
@@ -165,7 +171,7 @@ retro_tri_09Steel & rusttricolor · 3 colours
 
 \#CB4E40
 
-retro_tri_10Evergreen studiotricolor · 3 colours
+retro_tri_10Evergreen studiodataviztricolor · 3 colours
 
 \#00534B
 
@@ -173,7 +179,7 @@ retro_tri_10Evergreen studiotricolor · 3 colours
 
 \#F6CAA5
 
-retro_tri_11Blue, walnut & limetricolor · 3 colours
+retro_tri_11Blue, walnut & limedataviztricolor · 3 colours
 
 \#0083C2
 
@@ -189,7 +195,7 @@ retro_tri_12Garden partytricolor · 3 colours
 
 \#EA545C
 
-retro_tri_13Velvettricolor · 3 colours
+retro_tri_13Velvetdataviztricolor · 3 colours
 
 \#AE2039
 
@@ -205,7 +211,7 @@ retro_tri_14Coffeehousetricolor · 3 colours
 
 \#4C443F
 
-retro_tri_15Sunny fieldtricolor · 3 colours
+retro_tri_15Sunny fielddataviztricolor · 3 colours
 
 \#FFDF4F
 
@@ -213,7 +219,7 @@ retro_tri_15Sunny fieldtricolor · 3 colours
 
 \#B6DA91
 
-retro_tri_16Sky, leaf & redtricolor · 3 colours
+retro_tri_16Sky, leaf & reddataviztricolor · 3 colours
 
 \#BCE0E7
 
@@ -229,7 +235,7 @@ retro_tri_17Quiet olivetricolor · 3 colours
 
 \#F4EBE3
 
-retro_tri_18Forest & brasstricolor · 3 colours
+retro_tri_18Forest & brassdataviztricolor · 3 colours
 
 \#005846
 
@@ -237,7 +243,7 @@ retro_tri_18Forest & brasstricolor · 3 colours
 
 \#BFC0C0
 
-retro_tri_19Primary printtricolor · 3 colours
+retro_tri_19Primary printdataviztricolor · 3 colours
 
 \#E61919
 
@@ -253,7 +259,7 @@ retro_tri_20Blue hourtricolor · 3 colours
 
 \#5F5CA7
 
-retro_tri_21Woodlandtricolor · 3 colours
+retro_tri_21Woodlanddataviztricolor · 3 colours
 
 \#7E8B5D
 
@@ -271,7 +277,7 @@ retro_four_01Rose, paper & goldfour-color · 4 colours
 
 \#FDCE27
 
-retro_four_02Hot typefour-color · 4 colours
+retro_four_02Hot typedatavizfour-color · 4 colours
 
 \#E60012
 
@@ -291,7 +297,7 @@ retro_four_03Classic printfour-color · 4 colours
 
 \#CAB06B
 
-retro_four_04Petal & leaffour-color · 4 colours
+retro_four_04Petal & leafdatavizfour-color · 4 colours
 
 \#F29E9D
 
@@ -311,7 +317,7 @@ retro_four_05Coastal clayfour-color · 4 colours
 
 \#DF752F
 
-retro_four_06Botanicalfour-color · 4 colours
+retro_four_06Botanicaldatavizfour-color · 4 colours
 
 \#008CAD
 
@@ -321,7 +327,7 @@ retro_four_06Botanicalfour-color · 4 colours
 
 \#F0D076
 
-retro_four_07Crimson & sea glassfour-color · 4 colours
+retro_four_07Crimson & sea glassdatavizfour-color · 4 colours
 
 \#C92539
 
@@ -361,7 +367,7 @@ retro_four_10Faded frescofour-color · 4 colours
 
 \#D9C699
 
-retro_four_11Lilac & leatherfour-color · 4 colours
+retro_four_11Lilac & leatherdatavizfour-color · 4 colours
 
 \#A686BC
 
@@ -495,7 +501,7 @@ retro_multi_09Dusk to ambermulticolor · 6 colours
 
 ## Minimalism (28)
 
-minimalism_bi_01bicolor · 2 colours
+minimalism_bi_01datavizbicolor · 2 colours
 
 \#5CB3CE
 
@@ -519,31 +525,31 @@ minimalism_bi_04bicolor · 2 colours
 
 \#D2A364
 
-minimalism_bi_05bicolor · 2 colours
+minimalism_bi_05datavizbicolor · 2 colours
 
 \#0053A5
 
 \#92D2E1
 
-minimalism_bi_06bicolor · 2 colours
+minimalism_bi_06datavizbicolor · 2 colours
 
 \#BF556C
 
 \#E3D2B4
 
-minimalism_bi_07bicolor · 2 colours
+minimalism_bi_07datavizbicolor · 2 colours
 
 \#02589F
 
 \#8EADBF
 
-minimalism_bi_08bicolor · 2 colours
+minimalism_bi_08datavizbicolor · 2 colours
 
 \#C1A76C
 
 \#182B82
 
-minimalism_bi_09bicolor · 2 colours
+minimalism_bi_09datavizbicolor · 2 colours
 
 \#35844B
 
@@ -555,7 +561,7 @@ minimalism_bi_10bicolor · 2 colours
 
 \#CFE5EC
 
-minimalism_bi_11bicolor · 2 colours
+minimalism_bi_11datavizbicolor · 2 colours
 
 \#D7B792
 
@@ -575,7 +581,7 @@ minimalism_tri_01tricolor · 3 colours
 
 \#00A0CF
 
-minimalism_tri_02tricolor · 3 colours
+minimalism_tri_02dataviztricolor · 3 colours
 
 \#570018
 
@@ -633,7 +639,7 @@ minimalism_four_05four-color · 4 colours
 
 \#4A517F
 
-minimalism_four_06four-color · 4 colours
+minimalism_four_06datavizfour-color · 4 colours
 
 \#F1B1CE
 
@@ -753,7 +759,7 @@ minimalism_multi_06multicolor · 7 colours
 
 ## Kawaii (30)
 
-kawaii_bi_01bicolor · 2 colours
+kawaii_bi_01datavizbicolor · 2 colours
 
 \#5C4D8C
 
@@ -791,7 +797,7 @@ kawaii_tri_04tricolor · 3 colours
 
 \#AFC0E3
 
-kawaii_tri_05tricolor · 3 colours
+kawaii_tri_05dataviztricolor · 3 colours
 
 \#DE1628
 
@@ -799,7 +805,7 @@ kawaii_tri_05tricolor · 3 colours
 
 \#F2CB4F
 
-kawaii_tri_06tricolor · 3 colours
+kawaii_tri_06dataviztricolor · 3 colours
 
 \#207EB8
 
@@ -807,7 +813,7 @@ kawaii_tri_06tricolor · 3 colours
 
 \#EEDD28
 
-kawaii_tri_07tricolor · 3 colours
+kawaii_tri_07dataviztricolor · 3 colours
 
 \#3D7EB4
 
@@ -823,7 +829,7 @@ kawaii_tri_08tricolor · 3 colours
 
 \#FFFCD1
 
-kawaii_tri_09tricolor · 3 colours
+kawaii_tri_09dataviztricolor · 3 colours
 
 \#FFF462
 
@@ -855,7 +861,7 @@ kawaii_tri_12tricolor · 3 colours
 
 \#FDD700
 
-kawaii_tri_13tricolor · 3 colours
+kawaii_tri_13dataviztricolor · 3 colours
 
 \#F9F21E
 
@@ -863,7 +869,7 @@ kawaii_tri_13tricolor · 3 colours
 
 \#A488D3
 
-kawaii_tri_14tricolor · 3 colours
+kawaii_tri_14dataviztricolor · 3 colours
 
 \#1D967A
 
@@ -871,7 +877,7 @@ kawaii_tri_14tricolor · 3 colours
 
 \#E94D3B
 
-kawaii_tri_15tricolor · 3 colours
+kawaii_tri_15dataviztricolor · 3 colours
 
 \#FFF462
 
@@ -903,7 +909,7 @@ kawaii_tri_18tricolor · 3 colours
 
 \#51E7C4
 
-kawaii_tri_19provisionaltricolor · 3 colours
+kawaii_tri_19provisionaldataviztricolor · 3 colours
 
 \#E7242E
 
@@ -911,7 +917,7 @@ kawaii_tri_19provisionaltricolor · 3 colours
 
 \#EFC757
 
-kawaii_four_01four-color · 4 colours
+kawaii_four_01datavizfour-color · 4 colours
 
 \#CFC83B
 
@@ -1035,19 +1041,19 @@ kawaii_multi_08multicolor · 5 colours
 
 ## Avant Garde (36)
 
-avantgarde_bi_01bicolor · 2 colours
+avantgarde_bi_01datavizbicolor · 2 colours
 
 \#E45886
 
 \#0068AC
 
-avantgarde_bi_02bicolor · 2 colours
+avantgarde_bi_02datavizbicolor · 2 colours
 
 \#F7DB00
 
 \#34A643
 
-avantgarde_bi_03bicolor · 2 colours
+avantgarde_bi_03datavizbicolor · 2 colours
 
 \#C81839
 
@@ -1059,31 +1065,31 @@ avantgarde_bi_04bicolor · 2 colours
 
 \#FCEBEF
 
-avantgarde_bi_05bicolor · 2 colours
+avantgarde_bi_05datavizbicolor · 2 colours
 
 \#3DB1DD
 
 \#D74288
 
-avantgarde_bi_06bicolor · 2 colours
+avantgarde_bi_06datavizbicolor · 2 colours
 
 \#A44295
 
 \#F5C826
 
-avantgarde_bi_07bicolor · 2 colours
+avantgarde_bi_07datavizbicolor · 2 colours
 
 \#D53921
 
 \#68C0A5
 
-avantgarde_bi_08provisionalbicolor · 2 colours
+avantgarde_bi_08provisionaldatavizbicolor · 2 colours
 
 \#8F3C89
 
 \#EFE531
 
-avantgarde_tri_01tricolor · 3 colours
+avantgarde_tri_01dataviztricolor · 3 colours
 
 \#E60012
 
@@ -1091,7 +1097,7 @@ avantgarde_tri_01tricolor · 3 colours
 
 \#004FA3
 
-avantgarde_tri_02tricolor · 3 colours
+avantgarde_tri_02dataviztricolor · 3 colours
 
 \#A7DAE5
 
@@ -1099,7 +1105,7 @@ avantgarde_tri_02tricolor · 3 colours
 
 \#E72410
 
-avantgarde_tri_03tricolor · 3 colours
+avantgarde_tri_03dataviztricolor · 3 colours
 
 \#F6C3D9
 
@@ -1107,7 +1113,7 @@ avantgarde_tri_03tricolor · 3 colours
 
 \#A7A8A8
 
-avantgarde_tri_04tricolor · 3 colours
+avantgarde_tri_04dataviztricolor · 3 colours
 
 \#25B17C
 
@@ -1123,7 +1129,7 @@ avantgarde_tri_05tricolor · 3 colours
 
 \#EBDDD5
 
-avantgarde_tri_06tricolor · 3 colours
+avantgarde_tri_06dataviztricolor · 3 colours
 
 \#FFF100
 
@@ -1155,7 +1161,7 @@ avantgarde_tri_09tricolor · 3 colours
 
 \#00A8D9
 
-avantgarde_tri_10tricolor · 3 colours
+avantgarde_tri_10dataviztricolor · 3 colours
 
 \#000000
 
@@ -1171,7 +1177,7 @@ avantgarde_tri_11tricolor · 3 colours
 
 \#FFFDE1
 
-avantgarde_four_01four-color · 4 colours
+avantgarde_four_01datavizfour-color · 4 colours
 
 \#F2AB16
 
@@ -1181,7 +1187,7 @@ avantgarde_four_01four-color · 4 colours
 
 \#0074BA
 
-avantgarde_four_02four-color · 4 colours
+avantgarde_four_02datavizfour-color · 4 colours
 
 \#E4007F
 
@@ -1394,4 +1400,14 @@ palettes(n = 7)[, c("id", "collection", "n_colors")]
 # only fully transcribed palettes
 nrow(palettes(include_review = FALSE))
 #> [1] 136
+
+# palettes that screen well for charts, widest first
+head(palettes(dataviz_friendly = TRUE)[, c("id", "n_colors", "min_delta_e_cvd")])
+#>            id n_colors min_delta_e_cvd
+#> 1 retro_bi_01        2            24.9
+#> 2 retro_bi_02        2            23.6
+#> 3 retro_bi_03        2            15.6
+#> 4 retro_bi_04        2            67.6
+#> 5 retro_bi_05        2            16.6
+#> 6 retro_bi_07        2            24.3
 ```

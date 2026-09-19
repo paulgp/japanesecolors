@@ -6,7 +6,13 @@ is the main way to browse what is in the package.
 ## Usage
 
 ``` r
-palettes(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
+palettes(
+  collection = NULL,
+  type = NULL,
+  n = NULL,
+  include_review = TRUE,
+  dataviz_friendly = NULL
+)
 ```
 
 ## Arguments
@@ -34,6 +40,12 @@ palettes(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
   them and
   [`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md)
   lists them.
+
+- dataviz_friendly:
+
+  Optionally keep only palettes that screen well for data visualisation
+  (`TRUE`), or only those that do not (`FALSE`). `NULL`, the default,
+  keeps both. See the Data visualisation section.
 
 ## Value
 
@@ -68,9 +80,42 @@ A data frame with one row per palette and the columns:
 
   `"transcribed"` or `"review"`.
 
+- dataviz_friendly:
+
+  Whether the palette screens well for categorical data visualisation.
+  See the Data visualisation section.
+
+- min_delta_e, min_delta_e_cvd, min_delta_e_white:
+
+  The measurements behind that flag.
+
 - note:
 
   Free text, including why any swatch is provisional.
+
+## Data visualisation
+
+These are design palettes, chosen to look good together rather than to
+encode categories, so many are unsuitable for charts. `dataviz_friendly`
+screens for the two things that decide it:
+
+- **Colour-vision deficiency.** Colours that separate for a trichromat
+  can collapse for a dichromat, so each palette is re-measured under
+  simulated deuteranopia, protanopia and tritanopia.
+
+- **Perceptual separation.** Categories have to read as different at a
+  glance, in small marks.
+
+Both use CIEDE2000 on a palette's closest pair, since a palette is only
+as readable as the two colours most easily confused. A third check stops
+a near-white colour from vanishing against the page. `min_delta_e`,
+`min_delta_e_cvd` and `min_delta_e_white` report the measurements, so
+you can apply a stricter or looser bar than the shipped thresholds.
+
+Thresholds are calibrated so that the Okabe-Ito palette, designed for
+colour-vision deficiency, passes. Treat the flag as a screening aid: it
+judges separability only, and cannot know whether a palette suits your
+chart, audience or medium.
 
 ## See also
 
@@ -92,13 +137,20 @@ head(palettes())
 #> 4 retro_bi_04      Gold & ink   editorial      retro            Retro     bi
 #> 5 retro_bi_05 Blue & charcoal   editorial      retro            Retro     bi
 #> 6 retro_bi_06     Moss & clay   editorial      retro            Retro     bi
-#>      type n_colors      status note
-#> 1 bicolor        2 transcribed     
-#> 2 bicolor        2 transcribed     
-#> 3 bicolor        2 transcribed     
-#> 4 bicolor        2 transcribed     
-#> 5 bicolor        2 transcribed     
-#> 6 bicolor        2 transcribed     
+#>      type n_colors      status dataviz_friendly min_delta_e min_delta_e_cvd
+#> 1 bicolor        2 transcribed             TRUE        42.0            24.9
+#> 2 bicolor        2 transcribed             TRUE        48.3            23.6
+#> 3 bicolor        2 transcribed             TRUE        47.6            15.6
+#> 4 bicolor        2 transcribed             TRUE        69.9            67.6
+#> 5 bicolor        2 transcribed             TRUE        17.5            16.6
+#> 6 bicolor        2 transcribed            FALSE        38.4             7.5
+#>   min_delta_e_white note
+#> 1              29.7     
+#> 2              35.2     
+#> 3              41.3     
+#> 4              25.2     
+#> 5              49.5     
+#> 6              42.0     
 
 # everything in one collection
 palettes("kawaii")
@@ -133,37 +185,68 @@ palettes("kawaii")
 #> 28 kawaii_multi_06 kawaii_multi_06     pending     kawaii           Kawaii
 #> 29 kawaii_multi_07 kawaii_multi_07     pending     kawaii           Kawaii
 #> 30 kawaii_multi_08 kawaii_multi_08     pending     kawaii           Kawaii
-#>    family       type n_colors      status
-#> 1      bi    bicolor        2 transcribed
-#> 2     tri   tricolor        3 transcribed
-#> 3     tri   tricolor        3 transcribed
-#> 4     tri   tricolor        3 transcribed
-#> 5     tri   tricolor        3 transcribed
-#> 6     tri   tricolor        3 transcribed
-#> 7     tri   tricolor        3 transcribed
-#> 8     tri   tricolor        3 transcribed
-#> 9     tri   tricolor        3 transcribed
-#> 10    tri   tricolor        3 transcribed
-#> 11    tri   tricolor        3 transcribed
-#> 12    tri   tricolor        3 transcribed
-#> 13    tri   tricolor        3 transcribed
-#> 14    tri   tricolor        3 transcribed
-#> 15    tri   tricolor        3 transcribed
-#> 16    tri   tricolor        3 transcribed
-#> 17    tri   tricolor        3 transcribed
-#> 18    tri   tricolor        3 transcribed
-#> 19    tri   tricolor        3 transcribed
-#> 20    tri   tricolor        3      review
-#> 21   four four-color        4 transcribed
-#> 22   four four-color        4 transcribed
-#> 23  multi multicolor        5 transcribed
-#> 24  multi multicolor        6      review
-#> 25  multi multicolor        7 transcribed
-#> 26  multi multicolor        5 transcribed
-#> 27  multi multicolor        5 transcribed
-#> 28  multi multicolor        5 transcribed
-#> 29  multi multicolor        5 transcribed
-#> 30  multi multicolor        5 transcribed
+#>    family       type n_colors      status dataviz_friendly min_delta_e
+#> 1      bi    bicolor        2 transcribed             TRUE        72.6
+#> 2     tri   tricolor        3 transcribed            FALSE        32.2
+#> 3     tri   tricolor        3 transcribed            FALSE        19.3
+#> 4     tri   tricolor        3 transcribed            FALSE        14.7
+#> 5     tri   tricolor        3 transcribed            FALSE        25.1
+#> 6     tri   tricolor        3 transcribed             TRUE        36.9
+#> 7     tri   tricolor        3 transcribed             TRUE        41.4
+#> 8     tri   tricolor        3 transcribed             TRUE        27.9
+#> 9     tri   tricolor        3 transcribed            FALSE        16.2
+#> 10    tri   tricolor        3 transcribed             TRUE        33.6
+#> 11    tri   tricolor        3 transcribed            FALSE        17.5
+#> 12    tri   tricolor        3 transcribed            FALSE        23.7
+#> 13    tri   tricolor        3 transcribed            FALSE        35.9
+#> 14    tri   tricolor        3 transcribed             TRUE        32.6
+#> 15    tri   tricolor        3 transcribed             TRUE        41.5
+#> 16    tri   tricolor        3 transcribed             TRUE        33.5
+#> 17    tri   tricolor        3 transcribed            FALSE        27.8
+#> 18    tri   tricolor        3 transcribed            FALSE        35.1
+#> 19    tri   tricolor        3 transcribed            FALSE        16.1
+#> 20    tri   tricolor        3      review             TRUE        47.6
+#> 21   four four-color        4 transcribed             TRUE        30.8
+#> 22   four four-color        4 transcribed            FALSE        32.6
+#> 23  multi multicolor        5 transcribed            FALSE        32.2
+#> 24  multi multicolor        6      review            FALSE         9.9
+#> 25  multi multicolor        7 transcribed            FALSE         8.0
+#> 26  multi multicolor        5 transcribed            FALSE        13.8
+#> 27  multi multicolor        5 transcribed            FALSE        14.8
+#> 28  multi multicolor        5 transcribed            FALSE        10.5
+#> 29  multi multicolor        5 transcribed            FALSE        22.7
+#> 30  multi multicolor        5 transcribed            FALSE        16.6
+#>    min_delta_e_cvd min_delta_e_white
+#> 1             42.8              28.0
+#> 2              8.2              19.6
+#> 3              7.2              29.6
+#> 4              8.3              11.3
+#> 5              7.0              19.7
+#> 6             20.6              28.3
+#> 7             10.7              29.9
+#> 8             13.7              32.6
+#> 9              6.3              13.4
+#> 10            10.5              13.4
+#> 11             5.3              12.9
+#> 12            11.0              11.0
+#> 13            11.4              10.7
+#> 14            14.5              28.1
+#> 15            15.7              27.4
+#> 16            17.3              19.7
+#> 17            22.8               7.6
+#> 18            30.6               7.4
+#> 19             7.4              19.8
+#> 20            14.1              27.9
+#> 21            10.3              20.3
+#> 22             2.0              26.5
+#> 23             6.9              19.6
+#> 24             5.9              26.2
+#> 25             6.5              24.8
+#> 26             5.6              22.3
+#> 27             8.8              30.2
+#> 28            10.4              12.4
+#> 29             6.0              28.6
+#> 30             5.6              29.7
 #>                                                                                                                                                                                                                                                 note
 #> 1                                                                                                                                                                                                                                                   
 #> 2                                                                                                                                                                                                                                                   
@@ -252,60 +335,114 @@ palettes(type = "tricolor")
 #> 51 avantgarde_tri_09    avantgarde_tri_09     pending avantgarde
 #> 52 avantgarde_tri_10    avantgarde_tri_10     pending avantgarde
 #> 53 avantgarde_tri_11    avantgarde_tri_11     pending avantgarde
-#>    collection_label family     type n_colors      status
-#> 1             Retro    tri tricolor        3 transcribed
-#> 2             Retro    tri tricolor        3 transcribed
-#> 3             Retro    tri tricolor        3 transcribed
-#> 4             Retro    tri tricolor        3      review
-#> 5             Retro    tri tricolor        3      review
-#> 6             Retro    tri tricolor        3      review
-#> 7             Retro    tri tricolor        3 transcribed
-#> 8             Retro    tri tricolor        3 transcribed
-#> 9             Retro    tri tricolor        3 transcribed
-#> 10            Retro    tri tricolor        3 transcribed
-#> 11            Retro    tri tricolor        3 transcribed
-#> 12            Retro    tri tricolor        3 transcribed
-#> 13            Retro    tri tricolor        3 transcribed
-#> 14            Retro    tri tricolor        3 transcribed
-#> 15            Retro    tri tricolor        3 transcribed
-#> 16            Retro    tri tricolor        3 transcribed
-#> 17            Retro    tri tricolor        3 transcribed
-#> 18            Retro    tri tricolor        3 transcribed
-#> 19            Retro    tri tricolor        3 transcribed
-#> 20            Retro    tri tricolor        3 transcribed
-#> 21            Retro    tri tricolor        3 transcribed
-#> 22       Minimalism    tri tricolor        3 transcribed
-#> 23       Minimalism    tri tricolor        3 transcribed
-#> 24           Kawaii    tri tricolor        3 transcribed
-#> 25           Kawaii    tri tricolor        3 transcribed
-#> 26           Kawaii    tri tricolor        3 transcribed
-#> 27           Kawaii    tri tricolor        3 transcribed
-#> 28           Kawaii    tri tricolor        3 transcribed
-#> 29           Kawaii    tri tricolor        3 transcribed
-#> 30           Kawaii    tri tricolor        3 transcribed
-#> 31           Kawaii    tri tricolor        3 transcribed
-#> 32           Kawaii    tri tricolor        3 transcribed
-#> 33           Kawaii    tri tricolor        3 transcribed
-#> 34           Kawaii    tri tricolor        3 transcribed
-#> 35           Kawaii    tri tricolor        3 transcribed
-#> 36           Kawaii    tri tricolor        3 transcribed
-#> 37           Kawaii    tri tricolor        3 transcribed
-#> 38           Kawaii    tri tricolor        3 transcribed
-#> 39           Kawaii    tri tricolor        3 transcribed
-#> 40           Kawaii    tri tricolor        3 transcribed
-#> 41           Kawaii    tri tricolor        3 transcribed
-#> 42           Kawaii    tri tricolor        3      review
-#> 43      Avant Garde    tri tricolor        3 transcribed
-#> 44      Avant Garde    tri tricolor        3 transcribed
-#> 45      Avant Garde    tri tricolor        3 transcribed
-#> 46      Avant Garde    tri tricolor        3 transcribed
-#> 47      Avant Garde    tri tricolor        3 transcribed
-#> 48      Avant Garde    tri tricolor        3 transcribed
-#> 49      Avant Garde    tri tricolor        3 transcribed
-#> 50      Avant Garde    tri tricolor        3 transcribed
-#> 51      Avant Garde    tri tricolor        3 transcribed
-#> 52      Avant Garde    tri tricolor        3 transcribed
-#> 53      Avant Garde    tri tricolor        3 transcribed
+#>    collection_label family     type n_colors      status dataviz_friendly
+#> 1             Retro    tri tricolor        3 transcribed             TRUE
+#> 2             Retro    tri tricolor        3 transcribed             TRUE
+#> 3             Retro    tri tricolor        3 transcribed             TRUE
+#> 4             Retro    tri tricolor        3      review             TRUE
+#> 5             Retro    tri tricolor        3      review            FALSE
+#> 6             Retro    tri tricolor        3      review             TRUE
+#> 7             Retro    tri tricolor        3 transcribed             TRUE
+#> 8             Retro    tri tricolor        3 transcribed            FALSE
+#> 9             Retro    tri tricolor        3 transcribed            FALSE
+#> 10            Retro    tri tricolor        3 transcribed             TRUE
+#> 11            Retro    tri tricolor        3 transcribed             TRUE
+#> 12            Retro    tri tricolor        3 transcribed            FALSE
+#> 13            Retro    tri tricolor        3 transcribed             TRUE
+#> 14            Retro    tri tricolor        3 transcribed            FALSE
+#> 15            Retro    tri tricolor        3 transcribed             TRUE
+#> 16            Retro    tri tricolor        3 transcribed             TRUE
+#> 17            Retro    tri tricolor        3 transcribed            FALSE
+#> 18            Retro    tri tricolor        3 transcribed             TRUE
+#> 19            Retro    tri tricolor        3 transcribed             TRUE
+#> 20            Retro    tri tricolor        3 transcribed            FALSE
+#> 21            Retro    tri tricolor        3 transcribed             TRUE
+#> 22       Minimalism    tri tricolor        3 transcribed            FALSE
+#> 23       Minimalism    tri tricolor        3 transcribed             TRUE
+#> 24           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 25           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 26           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 27           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 28           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 29           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 30           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 31           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 32           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 33           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 34           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 35           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 36           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 37           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 38           Kawaii    tri tricolor        3 transcribed             TRUE
+#> 39           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 40           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 41           Kawaii    tri tricolor        3 transcribed            FALSE
+#> 42           Kawaii    tri tricolor        3      review             TRUE
+#> 43      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 44      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 45      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 46      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 47      Avant Garde    tri tricolor        3 transcribed            FALSE
+#> 48      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 49      Avant Garde    tri tricolor        3 transcribed            FALSE
+#> 50      Avant Garde    tri tricolor        3 transcribed            FALSE
+#> 51      Avant Garde    tri tricolor        3 transcribed            FALSE
+#> 52      Avant Garde    tri tricolor        3 transcribed             TRUE
+#> 53      Avant Garde    tri tricolor        3 transcribed            FALSE
+#>    min_delta_e min_delta_e_cvd min_delta_e_white
+#> 1         31.0            13.6              20.6
+#> 2         37.1            32.9              24.5
+#> 3         33.3            15.6              20.7
+#> 4         27.0            12.2              25.9
+#> 5         30.4             5.4              41.9
+#> 6         31.6            16.1              25.5
+#> 7         45.3            22.1              24.7
+#> 8         13.0            10.5              29.2
+#> 9         25.6            24.2               5.2
+#> 10        21.2            14.0              19.9
+#> 11        37.0            37.1              29.7
+#> 12        19.1             4.6              28.7
+#> 13        31.1            15.1              33.3
+#> 14        17.6             8.1              19.6
+#> 15        20.4            11.7              24.7
+#> 16        30.1            11.8              14.7
+#> 17         9.5             8.5               6.2
+#> 18        29.1            27.0              14.2
+#> 19        48.0            23.5              31.1
+#> 20        10.9             5.1              32.3
+#> 21        19.7            14.9              20.6
+#> 22        14.5             6.6              25.2
+#> 23        25.4            15.9              12.6
+#> 24        32.2             8.2              19.6
+#> 25        19.3             7.2              29.6
+#> 26        14.7             8.3              11.3
+#> 27        25.1             7.0              19.7
+#> 28        36.9            20.6              28.3
+#> 29        41.4            10.7              29.9
+#> 30        27.9            13.7              32.6
+#> 31        16.2             6.3              13.4
+#> 32        33.6            10.5              13.4
+#> 33        17.5             5.3              12.9
+#> 34        23.7            11.0              11.0
+#> 35        35.9            11.4              10.7
+#> 36        32.6            14.5              28.1
+#> 37        41.5            15.7              27.4
+#> 38        33.5            17.3              19.7
+#> 39        27.8            22.8               7.6
+#> 40        35.1            30.6               7.4
+#> 41        16.1             7.4              19.8
+#> 42        47.6            14.1              27.9
+#> 43        45.8            33.5              12.8
+#> 44        37.6            29.8              18.2
+#> 45        21.2            11.6              20.7
+#> 46        37.4            15.4              30.3
+#> 47        25.6             6.8               9.3
+#> 48        55.9            22.4              30.3
+#> 49        31.2            13.1               8.5
+#> 50        20.7             9.9              33.1
+#> 51        25.4             6.4              32.6
+#> 52        57.4            37.3              30.3
+#> 53        30.7            24.4              11.2
 #>                                                                                                                                                                               note
 #> 1                                                                                                                                                                                 
 #> 2                                                                                                                                                                                 
@@ -364,4 +501,14 @@ palettes(type = "tricolor")
 # only fully transcribed palettes
 nrow(palettes(include_review = FALSE))
 #> [1] 136
+
+# palettes that screen well for charts
+head(palettes(dataviz_friendly = TRUE)[, c("id", "n_colors", "min_delta_e_cvd")])
+#>            id n_colors min_delta_e_cvd
+#> 1 retro_bi_01        2            24.9
+#> 2 retro_bi_02        2            23.6
+#> 3 retro_bi_03        2            15.6
+#> 4 retro_bi_04        2            67.6
+#> 5 retro_bi_05        2            16.6
+#> 6 retro_bi_07        2            24.3
 ```

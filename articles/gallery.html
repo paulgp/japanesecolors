@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,6 +94,13 @@
   font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
   background: #fde68a; color: #713f12; padding: .1rem .4rem; border-radius: 4px;
 }
+.rs-dv {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
+  background: #cfe8d5; color: #14532d; padding: .1rem .4rem; border-radius: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  .rs-dv { background: #14532d; color: #cfe8d5; }
+}
 .rs-bar { display: flex; height: 54px; border-radius: 6px; overflow: hidden; border: 1px solid #0000001a; }
 .rs-sw { flex: 1 1 0; position: relative; }
 .rs-sw span {
@@ -113,18 +120,23 @@
 <p>All 149 palettes, grouped by collection. Hover a palette to read its
 hex values. Every palette shown here is an exported object: type its ID
 into R and you get the vector.</p>
+<p>These are design palettes, so most were never meant to encode
+categories in a chart. The 65 marked <strong>dataviz</strong> stay
+separable both in normal vision and under simulated colour-vision
+deficiency — filter to them with the <em>Charts</em> buttons, or in code
+with <code>palettes(dataviz_friendly = TRUE)</code>.</p>
 <div id="rs-controls" class="rs-controls">
 <p><label>Collection</label><button data-filter="collection" data-value="all" aria-pressed="true">All</button><button data-filter="collection" data-value="retro" aria-pressed="false">Retro</button><button data-filter="collection" data-value="minimalism" aria-pressed="false">Minimalism</button><button data-filter="collection" data-value="kawaii" aria-pressed="false">Kawaii</button><button data-filter="collection" data-value="avantgarde" aria-pressed="false">Avant
-Garde</button><label style="margin-left:1rem">Type</label><button data-filter="family" data-value="all" aria-pressed="true">All</button><button data-filter="family" data-value="bi" aria-pressed="false">bicolor</button><button data-filter="family" data-value="tri" aria-pressed="false">tricolor</button><button data-filter="family" data-value="four" aria-pressed="false">four-color</button><button data-filter="family" data-value="multi" aria-pressed="false">multicolor</button><span id="rs-count" class="rs-count"></span></p>
+Garde</button><label style="margin-left:1rem">Type</label><button data-filter="family" data-value="all" aria-pressed="true">All</button><button data-filter="family" data-value="bi" aria-pressed="false">bicolor</button><button data-filter="family" data-value="tri" aria-pressed="false">tricolor</button><button data-filter="family" data-value="four" aria-pressed="false">four-color</button><button data-filter="family" data-value="multi" aria-pressed="false">multicolor</button><label style="margin-left:1rem">Charts</label><button data-filter="dataviz" data-value="all" aria-pressed="true">All</button><button data-filter="dataviz" data-value="yes" aria-pressed="false">Dataviz-friendly</button><span id="rs-count" class="rs-count"></span></p>
 </div>
 <div id="rs-gallery">
 <h2 data-collection-heading="retro">
 Retro <span style="font-weight:400;color:#888;font-size:.8em">(55)</span>
 </h2>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_01</span><span class="rs-name">Ochre &amp;
-brick</span><span class="rs-meta">bicolor · 2 colours</span>
+brick</span><span class="rs-dv" title="Separable in normal vision (dE 42) and under simulated colour-vision deficiency (dE 25)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#EBB845">
@@ -135,10 +147,10 @@ brick</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_02</span><span class="rs-name">Plum &amp;
-apricot</span><span class="rs-meta">bicolor · 2 colours</span>
+apricot</span><span class="rs-dv" title="Separable in normal vision (dE 48) and under simulated colour-vision deficiency (dE 24)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#934B85">
@@ -149,10 +161,10 @@ apricot</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_03</span><span class="rs-name">Violet &amp;
-olive</span><span class="rs-meta">bicolor · 2 colours</span>
+olive</span><span class="rs-dv" title="Separable in normal vision (dE 48) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#5A4F7D">
@@ -163,10 +175,10 @@ olive</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_04</span><span class="rs-name">Gold &amp;
-ink</span><span class="rs-meta">bicolor · 2 colours</span>
+ink</span><span class="rs-dv" title="Separable in normal vision (dE 70) and under simulated colour-vision deficiency (dE 68)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#D9BC77">
@@ -177,10 +189,10 @@ ink</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_05</span><span class="rs-name">Blue &amp;
-charcoal</span><span class="rs-meta">bicolor · 2 colours</span>
+charcoal</span><span class="rs-dv" title="Separable in normal vision (dE 18) and under simulated colour-vision deficiency (dE 17)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#1B65A1">
@@ -191,7 +203,7 @@ charcoal</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_06</span><span class="rs-name">Moss &amp;
 clay</span><span class="rs-meta">bicolor · 2 colours</span>
@@ -205,10 +217,10 @@ clay</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_07</span><span class="rs-name">Brick &amp;
-citron</span><span class="rs-meta">bicolor · 2 colours</span>
+citron</span><span class="rs-dv" title="Separable in normal vision (dE 56) and under simulated colour-vision deficiency (dE 24)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#C5351E">
@@ -219,10 +231,10 @@ citron</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_08</span><span class="rs-name">Mint &amp;
-cream</span><span class="rs-meta">bicolor · 2 colours</span>
+cream</span><span class="rs-dv" title="Separable in normal vision (dE 20) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#B5DED9">
@@ -233,10 +245,10 @@ cream</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_09</span><span class="rs-name">Walnut &amp;
-pine</span><span class="rs-meta">bicolor · 2 colours</span>
+pine</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 21)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#886C4B">
@@ -247,10 +259,10 @@ pine</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_10</span><span class="rs-name">Slate &amp;
-stone</span><span class="rs-meta">bicolor · 2 colours</span>
+stone</span><span class="rs-dv" title="Separable in normal vision (dE 22) and under simulated colour-vision deficiency (dE 22)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#59606A">
@@ -261,10 +273,10 @@ stone</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_11</span><span class="rs-name">Plum &amp;
-citron</span><span class="rs-meta">bicolor · 2 colours</span>
+citron</span><span class="rs-dv" title="Separable in normal vision (dE 71) and under simulated colour-vision deficiency (dE 36)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#934B85">
@@ -275,7 +287,7 @@ citron</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_12</span><span class="rs-name">Brick &amp;
 moss</span><span class="rs-meta">bicolor · 2 colours</span>
@@ -289,10 +301,10 @@ moss</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_13</span><span class="rs-name">Saffron
-&amp; ink</span><span class="rs-flag">provisional</span><span class="rs-meta">bicolor · 2 colours</span>
+&amp; ink</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 76) and under simulated colour-vision deficiency (dE 72)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F4C03A">
@@ -303,10 +315,10 @@ moss</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="bi" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="bi" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_bi_14</span><span class="rs-name">Blue &amp;
-poppy</span><span class="rs-flag">provisional</span><span class="rs-meta">bicolor · 2 colours</span>
+poppy</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 44) and under simulated colour-vision deficiency (dE 37)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#3071B9">
@@ -317,10 +329,10 @@ poppy</span><span class="rs-flag">provisional</span><span class="rs-meta">bicolo
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_01</span><span class="rs-name">Meadow
-&amp; sky</span><span class="rs-meta">tricolor · 3 colours</span>
+&amp; sky</span><span class="rs-dv" title="Separable in normal vision (dE 31) and under simulated colour-vision deficiency (dE 14)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E9D99B">
@@ -334,10 +346,9 @@ poppy</span><span class="rs-flag">provisional</span><span class="rs-meta">bicolo
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">retro_tri_02</span><span class="rs-name">Harbor</span><span class="rs-meta">tricolor · 3
-colours</span>
+<span class="rs-id">retro_tri_02</span><span class="rs-name">Harbor</span><span class="rs-dv" title="Separable in normal vision (dE 37) and under simulated colour-vision deficiency (dE 33)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#57B0BF">
@@ -351,10 +362,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">retro_tri_03</span><span class="rs-name">Poolside</span><span class="rs-meta">tricolor · 3
-colours</span>
+<span class="rs-id">retro_tri_03</span><span class="rs-name">Poolside</span><span class="rs-dv" title="Separable in normal vision (dE 33) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#FFDF4F">
@@ -368,10 +378,10 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_04</span><span class="rs-name">Orange
-soda</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolor · 3 colours</span>
+soda</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 27) and under simulated colour-vision deficiency (dE 12)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#EE763B">
@@ -385,7 +395,7 @@ soda</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolo
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_05</span><span class="rs-name">Plum, blue
 &amp; crimson</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolor · 3 colours</span>
@@ -402,10 +412,10 @@ soda</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolo
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_06</span><span class="rs-name">Peach
-orchard</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolor · 3 colours</span>
+orchard</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 32) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F5AE94">
@@ -419,10 +429,10 @@ orchard</span><span class="rs-flag">provisional</span><span class="rs-meta">tric
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_07</span><span class="rs-name">Crimson
-garden</span><span class="rs-meta">tricolor · 3 colours</span>
+garden</span><span class="rs-dv" title="Separable in normal vision (dE 45) and under simulated colour-vision deficiency (dE 22)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E72F2B">
@@ -436,7 +446,7 @@ garden</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_08</span><span class="rs-name">Harvest</span><span class="rs-meta">tricolor · 3
 colours</span>
@@ -453,7 +463,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_09</span><span class="rs-name">Steel &amp;
 rust</span><span class="rs-meta">tricolor · 3 colours</span>
@@ -470,10 +480,10 @@ rust</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_10</span><span class="rs-name">Evergreen
-studio</span><span class="rs-meta">tricolor · 3 colours</span>
+studio</span><span class="rs-dv" title="Separable in normal vision (dE 21) and under simulated colour-vision deficiency (dE 14)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#00534B">
@@ -487,11 +497,10 @@ studio</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_11</span><span class="rs-name">Blue,
-walnut &amp; lime</span><span class="rs-meta">tricolor · 3
-colours</span>
+walnut &amp; lime</span><span class="rs-dv" title="Separable in normal vision (dE 37) and under simulated colour-vision deficiency (dE 37)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#0083C2">
@@ -505,7 +514,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_12</span><span class="rs-name">Garden
 party</span><span class="rs-meta">tricolor · 3 colours</span>
@@ -522,10 +531,9 @@ party</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">retro_tri_13</span><span class="rs-name">Velvet</span><span class="rs-meta">tricolor · 3
-colours</span>
+<span class="rs-id">retro_tri_13</span><span class="rs-name">Velvet</span><span class="rs-dv" title="Separable in normal vision (dE 31) and under simulated colour-vision deficiency (dE 15)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#AE2039">
@@ -539,7 +547,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_14</span><span class="rs-name">Coffeehouse</span><span class="rs-meta">tricolor · 3
 colours</span>
@@ -556,10 +564,10 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_15</span><span class="rs-name">Sunny
-field</span><span class="rs-meta">tricolor · 3 colours</span>
+field</span><span class="rs-dv" title="Separable in normal vision (dE 20) and under simulated colour-vision deficiency (dE 12)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#FFDF4F">
@@ -573,10 +581,10 @@ field</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_16</span><span class="rs-name">Sky, leaf
-&amp; red</span><span class="rs-meta">tricolor · 3 colours</span>
+&amp; red</span><span class="rs-dv" title="Separable in normal vision (dE 30) and under simulated colour-vision deficiency (dE 12)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#BCE0E7">
@@ -590,7 +598,7 @@ field</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_17</span><span class="rs-name">Quiet
 olive</span><span class="rs-meta">tricolor · 3 colours</span>
@@ -607,10 +615,10 @@ olive</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_18</span><span class="rs-name">Forest
-&amp; brass</span><span class="rs-meta">tricolor · 3 colours</span>
+&amp; brass</span><span class="rs-dv" title="Separable in normal vision (dE 29) and under simulated colour-vision deficiency (dE 27)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#005846">
@@ -624,10 +632,10 @@ olive</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_19</span><span class="rs-name">Primary
-print</span><span class="rs-meta">tricolor · 3 colours</span>
+print</span><span class="rs-dv" title="Separable in normal vision (dE 48) and under simulated colour-vision deficiency (dE 24)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E61919">
@@ -641,7 +649,7 @@ print</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_tri_20</span><span class="rs-name">Blue
 hour</span><span class="rs-meta">tricolor · 3 colours</span>
@@ -658,10 +666,9 @@ hour</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">retro_tri_21</span><span class="rs-name">Woodland</span><span class="rs-meta">tricolor · 3
-colours</span>
+<span class="rs-id">retro_tri_21</span><span class="rs-name">Woodland</span><span class="rs-dv" title="Separable in normal vision (dE 20) and under simulated colour-vision deficiency (dE 15)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#7E8B5D">
@@ -675,7 +682,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_01</span><span class="rs-name">Rose,
 paper &amp; gold</span><span class="rs-meta">four-color · 4
@@ -696,10 +703,10 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_02</span><span class="rs-name">Hot
-type</span><span class="rs-meta">four-color · 4 colours</span>
+type</span><span class="rs-dv" title="Separable in normal vision (dE 23) and under simulated colour-vision deficiency (dE 11)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E60012">
@@ -716,7 +723,7 @@ type</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_03</span><span class="rs-name">Classic
 print</span><span class="rs-meta">four-color · 4 colours</span>
@@ -736,10 +743,10 @@ print</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_04</span><span class="rs-name">Petal
-&amp; leaf</span><span class="rs-meta">four-color · 4 colours</span>
+&amp; leaf</span><span class="rs-dv" title="Separable in normal vision (dE 27) and under simulated colour-vision deficiency (dE 13)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F29E9D">
@@ -756,7 +763,7 @@ print</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_05</span><span class="rs-name">Coastal
 clay</span><span class="rs-meta">four-color · 4 colours</span>
@@ -776,10 +783,9 @@ clay</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">retro_four_06</span><span class="rs-name">Botanical</span><span class="rs-meta">four-color · 4
-colours</span>
+<span class="rs-id">retro_four_06</span><span class="rs-name">Botanical</span><span class="rs-dv" title="Separable in normal vision (dE 24) and under simulated colour-vision deficiency (dE 12)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#008CAD">
@@ -796,11 +802,10 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_07</span><span class="rs-name">Crimson
-&amp; sea glass</span><span class="rs-meta">four-color · 4
-colours</span>
+&amp; sea glass</span><span class="rs-dv" title="Separable in normal vision (dE 25) and under simulated colour-vision deficiency (dE 15)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#C92539">
@@ -817,7 +822,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_08</span><span class="rs-name">Summer
 postcard</span><span class="rs-meta">four-color · 4 colours</span>
@@ -837,7 +842,7 @@ postcard</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_09</span><span class="rs-name">Primary
 play</span><span class="rs-meta">four-color · 4 colours</span>
@@ -857,7 +862,7 @@ play</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_10</span><span class="rs-name">Faded
 fresco</span><span class="rs-meta">four-color · 4 colours</span>
@@ -877,10 +882,10 @@ fresco</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
 <span class="rs-id">retro_four_11</span><span class="rs-name">Lilac
-&amp; leather</span><span class="rs-meta">four-color · 4 colours</span>
+&amp; leather</span><span class="rs-dv" title="Separable in normal vision (dE 23) and under simulated colour-vision deficiency (dE 10)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#A686BC">
@@ -897,7 +902,7 @@ fresco</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_01</span><span class="rs-name">Rose
 &amp; marigold</span><span class="rs-meta">multicolor · 5 colours</span>
@@ -920,7 +925,7 @@ fresco</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_02</span><span class="rs-name">Market
 day</span><span class="rs-meta">multicolor · 5 colours</span>
@@ -943,7 +948,7 @@ day</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_03</span><span class="rs-name">Ceramics</span><span class="rs-meta">multicolor · 5
 colours</span>
@@ -966,7 +971,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_04</span><span class="rs-name">Record
 shop</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 6 colours</span>
@@ -992,7 +997,7 @@ shop</span><span class="rs-flag">provisional</span><span class="rs-meta">multico
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_05</span><span class="rs-name">Autumn
 archive</span><span class="rs-meta">multicolor · 8 colours</span>
@@ -1024,7 +1029,7 @@ archive</span><span class="rs-meta">multicolor · 8 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_06</span><span class="rs-name">Twilight
 bouquet</span><span class="rs-meta">multicolor · 6 colours</span>
@@ -1050,7 +1055,7 @@ bouquet</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_07</span><span class="rs-name">Pastel
 garden</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 5 colours</span>
@@ -1073,7 +1078,7 @@ garden</span><span class="rs-flag">provisional</span><span class="rs-meta">multi
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_08</span><span class="rs-name">Seaside
 poster</span><span class="rs-meta">multicolor · 6 colours</span>
@@ -1099,7 +1104,7 @@ poster</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="retro" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">retro_multi_09</span><span class="rs-name">Dusk to
 amber</span><span class="rs-meta">multicolor · 6 colours</span>
@@ -1128,10 +1133,9 @@ amber</span><span class="rs-meta">multicolor · 6 colours</span>
 <h2 data-collection-heading="minimalism">
 Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </h2>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_01</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_01</span><span class="rs-dv" title="Separable in normal vision (dE 54) and under simulated colour-vision deficiency (dE 19)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#5CB3CE">
@@ -1142,7 +1146,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_bi_02</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -1156,7 +1160,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_bi_03</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -1170,7 +1174,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_bi_04</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -1184,10 +1188,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_05</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_05</span><span class="rs-dv" title="Separable in normal vision (dE 45) and under simulated colour-vision deficiency (dE 37)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#0053A5">
@@ -1198,10 +1201,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_06</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_06</span><span class="rs-dv" title="Separable in normal vision (dE 40) and under simulated colour-vision deficiency (dE 25)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#BF556C">
@@ -1212,10 +1214,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_07</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_07</span><span class="rs-dv" title="Separable in normal vision (dE 33) and under simulated colour-vision deficiency (dE 28)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#02589F">
@@ -1226,10 +1227,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_08</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_08</span><span class="rs-dv" title="Separable in normal vision (dE 67) and under simulated colour-vision deficiency (dE 57)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#C1A76C">
@@ -1240,10 +1240,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_09</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_09</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 30)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#35844B">
@@ -1254,7 +1253,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_bi_10</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -1268,10 +1267,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_bi_11</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">minimalism_bi_11</span><span class="rs-dv" title="Separable in normal vision (dE 67) and under simulated colour-vision deficiency (dE 65)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#D7B792">
@@ -1282,7 +1280,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_bi_12</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -1296,7 +1294,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_tri_01</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -1312,9 +1310,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_tri_02</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">minimalism_tri_02</span><span class="rs-dv" title="Separable in normal vision (dE 25) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#570018">
@@ -1328,7 +1326,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_01</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1347,7 +1345,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_02</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1366,7 +1364,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_03</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1385,7 +1383,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_04</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1404,7 +1402,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_05</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1423,9 +1421,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">minimalism_four_06</span><span class="rs-meta">four-color · 4 colours</span>
+<span class="rs-id">minimalism_four_06</span><span class="rs-dv" title="Separable in normal vision (dE 25) and under simulated colour-vision deficiency (dE 11)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F1B1CE">
@@ -1442,7 +1440,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_07</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1461,7 +1459,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_four_08</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -1480,7 +1478,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_01</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -1505,7 +1503,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_02</span><span class="rs-meta">multicolor · 7 colours</span>
 </div>
@@ -1533,7 +1531,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_03</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -1555,7 +1553,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_04</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -1580,7 +1578,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_05</span><span class="rs-meta">multicolor · 7 colours</span>
 </div>
@@ -1608,7 +1606,7 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="minimalism" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">minimalism_multi_06</span><span class="rs-meta">multicolor · 7 colours</span>
 </div>
@@ -1639,10 +1637,9 @@ Minimalism <span style="font-weight:400;color:#888;font-size:.8em">(28)</span>
 <h2 data-collection-heading="kawaii">
 Kawaii <span style="font-weight:400;color:#888;font-size:.8em">(30)</span>
 </h2>
-<div class="rs-pal" data-collection="kawaii" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_bi_01</span><span class="rs-meta">bicolor · 2
-colours</span>
+<span class="rs-id">kawaii_bi_01</span><span class="rs-dv" title="Separable in normal vision (dE 73) and under simulated colour-vision deficiency (dE 43)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#5C4D8C">
@@ -1653,7 +1650,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_01</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1670,7 +1667,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_02</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1687,7 +1684,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_03</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1704,7 +1701,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_04</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1721,10 +1718,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_05</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_05</span><span class="rs-dv" title="Separable in normal vision (dE 37) and under simulated colour-vision deficiency (dE 21)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#DE1628">
@@ -1738,10 +1734,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_06</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_06</span><span class="rs-dv" title="Separable in normal vision (dE 41) and under simulated colour-vision deficiency (dE 11)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#207EB8">
@@ -1755,10 +1750,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_07</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_07</span><span class="rs-dv" title="Separable in normal vision (dE 28) and under simulated colour-vision deficiency (dE 14)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#3D7EB4">
@@ -1772,7 +1766,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_08</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1789,10 +1783,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_09</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_09</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 10)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#FFF462">
@@ -1806,7 +1799,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_10</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1823,7 +1816,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_11</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1840,7 +1833,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_12</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1857,10 +1850,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_13</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_13</span><span class="rs-dv" title="Separable in normal vision (dE 33) and under simulated colour-vision deficiency (dE 14)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F9F21E">
@@ -1874,10 +1866,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_14</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_14</span><span class="rs-dv" title="Separable in normal vision (dE 42) and under simulated colour-vision deficiency (dE 16)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#1D967A">
@@ -1891,10 +1882,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_15</span><span class="rs-meta">tricolor ·
-3 colours</span>
+<span class="rs-id">kawaii_tri_15</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 17)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#FFF462">
@@ -1908,7 +1898,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_16</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1925,7 +1915,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_17</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1942,7 +1932,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_tri_18</span><span class="rs-meta">tricolor ·
 3 colours</span>
@@ -1959,10 +1949,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="review">
+<div class="rs-pal" data-collection="kawaii" data-family="tri" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_tri_19</span><span class="rs-flag">provisional</span><span class="rs-meta">tricolor · 3
-colours</span>
+<span class="rs-id">kawaii_tri_19</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 48) and under simulated colour-vision deficiency (dE 14)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E7242E">
@@ -1976,9 +1965,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">kawaii_four_01</span><span class="rs-meta">four-color · 4 colours</span>
+<span class="rs-id">kawaii_four_01</span><span class="rs-dv" title="Separable in normal vision (dE 31) and under simulated colour-vision deficiency (dE 10)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#CFC83B">
@@ -1995,7 +1984,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_four_02</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2014,7 +2003,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_01</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2036,7 +2025,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_02</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 6
 colours</span>
@@ -2062,7 +2051,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_03</span><span class="rs-meta">multicolor · 7 colours</span>
 </div>
@@ -2090,7 +2079,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_04</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2112,7 +2101,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_05</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2134,7 +2123,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_06</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2156,7 +2145,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_07</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2178,7 +2167,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="kawaii" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">kawaii_multi_08</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2203,10 +2192,9 @@ colours</span>
 <h2 data-collection-heading="avantgarde">
 Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </h2>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_01</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_01</span><span class="rs-dv" title="Separable in normal vision (dE 45) and under simulated colour-vision deficiency (dE 15)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E45886">
@@ -2217,10 +2205,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_02</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_02</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 19)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F7DB00">
@@ -2231,10 +2218,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_03</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_03</span><span class="rs-dv" title="Separable in normal vision (dE 29) and under simulated colour-vision deficiency (dE 25)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#C81839">
@@ -2245,7 +2231,7 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_bi_04</span><span class="rs-meta">bicolor
 · 2 colours</span>
@@ -2259,10 +2245,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_05</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_05</span><span class="rs-dv" title="Separable in normal vision (dE 60) and under simulated colour-vision deficiency (dE 22)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#3DB1DD">
@@ -2273,10 +2258,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_06</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_06</span><span class="rs-dv" title="Separable in normal vision (dE 70) and under simulated colour-vision deficiency (dE 33)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#A44295">
@@ -2287,10 +2271,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_07</span><span class="rs-meta">bicolor
-· 2 colours</span>
+<span class="rs-id">avantgarde_bi_07</span><span class="rs-dv" title="Separable in normal vision (dE 60) and under simulated colour-vision deficiency (dE 27)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#D53921">
@@ -2301,10 +2284,9 @@ Avant Garde <span style="font-weight:400;color:#888;font-size:.8em">(36)</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="review">
+<div class="rs-pal" data-collection="avantgarde" data-family="bi" data-status="review" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_bi_08</span><span class="rs-flag">provisional</span><span class="rs-meta">bicolor · 2
-colours</span>
+<span class="rs-id">avantgarde_bi_08</span><span class="rs-flag">provisional</span><span class="rs-dv" title="Separable in normal vision (dE 80) and under simulated colour-vision deficiency (dE 44)">dataviz</span><span class="rs-meta">bicolor · 2 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#8F3C89">
@@ -2315,9 +2297,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_01</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_01</span><span class="rs-dv" title="Separable in normal vision (dE 46) and under simulated colour-vision deficiency (dE 34)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E60012">
@@ -2331,9 +2313,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_02</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_02</span><span class="rs-dv" title="Separable in normal vision (dE 38) and under simulated colour-vision deficiency (dE 30)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#A7DAE5">
@@ -2347,9 +2329,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_03</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_03</span><span class="rs-dv" title="Separable in normal vision (dE 21) and under simulated colour-vision deficiency (dE 12)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F6C3D9">
@@ -2363,9 +2345,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_04</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_04</span><span class="rs-dv" title="Separable in normal vision (dE 37) and under simulated colour-vision deficiency (dE 15)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#25B17C">
@@ -2379,7 +2361,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_tri_05</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -2395,9 +2377,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_06</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_06</span><span class="rs-dv" title="Separable in normal vision (dE 56) and under simulated colour-vision deficiency (dE 22)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#FFF100">
@@ -2411,7 +2393,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_tri_07</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -2427,7 +2409,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_tri_08</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -2443,7 +2425,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_tri_09</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -2459,9 +2441,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_tri_10</span><span class="rs-meta">tricolor · 3 colours</span>
+<span class="rs-id">avantgarde_tri_10</span><span class="rs-dv" title="Separable in normal vision (dE 57) and under simulated colour-vision deficiency (dE 37)">dataviz</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#000000">
@@ -2475,7 +2457,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="tri" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_tri_11</span><span class="rs-meta">tricolor · 3 colours</span>
 </div>
@@ -2491,9 +2473,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_four_01</span><span class="rs-meta">four-color · 4 colours</span>
+<span class="rs-id">avantgarde_four_01</span><span class="rs-dv" title="Separable in normal vision (dE 34) and under simulated colour-vision deficiency (dE 13)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#F2AB16">
@@ -2510,9 +2492,9 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="yes">
 <div class="rs-pal-head">
-<span class="rs-id">avantgarde_four_02</span><span class="rs-meta">four-color · 4 colours</span>
+<span class="rs-id">avantgarde_four_02</span><span class="rs-dv" title="Separable in normal vision (dE 46) and under simulated colour-vision deficiency (dE 27)">dataviz</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
 <div class="rs-bar">
 <div class="rs-sw" style="background:#E4007F">
@@ -2529,7 +2511,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_four_03</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2548,7 +2530,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_four_04</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2567,7 +2549,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_four_05</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2586,7 +2568,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_four_06</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2605,7 +2587,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="four" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_four_07</span><span class="rs-meta">four-color · 4 colours</span>
 </div>
@@ -2624,7 +2606,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_01</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -2649,7 +2631,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_02</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -2674,7 +2656,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_03</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2696,7 +2678,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_04</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2718,7 +2700,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_05</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 6
 colours</span>
@@ -2744,7 +2726,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_06</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 5
 colours</span>
@@ -2767,7 +2749,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_07</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -2792,7 +2774,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_08</span><span class="rs-meta">multicolor · 5 colours</span>
 </div>
@@ -2814,7 +2796,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="transcribed" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_09</span><span class="rs-meta">multicolor · 6 colours</span>
 </div>
@@ -2839,7 +2821,7 @@ colours</span>
 </div>
 </div>
 </div>
-<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review">
+<div class="rs-pal" data-collection="avantgarde" data-family="multi" data-status="review" data-dataviz="no">
 <div class="rs-pal-head">
 <span class="rs-id">avantgarde_multi_10</span><span class="rs-flag">provisional</span><span class="rs-meta">multicolor · 5
 colours</span>
@@ -2868,7 +2850,7 @@ No palettes match that combination.
 </p>
 <script>
 (function () {
-  var state = { collection: "all", family: "all" };
+  var state = { collection: "all", family: "all", dataviz: "all" };
   var controls = document.getElementById("rs-controls");
   if (!controls) return;
 
@@ -2877,7 +2859,8 @@ No palettes match that combination.
     var shown = 0;
     pals.forEach(function (p) {
       var ok = (state.collection === "all" || p.dataset.collection === state.collection) &&
-               (state.family === "all" || p.dataset.family === state.family);
+               (state.family === "all" || p.dataset.family === state.family) &&
+               (state.dataviz === "all" || p.dataset.dataviz === state.dataviz);
       p.style.display = ok ? "" : "none";
       if (ok) shown++;
     });
@@ -2926,7 +2909,17 @@ No palettes match that combination.
 <span></span>
 <span><span class="co"># only fully transcribed palettes</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="fu"><a href="../reference/palettes.html">palettes</a></span><span class="op">(</span>include_review <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 136</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 136</span></span>
+<span></span>
+<span><span class="co"># palettes that screen well for charts, widest first</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="../reference/palettes.html">palettes</a></span><span class="op">(</span>dataviz_friendly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"n_colors"</span>, <span class="st">"min_delta_e_cvd"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt;            id n_colors min_delta_e_cvd</span></span>
+<span><span class="co">#&gt; 1 retro_bi_01        2            24.9</span></span>
+<span><span class="co">#&gt; 2 retro_bi_02        2            23.6</span></span>
+<span><span class="co">#&gt; 3 retro_bi_03        2            15.6</span></span>
+<span><span class="co">#&gt; 4 retro_bi_04        2            67.6</span></span>
+<span><span class="co">#&gt; 5 retro_bi_05        2            16.6</span></span>
+<span><span class="co">#&gt; 6 retro_bi_07        2            24.3</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

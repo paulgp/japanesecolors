@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,10 @@ They are stable API.</p>
 <p>Browse with <code><a href="palettes.html">palettes()</a></code>, <code><a href="palette_names.html">palette_names()</a></code> and <code><a href="collections.html">collections()</a></code>; look up with
 <code><a href="get_palette.html">get_palette()</a></code> and <code><a href="palette_info.html">palette_info()</a></code>; draw with <code><a href="show_palette.html">show_palette()</a></code>. For ggplot2,
 see <code><a href="scale_japanesecolors.html">scale_colour_japanesecolors()</a></code>. ggplot2 is suggested, not required.</p>
+<p>These are design palettes, so many are unsuitable for charts.
+<code>palettes(dataviz_friendly = TRUE)</code> keeps those that stay separable under
+simulated colour-vision deficiency and far enough apart to read at a glance;
+see <code><a href="palettes.html">palettes()</a></code> for how that is measured.</p>
 <p>Values were transcribed by hand from printed RGB labels. Readings that were
 not reliably legible are marked <code>"review"</code> rather than treated as confirmed;
 <code><a href="palettes_needing_review.html">palettes_needing_review()</a></code> lists them.</p>

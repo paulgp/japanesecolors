@@ -11,7 +11,7 @@ kawaii_bi_01 give the same colours.'></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,13 @@ of an exported object, so <code>get_palette(palette_names("kawaii")[1])</code> a
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palette_names</span><span class="op">(</span>collection <span class="op">=</span> <span class="cn">NULL</span>, type <span class="op">=</span> <span class="cn">NULL</span>, n <span class="op">=</span> <span class="cn">NULL</span>, include_review <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palette_names</span><span class="op">(</span></span>
+<span>  collection <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  type <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  include_review <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  dataviz_friendly <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -77,6 +83,12 @@ short codes used in palette IDs (<code>"bi"</code>, <code>"tri"</code>, <code>"f
 <dd><p>Whether to include palettes that contain a provisional
 swatch reading. <code>TRUE</code> by default, so nothing is hidden; the <code>status</code>
 column marks them and <code><a href="palettes_needing_review.html">palettes_needing_review()</a></code> lists them.</p></dd>
+
+
+<dt id="arg-dataviz-friendly">dataviz_friendly<a class="anchor" aria-label="anchor" href="#arg-dataviz-friendly"></a></dt>
+<dd><p>Optionally keep only palettes that screen well for
+data visualisation (<code>TRUE</code>), or only those that do not (<code>FALSE</code>). <code>NULL</code>,
+the default, keeps both. See the Data visualisation section.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -107,6 +119,10 @@ column marks them and <code><a href="palettes_needing_review.html">palettes_need
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "minimalism_bi_01" "minimalism_bi_02" "minimalism_bi_03" "minimalism_bi_04"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [5] "minimalism_bi_05" "minimalism_bi_06" "minimalism_bi_07" "minimalism_bi_08"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [9] "minimalism_bi_09" "minimalism_bi_10" "minimalism_bi_11" "minimalism_bi_12"</span>
+<span class="r-in"><span><span class="fu">palette_names</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">4</span>, dataviz_friendly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "retro_four_02"      "retro_four_04"      "retro_four_06"     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "retro_four_07"      "retro_four_11"      "minimalism_four_06"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [7] "kawaii_four_01"     "avantgarde_four_01" "avantgarde_four_02"</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu">palette_names</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 149</span>
 </code></pre></div>

@@ -124,6 +124,47 @@ get_palette("minimalism_multi_02")
 The visual gallery of all 149 palettes is on the [package
 website](https://paulgp.com/japanesecolors/articles/gallery.html).
 
+## Which ones work in a chart
+
+These are design palettes, chosen to look good together rather than to
+encode categories, so most were never meant for data visualisation. 65
+of the 149 screen well for it, on two criteria:
+
+- **Colour-vision deficiency** — colours that separate for a trichromat
+  can collapse for a dichromat, so each palette is re-measured under
+  simulated deuteranopia, protanopia and tritanopia.
+- **Perceptual separation** — categories have to read as different at a
+  glance, in small marks.
+
+Both use CIEDE2000 on a palette’s closest pair, since a palette is only
+as readable as the two colours most easily confused. A third check stops
+a near-white colour vanishing against the page.
+
+``` r
+
+palettes(dataviz_friendly = TRUE, n = 4)[, c("id", "min_delta_e", "min_delta_e_cvd")]
+#>                   id min_delta_e min_delta_e_cvd
+#> 1      retro_four_02        22.6            11.4
+#> 2      retro_four_04        26.8            13.2
+#> 3      retro_four_06        24.0            12.1
+#> 4      retro_four_07        24.9            15.4
+#> 5      retro_four_11        23.4            10.1
+#> 6 minimalism_four_06        25.0            11.4
+#> 7     kawaii_four_01        30.8            10.3
+#> 8 avantgarde_four_01        33.9            13.2
+#> 9 avantgarde_four_02        46.0            27.4
+```
+
+The measurements ship with every palette, so you can set your own bar.
+The thresholds are calibrated so that the [Okabe-Ito
+palette](https://jfly.uni-koeln.de/color/), designed for colour-vision
+deficiency, passes — and palettes that separate well in normal vision
+but collapse for a dichromat, like ggplot2’s default hue scale, do not.
+
+Worth knowing: no palette of five or more colours clears the bar.
+Keeping 5–8 colours mutually distinguishable under dichromacy is hard,
+and these palettes were not built for it.
+
 ## Python
 
 The same palettes, generated from the same canonical data, are available

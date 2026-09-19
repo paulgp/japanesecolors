@@ -7,7 +7,13 @@ and `kawaii_bi_01` give the same colours.
 ## Usage
 
 ``` r
-palette_names(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
+palette_names(
+  collection = NULL,
+  type = NULL,
+  n = NULL,
+  include_review = TRUE,
+  dataviz_friendly = NULL
+)
 ```
 
 ## Arguments
@@ -35,6 +41,12 @@ palette_names(collection = NULL, type = NULL, n = NULL, include_review = TRUE)
   them and
   [`palettes_needing_review()`](https://paulgp.com/japanesecolors/reference/palettes_needing_review.md)
   lists them.
+
+- dataviz_friendly:
+
+  Optionally keep only palettes that screen well for data visualisation
+  (`TRUE`), or only those that do not (`FALSE`). `NULL`, the default,
+  keeps both. See the Data visualisation section.
 
 ## Value
 
@@ -65,6 +77,10 @@ palette_names("minimalism", type = "bicolor")
 #>  [1] "minimalism_bi_01" "minimalism_bi_02" "minimalism_bi_03" "minimalism_bi_04"
 #>  [5] "minimalism_bi_05" "minimalism_bi_06" "minimalism_bi_07" "minimalism_bi_08"
 #>  [9] "minimalism_bi_09" "minimalism_bi_10" "minimalism_bi_11" "minimalism_bi_12"
+palette_names(n = 4, dataviz_friendly = TRUE)
+#> [1] "retro_four_02"      "retro_four_04"      "retro_four_06"     
+#> [4] "retro_four_07"      "retro_four_11"      "minimalism_four_06"
+#> [7] "kawaii_four_01"     "avantgarde_four_01" "avantgarde_four_02"
 length(palette_names())
 #> [1] 149
 ```

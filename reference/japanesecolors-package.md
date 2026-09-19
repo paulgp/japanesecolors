@@ -38,6 +38,13 @@ For ggplot2, see
 [`scale_colour_japanesecolors()`](https://paulgp.com/japanesecolors/reference/scale_japanesecolors.md).
 ggplot2 is suggested, not required.
 
+These are design palettes, so many are unsuitable for charts.
+`palettes(dataviz_friendly = TRUE)` keeps those that stay separable
+under simulated colour-vision deficiency and far enough apart to read at
+a glance; see
+[`palettes()`](https://paulgp.com/japanesecolors/reference/palettes.md)
+for how that is measured.
+
 Values were transcribed by hand from printed RGB labels. Readings that
 were not reliably legible are marked `"review"` rather than treated as
 confirmed;

@@ -9,7 +9,7 @@ the main way to browse what is in the package."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,13 @@ the main way to browse what is in the package.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palettes</span><span class="op">(</span>collection <span class="op">=</span> <span class="cn">NULL</span>, type <span class="op">=</span> <span class="cn">NULL</span>, n <span class="op">=</span> <span class="cn">NULL</span>, include_review <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">palettes</span><span class="op">(</span></span>
+<span>  collection <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  type <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  include_review <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  dataviz_friendly <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -75,6 +81,12 @@ short codes used in palette IDs (<code>"bi"</code>, <code>"tri"</code>, <code>"f
 swatch reading. <code>TRUE</code> by default, so nothing is hidden; the <code>status</code>
 column marks them and <code><a href="palettes_needing_review.html">palettes_needing_review()</a></code> lists them.</p></dd>
 
+
+<dt id="arg-dataviz-friendly">dataviz_friendly<a class="anchor" aria-label="anchor" href="#arg-dataviz-friendly"></a></dt>
+<dd><p>Optionally keep only palettes that screen well for
+data visualisation (<code>TRUE</code>), or only those that do not (<code>FALSE</code>). <code>NULL</code>,
+the default, keeps both. See the Data visualisation section.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -100,11 +112,40 @@ column marks them and <code><a href="palettes_needing_review.html">palettes_need
 <dt>status</dt>
 <dd><p><code>"transcribed"</code> or <code>"review"</code>.</p></dd>
 
+<dt>dataviz_friendly</dt>
+<dd><p>Whether the palette screens well for categorical
+data visualisation. See the Data visualisation section.</p></dd>
+
+<dt>min_delta_e, min_delta_e_cvd, min_delta_e_white</dt>
+<dd><p>The measurements
+behind that flag.</p></dd>
+
 <dt>note</dt>
 <dd><p>Free text, including why any swatch is provisional.</p></dd>
 
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="data-visualisation">Data visualisation<a class="anchor" aria-label="anchor" href="#data-visualisation"></a></h2>
+
+
+<p>These are design palettes, chosen to look good together rather than to
+encode categories, so many are unsuitable for charts. <code>dataviz_friendly</code>
+screens for the two things that decide it:</p><ul><li><p><strong>Colour-vision deficiency.</strong> Colours that separate for a trichromat can
+collapse for a dichromat, so each palette is re-measured under simulated
+deuteranopia, protanopia and tritanopia.</p></li>
+<li><p><strong>Perceptual separation.</strong> Categories have to read as different at a
+glance, in small marks.</p></li>
+</ul><p>Both use CIEDE2000 on a palette's closest pair, since a palette is only as
+readable as the two colours most easily confused. A third check stops a
+near-white colour from vanishing against the page. <code>min_delta_e</code>,
+<code>min_delta_e_cvd</code> and <code>min_delta_e_white</code> report the measurements, so you
+can apply a stricter or looser bar than the shipped thresholds.</p>
+<p>Thresholds are calibrated so that the Okabe-Ito palette, designed for
+colour-vision deficiency, passes. Treat the flag as a screening aid: it
+judges separability only, and cannot know whether a palette suits your
+chart, audience or medium.</p>
+    </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="palette_names.html">palette_names()</a></code> for just the IDs, <code><a href="get_palette.html">get_palette()</a></code> to fetch
@@ -121,13 +162,20 @@ colours, <code><a href="show_palette.html">show_palette()</a></code> to draw the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 retro_bi_04      Gold &amp; ink   editorial      retro            Retro     bi</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 retro_bi_05 Blue &amp; charcoal   editorial      retro            Retro     bi</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 retro_bi_06     Moss &amp; clay   editorial      retro            Retro     bi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      type n_colors      status note</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 bicolor        2 transcribed     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 bicolor        2 transcribed     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 bicolor        2 transcribed     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 bicolor        2 transcribed     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 bicolor        2 transcribed     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 bicolor        2 transcribed     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      type n_colors      status dataviz_friendly min_delta_e min_delta_e_cvd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 bicolor        2 transcribed             TRUE        42.0            24.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 bicolor        2 transcribed             TRUE        48.3            23.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 bicolor        2 transcribed             TRUE        47.6            15.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 bicolor        2 transcribed             TRUE        69.9            67.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 bicolor        2 transcribed             TRUE        17.5            16.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 bicolor        2 transcribed            FALSE        38.4             7.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   min_delta_e_white note</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1              29.7     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2              35.2     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              41.3     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              25.2     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              49.5     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6              42.0     </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># everything in one collection</span></span></span>
 <span class="r-in"><span><span class="fu">palettes</span><span class="op">(</span><span class="st">"kawaii"</span><span class="op">)</span></span></span>
@@ -162,37 +210,68 @@ colours, <code><a href="show_palette.html">show_palette()</a></code> to draw the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 28 kawaii_multi_06 kawaii_multi_06     pending     kawaii           Kawaii</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 29 kawaii_multi_07 kawaii_multi_07     pending     kawaii           Kawaii</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 30 kawaii_multi_08 kawaii_multi_08     pending     kawaii           Kawaii</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    family       type n_colors      status</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1      bi    bicolor        2 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9     tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19    tri   tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20    tri   tricolor        3      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21   four four-color        4 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22   four four-color        4 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23  multi multicolor        5 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24  multi multicolor        6      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25  multi multicolor        7 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26  multi multicolor        5 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27  multi multicolor        5 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28  multi multicolor        5 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29  multi multicolor        5 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30  multi multicolor        5 transcribed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    family       type n_colors      status dataviz_friendly min_delta_e</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      bi    bicolor        2 transcribed             TRUE        72.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     tri   tricolor        3 transcribed            FALSE        32.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     tri   tricolor        3 transcribed            FALSE        19.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     tri   tricolor        3 transcribed            FALSE        14.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     tri   tricolor        3 transcribed            FALSE        25.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6     tri   tricolor        3 transcribed             TRUE        36.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7     tri   tricolor        3 transcribed             TRUE        41.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8     tri   tricolor        3 transcribed             TRUE        27.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9     tri   tricolor        3 transcribed            FALSE        16.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10    tri   tricolor        3 transcribed             TRUE        33.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11    tri   tricolor        3 transcribed            FALSE        17.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12    tri   tricolor        3 transcribed            FALSE        23.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13    tri   tricolor        3 transcribed            FALSE        35.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14    tri   tricolor        3 transcribed             TRUE        32.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15    tri   tricolor        3 transcribed             TRUE        41.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16    tri   tricolor        3 transcribed             TRUE        33.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17    tri   tricolor        3 transcribed            FALSE        27.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    tri   tricolor        3 transcribed            FALSE        35.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19    tri   tricolor        3 transcribed            FALSE        16.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    tri   tricolor        3      review             TRUE        47.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21   four four-color        4 transcribed             TRUE        30.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22   four four-color        4 transcribed            FALSE        32.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  multi multicolor        5 transcribed            FALSE        32.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  multi multicolor        6      review            FALSE         9.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  multi multicolor        7 transcribed            FALSE         8.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26  multi multicolor        5 transcribed            FALSE        13.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  multi multicolor        5 transcribed            FALSE        14.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  multi multicolor        5 transcribed            FALSE        10.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  multi multicolor        5 transcribed            FALSE        22.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  multi multicolor        5 transcribed            FALSE        16.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    min_delta_e_cvd min_delta_e_white</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             42.8              28.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2              8.2              19.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              7.2              29.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              8.3              11.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              7.0              19.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6             20.6              28.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7             10.7              29.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8             13.7              32.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9              6.3              13.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10            10.5              13.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11             5.3              12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12            11.0              11.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13            11.4              10.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14            14.5              28.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15            15.7              27.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16            17.3              19.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17            22.8               7.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18            30.6               7.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19             7.4              19.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20            14.1              27.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21            10.3              20.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22             2.0              26.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23             6.9              19.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24             5.9              26.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25             6.5              24.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26             5.6              22.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27             8.8              30.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28            10.4              12.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29             6.0              28.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30             5.6              29.7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                 note</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                                                                                   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                                                   </span>
@@ -281,60 +360,114 @@ colours, <code><a href="show_palette.html">show_palette()</a></code> to draw the
 <span class="r-out co"><span class="r-pr">#&gt;</span> 51 avantgarde_tri_09    avantgarde_tri_09     pending avantgarde</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 52 avantgarde_tri_10    avantgarde_tri_10     pending avantgarde</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 53 avantgarde_tri_11    avantgarde_tri_11     pending avantgarde</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    collection_label family     type n_colors      status</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4             Retro    tri tricolor        3      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5             Retro    tri tricolor        3      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6             Retro    tri tricolor        3      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9             Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21            Retro    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22       Minimalism    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23       Minimalism    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           Kawaii    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           Kawaii    tri tricolor        3      review</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52      Avant Garde    tri tricolor        3 transcribed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53      Avant Garde    tri tricolor        3 transcribed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    collection_label family     type n_colors      status dataviz_friendly</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2             Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3             Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4             Retro    tri tricolor        3      review             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5             Retro    tri tricolor        3      review            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6             Retro    tri tricolor        3      review             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7             Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8             Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9             Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12            Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14            Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17            Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20            Retro    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21            Retro    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22       Minimalism    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23       Minimalism    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38           Kawaii    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41           Kawaii    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42           Kawaii    tri tricolor        3      review             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47      Avant Garde    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49      Avant Garde    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50      Avant Garde    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51      Avant Garde    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52      Avant Garde    tri tricolor        3 transcribed             TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53      Avant Garde    tri tricolor        3 transcribed            FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    min_delta_e min_delta_e_cvd min_delta_e_white</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         31.0            13.6              20.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         37.1            32.9              24.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         33.3            15.6              20.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         27.0            12.2              25.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         30.4             5.4              41.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         31.6            16.1              25.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         45.3            22.1              24.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         13.0            10.5              29.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9         25.6            24.2               5.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        21.2            14.0              19.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11        37.0            37.1              29.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        19.1             4.6              28.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        31.1            15.1              33.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        17.6             8.1              19.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        20.4            11.7              24.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        30.1            11.8              14.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17         9.5             8.5               6.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        29.1            27.0              14.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19        48.0            23.5              31.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        10.9             5.1              32.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        19.7            14.9              20.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        14.5             6.6              25.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23        25.4            15.9              12.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24        32.2             8.2              19.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25        19.3             7.2              29.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26        14.7             8.3              11.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27        25.1             7.0              19.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28        36.9            20.6              28.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29        41.4            10.7              29.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30        27.9            13.7              32.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31        16.2             6.3              13.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32        33.6            10.5              13.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33        17.5             5.3              12.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34        23.7            11.0              11.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35        35.9            11.4              10.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36        32.6            14.5              28.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37        41.5            15.7              27.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38        33.5            17.3              19.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39        27.8            22.8               7.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40        35.1            30.6               7.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41        16.1             7.4              19.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42        47.6            14.1              27.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43        45.8            33.5              12.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44        37.6            29.8              18.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45        21.2            11.6              20.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46        37.4            15.4              30.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47        25.6             6.8               9.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48        55.9            22.4              30.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49        31.2            13.1               8.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50        20.7             9.9              33.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51        25.4             6.4              32.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52        57.4            37.3              30.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53        30.7            24.4              11.2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                               note</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                 </span>
@@ -393,6 +526,16 @@ colours, <code><a href="show_palette.html">show_palette()</a></code> to draw the
 <span class="r-in"><span><span class="co"># only fully transcribed palettes</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="fu">palettes</span><span class="op">(</span>include_review <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 136</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># palettes that screen well for charts</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">palettes</span><span class="op">(</span>dataviz_friendly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"n_colors"</span>, <span class="st">"min_delta_e_cvd"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            id n_colors min_delta_e_cvd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 retro_bi_01        2            24.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 retro_bi_02        2            23.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 retro_bi_03        2            15.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 retro_bi_04        2            67.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 retro_bi_05        2            16.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 retro_bi_07        2            24.3</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

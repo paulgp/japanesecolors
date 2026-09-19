@@ -26,7 +26,7 @@
 
     <a class="navbar-brand me-2" href="index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -175,16 +175,42 @@
 <p>The visual gallery of all 149 palettes is on the <a href="https://paulgp.com/japanesecolors/articles/gallery.html">package website</a>.</p>
 </div>
 <div class="section level2">
+<h2 id="which-ones-work-in-a-chart">Which ones work in a chart<a class="anchor" aria-label="anchor" href="#which-ones-work-in-a-chart"></a>
+</h2>
+<p>These are design palettes, chosen to look good together rather than to encode categories, so most were never meant for data visualisation. 65 of the 149 screen well for it, on two criteria:</p>
+<ul>
+<li>
+<strong>Colour-vision deficiency</strong> — colours that separate for a trichromat can collapse for a dichromat, so each palette is re-measured under simulated deuteranopia, protanopia and tritanopia.</li>
+<li>
+<strong>Perceptual separation</strong> — categories have to read as different at a glance, in small marks.</li>
+</ul>
+<p>Both use CIEDE2000 on a palette’s closest pair, since a palette is only as readable as the two colours most easily confused. A third check stops a near-white colour vanishing against the page.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/palettes.html">palettes</a></span><span class="op">(</span>dataviz_friendly <span class="op">=</span> <span class="cn">TRUE</span>, n <span class="op">=</span> <span class="fl">4</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"min_delta_e"</span>, <span class="st">"min_delta_e_cvd"</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="co">#&gt;                   id min_delta_e min_delta_e_cvd</span></span>
+<span><span class="co">#&gt; 1      retro_four_02        22.6            11.4</span></span>
+<span><span class="co">#&gt; 2      retro_four_04        26.8            13.2</span></span>
+<span><span class="co">#&gt; 3      retro_four_06        24.0            12.1</span></span>
+<span><span class="co">#&gt; 4      retro_four_07        24.9            15.4</span></span>
+<span><span class="co">#&gt; 5      retro_four_11        23.4            10.1</span></span>
+<span><span class="co">#&gt; 6 minimalism_four_06        25.0            11.4</span></span>
+<span><span class="co">#&gt; 7     kawaii_four_01        30.8            10.3</span></span>
+<span><span class="co">#&gt; 8 avantgarde_four_01        33.9            13.2</span></span>
+<span><span class="co">#&gt; 9 avantgarde_four_02        46.0            27.4</span></span></code></pre></div>
+<p>The measurements ship with every palette, so you can set your own bar. The thresholds are calibrated so that the <a href="https://jfly.uni-koeln.de/color/" class="external-link">Okabe-Ito palette</a>, designed for colour-vision deficiency, passes — and palettes that separate well in normal vision but collapse for a dichromat, like ggplot2’s default hue scale, do not.</p>
+<p>Worth knowing: no palette of five or more colours clears the bar. Keeping 5–8 colours mutually distinguishable under dichromacy is hard, and these palettes were not built for it.</p>
+</div>
+<div class="section level2">
 <h2 id="python">Python<a class="anchor" aria-label="anchor" href="#python"></a>
 </h2>
 <p>The same palettes, generated from the same canonical data, are available for matplotlib:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="im">import</span> japanesecolors <span class="im">as</span> jc</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>jc.kawaii_tri_07                  <span class="co"># ['#3D7EB4', '#DF4472', '#E68C5F']</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(<span class="dv">3</span>), y, color<span class="op">=</span>jc.kawaii_tri_07)</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>jc.set_palette(<span class="st">"avantgarde_four_04"</span>)   <span class="co"># default colour cycle</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>jc.register_cmaps()                    <span class="co"># then cmap="jc:retro_multi_01"</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="im">import</span> japanesecolors <span class="im">as</span> jc</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>jc.kawaii_tri_07                  <span class="co"># ['#3D7EB4', '#DF4472', '#E68C5F']</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(<span class="dv">3</span>), y, color<span class="op">=</span>jc.kawaii_tri_07)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>jc.set_palette(<span class="st">"avantgarde_four_04"</span>)   <span class="co"># default colour cycle</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>jc.register_cmaps()                    <span class="co"># then cmap="jc:retro_multi_01"</span></span></code></pre></div>
 <p>See <a href="python/README.html"><code>python/README.md</code></a>. A test asserts the R and Python packages carry identical colour values.</p>
 </div>
 <div class="section level2">

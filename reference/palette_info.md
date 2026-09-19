@@ -31,8 +31,10 @@ plus a `colors` list-column holding the palette's hex vector.
 palette_info("retro_bi_01")
 #>            id          name name_status collection collection_label family
 #> 1 retro_bi_01 Ochre & brick   editorial      retro            Retro     bi
-#>      type n_colors      status note           colors
-#> 1 bicolor        2 transcribed      #EBB845, #C5351E
+#>      type n_colors      status dataviz_friendly min_delta_e min_delta_e_cvd
+#> 1 bicolor        2 transcribed             TRUE          42            24.9
+#>   min_delta_e_white note           colors
+#> 1              29.7      #EBB845, #C5351E
 
 # provenance and the reason a reading is provisional
 palette_info("kawaii_tri_19")$note

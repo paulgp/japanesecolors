@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">japanesecolors</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,8 +70,10 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">palette_info</span><span class="op">(</span><span class="st">"retro_bi_01"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            id          name name_status collection collection_label family</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 retro_bi_01 Ochre &amp; brick   editorial      retro            Retro     bi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      type n_colors      status note           colors</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 bicolor        2 transcribed      #EBB845, #C5351E</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      type n_colors      status dataviz_friendly min_delta_e min_delta_e_cvd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 bicolor        2 transcribed             TRUE          42            24.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   min_delta_e_white note           colors</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1              29.7      #EBB845, #C5351E</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># provenance and the reason a reading is provisional</span></span></span>
 <span class="r-in"><span><span class="fu">palette_info</span><span class="op">(</span><span class="st">"kawaii_tri_19"</span><span class="op">)</span><span class="op">$</span><span class="va">note</span></span></span>
