@@ -142,17 +142,5 @@ project's transcription of RGB/hex colour values and its own metadata — not th
 book's text, layouts, photographs, advertisements or other artwork — and is no
 substitute for the book itself.
 
-`r nrow(palettes_needing_review())` readings were not reliably legible and are
-marked provisional rather than treated as confirmed:
-
-```{r review}
-palettes_needing_review()[, c("palette_id", "order", "hex")]
-```
-
-They are still exported and usable; the value is the best available reading of
-the printed label, not a guess at a nicer colour, and the flag records that it
-could not be confirmed. The citation is available at runtime as
-`japanesecolors:::SOURCE` in R and `japanesecolors.SOURCE` in Python.
-
 The MIT licence covers this package's code, metadata and documentation. It
 confers no rights in the source work.
